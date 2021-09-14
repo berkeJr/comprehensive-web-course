@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <!-- Eskiden olsa biz div kullanarak şöyle yapardık yine şu an da yapabiliriz fakat artık tercih edilmiyor 
+    <div id="header">
+
+        <div id="nav-top"></div>
+
+    </div>
+
+    <div id="main"></div>
+    <div class="sidebar"></div>
+    <div id="footer"></div>
+
+    :-->
+
+    <!--Biz artık semantic elements'leri tercih ediyoruz.Böylece kod daha okunaklı oluyor ve de arama motorları sayfa optimizasyonuna 
+        bir şekilde katkıda bulunabiliyor.Mesela header içinde bir navigation bar için : -->
+    <header>
+        <h1>Yazılım Geliştirme</h1>
+        
+        <nav id="top-nav">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Service</a>
+        </nav>
+
+    </header>
+
+    <section id="section-liddle">
+        <!--Sorular veya makaleler vs. için article elementini kullanabiliriz. Aynı zamanda biz semantic elementlere de id veya class verebiliriz-->
+        <article>Story 1</article>
+        <article>Story 2</article>
+        <article>Story 3</article>
+    </section>
+
+    <section id="section-big">
+        <article>Story 1</article>
+        <article>Story 2</article>
+        <article>Story 3</article>
+
+    </section>
+
+    <!--Sayfamızın yanında bulunan nav-bar için aside etiketini kullanırız-->
+    <aside>
+        <nav id="side-nav">
+            
+        </nav>
+    </aside>
+
+    <footer>
+        Copyright
+    </footer>
+
+    
+
+
+
+
+
+    
+</body>
+
+</html>
