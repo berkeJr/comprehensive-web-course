@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding and Box-Sizing</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div.box-1{
+            width: 500px;
+            height: 200px;
+            border: 5px solid black;
+            /*daha kısa şu şekilde yaparız. top-bottom / right left / veya hepsi aynıysa tek bir değer*/
+            padding: 40px; /*(top right bottom left)*/
+            /*kutunu genişliği = 500px + 5px + 5px + 40px + 40px = 590px*/
+
+              /*biz normalde width ve height verdiğimiz zaman sadece content kısmına genişlik ve yükseklik vermiş oluyoruz.yani div'deki
+            padding ve border'ı da ekleyince kutunun width değeri 500px den daha fazla oluyor*/
+
+            /*fakat biz box-sizing özelliğinde eğer border-box kullanırsak biz eğer width değerini 500px verirsek border ve padding 
+            ile birlikte 500px vermiş oluyoruz.yani border ve padding değerlerine karışmıyor fakat width ve height değerlerini genişlik
+            toplam her şey dahil 500 ve yükseklik toplam 200 olacak şekilde ayarlıyor.*/
+            
+            /*yani eğer box-sizing = border-box özelliğini kullanırsak burada width için verdiğimiz 500px'e göre border ve
+            padding'i dahil edecek ve content değerini(width ve height) küçültecek yani böylelikle tüm box'larımızn büyüklüğü aynı olacak*/
+            box-sizing: border-box;
+           
+                      
+            /*content ile border arasında kalan yer padding'dir.*/          
+            
+        }
+
+        div.box-2{
+            width: 500px;
+            height: 200px;
+            border: 5px solid black;
+            padding: 30px; /*(top right bottom left)*/
+            box-sizing: border-box;
+        }
+
+        /*eğer istersek box-sizing: border-box; özelliğini *selectorünün içinde yazarak bütün elementlere uygulanmasını sağlayabiliriz*/
+
+        </style>
+
+
+</head>
+
+<body>
+    <div class="box-1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa, debitis.
+    </div>
+
+    <div class="box-2">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, pariatur.    
+    </div>
+
+    
+</body>
+
+</html>

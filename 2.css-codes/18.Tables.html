@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Tables</title>
+
+    <style>
+        /*
+        The <table> tag defines an HTML table.
+        Each table row is defined with a <tr> tag.
+        Each table header is defined with a <th> tag.
+        Each table data/cell is defined with a <td> tag.
+        By default, the text in <th> elements are bold and centered.
+        By default, the text in <td> elements are regular and left-aligned.
+        -------------------------------------------------------------------
+        <table> ===== tables
+        <tr> ======== table row(satırlar)
+        <th> ======== table header(başlık)
+        <td> ======== table data/cell
+        
+        <thead> ===== The "thead" element represents the block of rows that consist of the column labels (headers) for the parent 
+        table element, if the thead element has a parent and it is a table.
+        
+        <tbody> ===== The tbody element represents a block of rows that consist of a body of data for the parent table element, 
+        if the tbody element has a parent and it is a table.
+        */
+
+
+        /*NOT!!!! : CSS geliştirirken en genelden en özele doğru style'lamamız gerekir.*/    
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;/*border-collapse=collapse >>>>> border'ları birleştirmek için kullanılır.*/
+        }
+
+        table {
+            width: 75%; /*genişiliği sayfanın %75'ini kaplasın*/
+            margin: 0 auto; /*tabloyu sayfanın tam ortasında konumlandırmak için kullanırız.*/
+            font-size: 1.5em;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        thead tr {
+            background: green;
+            color: white;
+        }
+
+        tbody tr {
+            text-align: center;
+        }
+
+        /*toplam 4 satırımız var, biz 2 ve 4.satırlara şu şekilde erişiriz*/
+        tbody tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        tbody tr:hover {
+            background: #ddd;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <table class="employees">
+
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Departman</th>
+                <th>Maaş</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Mustafa</td>
+                <td>Bilişim</td>
+                <td>4000</td>
+            </tr>
+
+            <tr>
+                <td>Mustafa</td>
+                <td>Bilişim</td>
+                <td>4000</td>
+            </tr>
+
+            <tr>
+                <td>Mustafa</td>
+                <td>Bilişim</td>
+                <td>4000</td>
+            </tr>
+
+            <tr>
+                <td>Mustafa</td>
+                <td>Bilişim</td>
+                <td>4000</td>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
+
+
+
+</body>
+
+</html>

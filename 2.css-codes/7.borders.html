@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box1{
+            background-color: #a7a7a7;
+
+            /*border properties*/
+
+            /* border properties....
+            border-width: 5px;
+            border-color: red;
+            border-style: solid; 
+            */
+            
+            /*Kısa yol border properties
+            border: 5px red solid;*/
+
+            /*Örneğin sadece div'in kapladığı dörtgende sol tarafa border atayalım
+            border-left-width: 5px;
+            border-left-color: blue;
+            border-left-style: solid; */
+                        
+            /*radius özelliği : border'ın köşelerinde oval'lik oluşmasını sağlar
+            border : 10px solid red;
+            border-radius: 10px;*/            
+        }
+
+        #box2{
+            /*div'in içi boş , o yüzden bir width ve height atayalım ve bir kutu oluşturalım, bu kutu köşeli bir dörtgen(kare) diyebiliriz
+            bu kutuyu tam oval yapmak için css'de bir özelliğimiz var*/
+            width: 50px;
+            height: 50px;
+            background-color: #a7a7a7;
+            /*border-radius değerini buradaki height kadar verirsek bzim buradaki kare tam bir oval olacaktır.*/
+            border-radius: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="box1">
+        <h1>Box 1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, tempora.</p>
+
+
+    </div>
+
+    <div id="box2">
+
+    </div>
+
+    
+</body>
+
+</html>

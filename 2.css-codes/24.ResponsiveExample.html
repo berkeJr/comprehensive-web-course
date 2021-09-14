@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tasarım Example</title>
+
+    <style>
+        /*Mesela biz sadece bilgisayar ekranında belli bir text'in görünmesini istiyorsak ancak o text'in tablet ve telefonda
+        görüntülenmesini istemiyorsak media query'lerini kullanırız*/
+
+        /* p{
+            display: none; p elemeti şimdilik görünmesin
+        } */
+        /*Geniş ekrandan tablet ekranına kadar display: block yaparsak ve sonrasında display: none yaparsak yazımız web'de görünür ama
+        tablet ve telefonda görünmez*/
+
+        /* @media(min-width: 768px){
+            p{
+                display: block;
+            }
+        } */
+
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            max-width: 1100px;
+            margin: 0 auto; /*sağdan ve soldan ortalansın.*/
+            display: flex; /*yanyana gelsinler*/
+            flex-wrap: wrap;
+        }
+
+        .box{
+            border: 1px solid black;
+            background: #a7a7a7;
+            padding: 10px;
+            width: 25%;
+            /*responsive tasarımlarda bizim width'lerimizi px olarak vermememiz gerekiyor. witdh'lerimizi genel olarak % ile vermeliyiz
+            böylece sayfa küçüldüğü zaman o yüzde hep sabit kalır. */
+        }
+        
+        /*tabletler için*/
+        @media(max-width: 768px){
+            .box{
+                width: 50%;
+            }
+        }
+
+        /*telefonlar için*/
+        @media(max-width: 500px){
+            .box{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, molestiae.</p> -->
+
+    <div class="container">
+        
+        <div class="box">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vitae.</p>
+        </div>
+
+        <div class="box">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vitae.</p>
+        </div>
+
+        <div class="box">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vitae.</p>
+        </div>
+
+        <div class="box">
+            <h1>Article 4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, vitae.</p>
+        </div>
+
+    </div>
+
+ 
+</body>
+</html>

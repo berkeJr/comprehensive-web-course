@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Float</title>
+
+    <style>
+        /*CSS-Flexbox: Flexbox veya Grid sistem çıkmadan önce CSS'de  div'lerin veya box'ların konumlandırılması bu Float'lar sayesinde
+        yapılabiliyordu.Ancak Float'lar ile bunları yapmak çok zaman alan uğaraştırıcı bir yöntemdir.Flexbox ve Grid'lerin çıkması ile
+        birlikte sayfa içerisinde konumlandırmayı onlarla gerçekleştiriyoruz.Float oldukça az kullanılıyor.*/
+
+        /*Float kayma anlamına geliyor.sola yaslama sağa yaslama gibi özellikleri bbiz kullanabiliyoruz.*/
+
+        /*biz sayfada resmin solda olmasını ve p elementi içerisnindeki yazıların hemen yanından başlamasını ve devam etmesini 
+        istiyoruz*/
+        .image1 {
+            margin-right: 10px;
+            float: left;
+        }
+        .image2{
+            margin-left: 10px;
+            float: right;
+        }
+
+         
+        .box{
+            width: 33%;
+            height: 200px;
+            float: left; /*biz bu kutuları yanyana konumlandırmak istersek eğer*/
+        }
+        .box-1{
+            background: blue;
+        }
+        .box-2{
+            background: red;
+        }
+        .box-3{
+            background: green;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <img class="image1" src="images/mustafamuratcoskun-300x300.jpg" alt="">
+    <img class="image2" src="images/mustafamuratcoskun-300x300.jpg" alt="">
+    <div style="clear: both;"></div>
+    <!--eğer ki clear özelliğini kullanırsak yukarıdaki float özellikleri silinmiş olacak ve yazılar resimlerin arasından değil
+    resimler bittikten sonra başlayaack-->
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nulla doloremque earum sapiente corrupti,
+        adipisci
+        tempora voluptatem reprehenderit perspiciatis sit soluta laudantium! Deleniti ea modi non dolorem sunt
+        repellendus. Quisquam
+        aliquid dolorum officia nihil magni vero corporis possimus, alias facilis explicabo amet a consequatur
+        necessitatibus molestias
+        impedit accusantium debitis maiores nisi ad nulla minus et cumque? Molestias, sint harum! Ea laboriosam dolores
+        hic recusandae
+        deleniti est incidunt, quis dolor! Suscipit sapiente enim ipsam, in totam unde magni pariatur, possimus
+        molestiae quia ut
+        molestias. Molestiae corporis, eveniet dicta nobis fuga, praesentium officiis inventore quia repellat molestias
+        quasi? Ducimus
+        cumque eius, sapiente laborum modi architecto facere veritatis reprehenderit vel inventore cupiditate harum
+        eaque excepturi
+        ipsa atque incidunt! Porro vitae praesentium nisi nemo a modi eligendi, rerum odit ex delectus totam dolorum
+        quod molestiae
+        tempore impedit debitis soluta magnam, esse, deleniti iure. Praesentium similique odit officiis quis,
+        voluptatibus voluptates.
+        Aspernatur culpa sequi explicabo beatae eum neque ducimus consequatur esse cupiditate nihil laboriosam dolores
+        numquam ut
+        necessitatibus fugit, accusantium assumenda vel deserunt pariatur architecto corporis reiciendis? Fugit
+        voluptatum ipsam earum
+        labore beatae dolore magnam perferendis quae aspernatur adipisci ratione doloribus veritatis recusandae dolor
+        aperiam obcaecati
+        dicta saepe cumque dignissimos, eveniet reprehenderit consequuntur dolores animi iure. Atque impedit sed soluta
+        similique accusamus
+        omnis nisi incidunt nam ex reprehenderit, perspiciatis beatae quod et nesciunt earum a repellat quo quidem.
+        Consectetur, earum?
+        Vel beatae, voluptatibus doloribus modi necessitatibus dignissimos sapiente pariatur quibusdam at natus
+        reprehenderit amet optio
+        atque sint cupiditate obcaecati mollitia recusandae nostrum harum sit! Facilis aspernatur est ipsam mollitia
+        eligendi? Impedit
+        consequatur incidunt dignissimos sit nobis illo officia facere rem, est blanditiis consequuntur ad soluta
+        doloribus nihil nemo
+        reprehenderit quod quos. Voluptas animi at, assumenda a eveniet iusto ea soluta. Iure ex voluptate omnis
+        praesentium modi
+        asperiores blanditiis non beatae nisi, debitis porro ullam. Iste ea quas numquam facere obcaecati voluptate illo
+        voluptatibus
+        voluptatum a nulla doloremque dolor dicta, earum suscipit quae natus necessitatibus qui? Debitis voluptatibus
+        repudiandae molestias
+        culpa itaque ea rerum nam, ratione quaerat tenetur, reprehenderit, libero porro! Esse dolorem adipisci
+        blanditiis! Voluptate
+        dolorem necessitatibus eligendi architecto inventore ea in velit, quam iste debitis omnis non eum enim
+        asperiores labore quo!
+        Totam amet architecto debitis enim iure rem molestias doloribus quibusdam cumque, fugit aliquam, voluptas natus
+        porro? A placeat,
+        omnis dolor, pariatur ea earum culpa blanditiis praesentium fugit enim recusandae repellat qui quasi ad in
+        ullam. Pariatur minus,
+        voluptates eveniet sequi distinctio consequatur non ipsam alias aliquam possimus eos omnis ratione corrupti quam
+        placeat sit
+        doloribus sed. Doloribus ea dolore sit temporibus officiis ab alias, ratione iusto, suscipit officia molestiae
+        autem, veniam
+        aliquid quae quos sunt excepturi. Optio tenetur amet minima impedit similique neque pariatur earum repellat
+        distinctio eum tempore
+        corrupti, repudiandae asperiores necessitatibus illo praesentium cumque beatae ad fugiat. Natus consequuntur ea
+        excepturi nostrum,
+        dicta voluptates quidem commodi dignissimos quam, inventore, illo eligendi neque? Minus laboriosam aliquam ipsam
+        illo qui assumenda
+        ullam doloremque. Est repudiandae minima minus ea cum corrupti molestias eaque unde ipsum error atque quo iste
+        recusandae, in dicta
+        hic.</p>
+
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+
+
+
+</body>
+
+</html>

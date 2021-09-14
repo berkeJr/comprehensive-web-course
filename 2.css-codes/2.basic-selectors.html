@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*Tüm h1'leri seçelim
+           h1{
+            color: red;
+            background: blue;
+        } */
+
+        /* Tüm p'leri seçelim
+        p{
+            color: red;
+            background: blue;
+        } */
+
+        /*Peki biz h1'ler ile p'lerin aynı özelliğe sahip olmasını istiyorsak ne yapabiliriz , selector'leri peşpeşe yazarız
+        h1,p{
+            color: red;
+            background: blue;
+        }
+        */
+
+        /*id'si logo olan h1'i seçelim
+        #logo{
+            color:red;
+            background: blue;
+        }
+        */
+
+        /*class'ı info olan p'leri seçelim
+        .info{
+            color: red;
+            background-color: blue;
+        }
+        */
+
+        /*id'si #logo veya da class'ı .lead olanı seçelim
+        #logo,.lead{
+            color: red;
+            background: blue;
+        } */
+
+        /*Aynı anda id'si para1 ve classı .lead olanı seçelim
+        #para1.lead{
+            color: red;
+            background: blue;
+        }
+        */
+
+        /*tüm a etiketlerini seçelim ve de sayfadaki a etiketlerinin altındaki çizgileri kaldıralım
+        a{
+            color: red;
+            background: blue;
+            text-decoration: none;  ===>alt çizgileri kaldıran css özelliği
+        }
+        */
+
+        /*eğer biz sadece <ul> etiketi altındaki <li> etiketi altındaki a etiketine erişip stillemek istiyorsak
+        yani bu duruma <ul> etiketi <li>'nin parent etiketi denir , <li> etiketi de <ul> etiketinin children(çocuğu) denebilir
+        aynı şekilde <a> ve <li> elementleri içinde geçerlidir.  */
+        /*ul li a{
+            color: red;
+            background: blue;
+            text-decoration: none;
+        }
+        */
+
+        /*class'ı info olan elemetin altındaki span'leri çekelim*/
+        /* .info span{
+            color: red;
+            background: blue;
+        } */
+
+        /*class'ı primary olan span'i seçelim*/
+        /* .primary{
+            color: red;
+            background: blue;
+        } */
+
+        /*classı info olup içteki span'inde class'ı primary olanı çekelim*/
+        /* .info .primary {
+            color: red;
+            background: blue;
+        } */
+
+        /*Html sayfamızdaki tüm elemanlarımıza erişip stillemek istiyorsak * operatörünü kullanırız*/
+        /* *{
+            color: red;
+            background: blue;
+        } */
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Header 1</h1>
+        <h1 id="logo">Logo</h1>
+
+        <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+
+    </header>
+
+    <h1>Header 2</h1>
+
+    <p id="para1" class="lead info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, a.</p>
+
+    <p class="info">Lorem ipsum <span class="primary">dolor</span> sit amet consectetur, adipisicing elit. Similique
+        voluptatibus </p>
+
+    <p class="info">Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Qui, dignissimos.</p>
+
+    <p>Test Paragraph</p>
+
+
+    <a href="#">Home</a>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

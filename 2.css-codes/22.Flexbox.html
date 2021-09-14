@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        /*Flexbox'ın çıkması ile birlikte biz elementleri, kutuları vs. konumlandırmayı Float ile değil flexbox ile yapmaya başladık.
+       
+        Mesela biz bir container kullanarak box'larımızı kolay bir şekilde konumlandırabiliriz.
+        Container: kapsayıcı : parent : flex container
+        Items : Inside the container : Children : flex items
+        biz bu şekilde items'ları çok kolay bir şekilde yerleştirip layout'larımızı oluşturabiliyoruz.
+        
+        biz bu container'ları normalde inline ve block olarak tasarlayabiliyorduk fakat flexbox haline getirebilmek için yapmamız gereken
+        tek şey display: flex yapmak
+        flexbox artık tüm tarayıcılarda destekleniyor
+        
+        flexbox'da yatay eksen: main axis/ başladığı yer: main start/ bittiği yer: main end /genişliği: main size
+        dikey eksen: cross axis  başladığı yer: cross start/ bittiği yer: cross end */
+
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            width: 75%;
+            margin: 0 auto; /*sayfada tam olarak ortalansın*/
+            display: flex; /*flexbox'ımızın ilk özelliğini oluşturmak için container'ı flexbox haline getirmemiz gerekiyor.bu şekilde az
+            önce alt alta olan kutular şu anda sayfada yanyana gösteriliyor.eğer ki kutuları alt alta sıralamak istiyorsak flex-direction
+            özelliğini kullanırız. flex-direction: column*/
+            min-height: 600px; /*yani height değeri en az 600px olsun ve de eğer ki contentin height'ı 600px'i geçerse height değeri
+            ona göre artsın*/
+            background: black;
+            justify-content: flex-start;  /*flexbox da yatayda item'ların konumlandırılmasını sağlamak için jusitfy-content: özelliğini 
+            kullanırız
+            jusitfy-content: flex-start: default olan özellikdir container'ın başından başlar
+            jusitfy-content: flex-end: container'ın bitiminden başlayarak item'ları konumlandırır.
+            jusitfy-content: center: kutular flexbox'ın tam ortasına gelir
+            jusitfy-content: space-between özelliğinde ise birer kutuyu başa ve sona yerleştirererk diğer kutuyu da tam ortaya
+            konumlandırır. yani kutular arasında eşit mesafe olur
+            jusitfy-content: sapace-around özelliğinde ise container'ın başlangıcında ve bitiminden biraz boşluk bırakarak kutular 
+            yerleştirilir. yani kutular başlangıçta ve bitimde olmaz, kutuların aralarında ise eşit mesafe olur
+            jusitfy-content: space-evenly özelliğinde ise container'ın başlangıcında ve bitiminden biraz boşluk bırakarak kutular 
+            yerleştirilir. yani kutular başlangıçta ve bitimde olmaz, kutuların aralarında ise eşit mesafe olur, fakat space-around'dan
+            farkı şudur: başta ve bitimde bıraklılan boşluklar ile kutular arasındaki boşluklar da eşittir*/
+            
+            align-items: stretch; /*align-items özelliği bizim yukarıdan aşağıya dikeyde sıralama yapmamızı sağlar. align-items: stretch 
+            default olan özellikdir. box içerisinde height'ımız ne kadar ise bizim de div'imiz o kadar oluyor.
+            align-items: center dersek yukarıdan aşağıya doğru bir ortalama gerçekleleşir ve de strecth özelliğini iptal ettiğimiz
+            için sadece contenti kadar yer kaplar
+            align-items: flex-start dersek hem sol tarafta hem de üstte olur.
+            align-items: flex-end dersek hem sol tarafta hem de aşağıda olur*/
+
+            flex-wrap: wrap; /*default değeri nowrap'dir yani bütün elementleri satıra sığdırır.biz kutuların width'ini küçültmesin
+            yer kalmazsa aşağıya geçsin istiyoruz. flex-wrap : wrap özelliğini kullanırız*/
+
+            /*flex-direction: row; bu şekilde iken yatayda: justify:content, dikeyde: align-items kullanırız*/
+
+            /*flex-direction: columns; bu şekilde iken yatayda: align-items'ı, dikeyde justify-content'i kulllanırız*/
+        }
+
+
+        .box{
+            text-align: center;
+            background: #f2f2f2;
+            width: 200px;
+            /*eğer ki container da çok box varsa ve de hepsi yan yana container'ın genişliğini geçiyorsa o durumda box'ların width'i
+            container içerisine sığacak şekilde otomatik olarak tarayıcı tarafından ayarlanır.yani flex'in default olan özelliği satıra 
+            bütün elementleri sığdırmaya çalışıyor.peki biz burada width'lerimiz sabit kalsın.kutular sığmadığı zaman aşağıya geçsin dersek
+            ne yaparız? container için flex-wrap : özelliğini kullanırız*/
+            border: 1px solid black;
+            height: 200px;
+            /*box'lara height özelliği vermezsek,yüksekliği container'ın yüksekliği kadar olur.çünkü container, box'ların kapsayıcısıdır.*/
+            margin: 10px;
+        }
+
+        /*normalde sayfada sırayla box-1, box-2 ve box-3 gelecek.Eğer biz sırayı değiştirmek istiyorsak order özelliğini kullanabiliriz*/
+        .box-1{
+            /* order: 3; */
+            background: red;
+            flex-grow: 1;
+        }
+        .box-2{
+            /* order: 1; */
+            background: blue;
+            /*normalde container'daki justify-content: sapace-around özelliğine göre hareket eder fakat biz burada align-self özelliğiyle
+            kendisine has özellik verebiliriz.*/
+            /* align-self: flex-end; */
+            flex-grow: 2;
+        }
+        .box-3{
+            /* order: 2; */
+            background: green;
+            flex-grow: 3; 
+        }
+        /*toplam flex-grow = 1 + 2 + 3 = 6 parça olacak 
+        box-1 : genişliği container'ın genişliğinin 1/6'sı olacak
+        box-2 : genişliği container'ın genişliğinin 2/6'sı olacak
+        box-3 : genişliği container'ın genişliğinin 3/6'sı olacak
+        diğer kutulara flex-grow vermezsek ve sadece mavi için flex-grow: 1; dersek o durumda ilk önce yeşil ve kırmızı kutuyu normal 
+        boyutlarında ayarlar ve container'ın kalan kısmını mavi kutunun genişliği ile doldurur.*/
+
+    </style>
+</head>
+<body>
+    <!--1 container ve içerisinde 3 farklı kutu oluşturalım-->
+    <div class="container">
+        
+        <div class="box box-1">
+            <h1>Article 1</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="box box-2">
+            <h1>Article 2</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+        <div class="box box-3">
+            <h1>Article 3</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tasarım</title>
+
+    <style>
+        /*Şimdiye kadar ki tüm tasarımlarımızı bir bilgisayar ekranında gerçekleştirdik.Fakat bizim web sitelerimizi aynı zamanda tablette
+        ve telefonda düzgün çalışacak şekilde tasarlamamız gerekiyor.Biz bu tarz işlemlerimize responsive tasarım diyoruz.
+        -Responsive web design uses only HTML and CSS.
+        -Responsive web design is not a program or a JavaScript.
+        Farklı ekranlar için farklı tasarımlar yapmaya biz responsive tasarım diyoruz 
+        ----Biz CSS'de Responsive Tasarımları mediaQuery'ler ile gerçekleştiriyoruz.
+        ---Mesela biz bir web sayfasında sağ tıklayıp inspect deyince web developer tools açılır.İşte orada bir seçenek var."Toggle Device
+        Toolbar" isminde.Bu seçenek ile biz farklı boyutlarda ya da farklı cihazlarda sayfanın nasıl görünebileceğini inceleyebiliyoruz.
+        */
+
+        body {
+            background: red;
+            /*bu durumda web sayfasında tüm arkaplan kırmızı olur.Fakat mesela biz tablette veya telefonda farklı renk olmasını istersek;
+            bunun için media query'lerini kullanırız.*/
+        }
+
+        /*media query'ler şu şekilde kullanılır*/
+        /*Tabletler için(tabletler genel olarak 768 px genişliğindedir)*/
+        @media(max-width: 768px) {
+
+            /*sayfanın genişliği max-width en fazla 768 px ise ve ondan düşük ise buradaki kurallar geçerli olsun*/
+            body {
+                background: blue;
+            }
+
+            /*ilave not : biz u kuralın sadece telefon, pc ve tabletde geçerli olmasını istersek
+            @media only screen and(max-width: 768px){} şeklinde kullanırız*/
+        }
+
+        /*Telefonlar için(telefonlar genel olarak 500 px genişliğindedir)*/
+        @media(max-width: 500px) {
+            body {
+                background: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+</body>
+
+</html>

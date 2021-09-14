@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*şu an da box-1'e margin özelliklerini istediğimiz gibi atayabiliriz.*/
+        div.box-1{
+            /* margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px; */
+
+            /*yukarıdaki işlemi tek satırda şu şekilde yazarız
+            top right bottom left*/
+            /* margin: 50px 20px 50px 20px; */
+
+            /*daha kısa olacak şekilde şöyle yazarız
+            top-bottom , right-left*/
+            margin: 50px 20px;            
+        }
+
+        div.box-2{
+            background: #a7a7a7;;
+            width: 50%; /*genişliğimizin %50'sini kaplasın*/ 
+            /*bu div'in sayfanın tam ortasına gelmesini istersek ne yaparız.margin'leri elle girmek yerine tarayıcının bunu hesaplayıp
+            otomatik olarak ayarlamasını istiyoruz.yani soldan ve sağdan tam ortada olsun.bunun için auto özelliğini kullanırız*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box-1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, voluptatem.
+    </div>
+    <!--burada herhangi bir margin ataması yapmadık ama tarayıcımızda açtığımız zaman margin'lerin default olarak atanmış olduğunu görürüz
+    tarayıcıda incelersek marign'lerin otomatik olarak 8px verildiğini görürüz.-->
+
+    <!--biz kendi projelerimizde çalışırken tarayıcıdan gelen otomatik değerleri kapatmak 0'lamak isteyebiliriz.Bunun içinde reset Css'ler
+    vardır.Bu tarayıcıların kendi özelliklerini yok etmeyi ve de bütün tarayıcıları ortak hale getirmeyi sağlar.Küçük bir örnek verelim.
+    Bunun için style'da * operatörünü kullanırız.Bu bir universal selector'dür.Tüm elementlere ulaşmak için kullanılır -->
+
+    <div class="box-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima eius aperiam dignissimos, ratione facilis atque?
+    </div>
+    
+    
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Displays</title>
+
+    <style>
+        /*biz width ve height değerlerini div'e atadıktan sonra da div block element olmaya devam eder, yani ondan sonra gelen 
+        elemanlar bir alt satıra geçer.bu block element özelliğidir*/
+        .box{
+            width: 50%;
+            height: 100px;
+        }
+        .box-1{
+            background: red;
+        }
+        .box-2{
+            background: blue;
+        }
+        #test-link{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: #aa77aa;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <!--display, block, inline ve inline-block-->
+
+    <!--2 tane div oluşturalım ve her birinin 2 tane class'ı olsun.-->
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+
+    <br>
+    <!--bir a etiketi oluşturalım. inspect yapıp computed kısmına gidelim ve filtreleme yerinde display yazınca display = inline olduğunu
+    görürüz, yani sadece o content kadar yer kaplar, width ve height değerleri tarayıcı tarafıdan otomatik olarak atanır(content kadar).-->
+    
+    <a href="#" id="test-link">Test Link</a>
+    <!--peki biz inline elementlere width ve height verebilir miyiz? hayır. inline elementler de tarayıcımız content kadar width ve
+    height değeri verir ve biz değiştiremeyiz. peki olası bir durumda bizim inline elementlere width ve height vermemiz gerekirse ne o
+    inline elementin display özelliğini ne yaparız?-->
+    
+    <!--bizim inline ve block elementleri haricinde bir türümüz daha var ve o da inline-block element türüdür. inline-block türü hem 
+    inline gibi hem de block gibi davranabilmemizi sağlayan ortada bir değerdir.inline-block elementlere biz width ve height verebiliyoruz
+    ancak inline'da olduğu gibi sadece belirttiğimiz width ve height kadar yer kaplıyor ve sonrasında gelen content yine bunun
+    yanına gidiyor. ancak block elementler gibi biz width ve height da verebiliyoruz. yani ortada bir özelliktir-->
+    
+    Deneme content <!--bu yazı yine sayfada yukarıdaki inline-block elementte content bitince gösterilir-->
+    
+</body>
+</html>

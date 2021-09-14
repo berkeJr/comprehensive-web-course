@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Fonts</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <style>
+        h1{
+            /*Font-family'yi değiştirelim*/
+            font-family: 'Open Sans', sans-serif;;
+            /*peki burada niye Arial, Helvetica, sans-serif şeklinde belirttik? Burada şöyle bir durum söz konusu.Biz web sitelerimizi
+            bir çok cihazda çalıştırabiliriz(örneğin tablet, iphone, mobil cihaz vs.) Ve eğer o cihazlarda Arial bulunmadıysa, burada hemen
+            bir sonraki kısıma geçip Helvetica'yı deneyecek.Diyelim ki o cihazda Helvetica'da yok.O durumda ise sans-serif'e gidecek
+            ve de sans-serif fontlarından o cihazda default olanını kullanacak.*/
+
+            /*biz font seçmek için Google Fonts'u da kullanabiliriz.Mesela o sayfaya gidelim open sans'da istediğimiz özellikleri seçelim
+            ve +Select this style diyelim daha sonra bize bir link verecek ve o linki kopyalayıp head içerisinde title'ın hemen altına
+            yapıştıralım. daha sonra o sayfada ki bize verdiği font-family değerlerini kopyalayıp style'da istediğimiz yere yapıştıralım*/
+        }
+
+        /*Absolue Length: biz ne değeri verirsek hep aynı kalır: cm, mm, px... */
+
+        /*Relative Length(göreceli uzunluklar): em, rem, %...diğerleri için W3Schools CSS Units'e bakabilirsin */
+
+        /*Mesela % şu: Bizim bir div'imiz var içerisinde de p elementimiz var. p elementimizin font-size:%50 yaparsak div'in 
+        font-size'ının yarısı kadar bir değer alır.Bunlar bizim responsive tasarımlar yapmak için kullandığımız değişik unit'ler. */        
+
+        .paragraph1{
+            /*font-size özelliğini değiştirelim.tarayıcıda otomatik olarak 16px */
+            font-size: 20px;
+
+            /*line-height özelliği 2 satır arasındaki yüksekliği belirleme için kullanılır*/
+            /*mesela em bizim o elementimizin font-size'ı kadar bir orana sahiptir.*/
+            line-height: 1.5em; 
+            /*bu şekilde yaparsak p nin font-size:16 px. onun 1.5 katı olarak da direk 24 px atar.bu durumda biz line-height değerini
+            elle ayarlamak zorunda değiliz sadece font-size değerini değiştirmemiz yeterli olacaktır.*/
+        }
+        .paragraph2{
+            /*rem kullanımını görelim. rem root elemente göre oranlar. bizim burada root elementimz html elementi.tarayıcıya gidip
+            html elementinin font-size değerini buluruz = 16px*/
+            font-size: 1.5rem; /*bu durumda 1.5 ile 16 yı çarparız 24px olur*/
+        }
+        .paragraph3{
+            font-size: 20px;
+            line-height: 1.5em;
+            font-weight: bold; /*yazıyı bold yapmaya yarar. */
+            font-style: italic; /*yazıyı italic yapmaya yarar.*/
+        }
+
+        .div1{
+            width: 1500px;
+            height: 500px;
+            border: 5px solid black;
+        }
+        .div2{
+            width: 1500px;
+            height: 150px;
+            border: 5px solid blue;
+        }
+        .span1{
+            font-size: 75%; /*parent = div2 , div2'nin font-size'ının %75'i yapar.*/
+
+        }        
+
+    </style>   
+
+</head>
+
+<body>
+    
+
+    <div class="div1">
+        <h1>Başlık 1</h1>
+    
+        <h3>1.Paragraph</h3>
+        <p class="paragraph1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium eos facilis sunt nam
+            tempora cumque corrupti
+            excepturi consectetur deserunt, nulla dicta, non magni mollitia! Rem sint odio laborum provident, consectetur
+            quibusdam est,
+            iusto officiis optio quisquam quod dolorem porro facilis? Animi omnis mollitia molestias laboriosam consequatur
+            autem blanditiis
+            beatae nesciunt.</p>
+        <!--Biz tarayıcıda inpect yapınca daha sonra Computed'ı seçip istediğimiz elementin bütün özelliklerini görebiliriz.Ve de
+            öyle yapınca p ve h1 etiketleri içerisindeki content yazılarında font-family'nin tarayıcı tarafından default olarak
+            Times New Roman seçildiğini görürüz. -->
+    
+        <!--Fakat biz tarayıcının seçtiği font-family veya diğer özellikler yerine kendi istediğimiz değerleri de atayabiliriz.
+        Bunun için farklı değerlerin neler olduğunu da bilmemiz gerekir.Bu sebeple W3Schools'u kullanabiliriz-->
+    
+        <!--Bizim genel olarak 3 tane büyük font-family'miz bulunuyor.Bunlar; "Serif", "Sans-serif" ve "Monospace"-->
+    
+        <!--Peki "Serif"ve "Sans-serif fontları arasında ne gibi farklar vardır.Mesela Serif font'larında harflerin bitiş noktalarında
+        tırnaklar olur,yani belli eğimler vardır ancak "Sans-serif" fontlarında bu tırnaklar yer almaz -->
+    
+        <!--Generic Family "Serif", "Sans-serif" ve "Monospace", yani genel bir aile.-->
+    
+        <!--Bir de kendi içlerinde bizim font aileleri var.Bunlarda mesela "Times New Roman" veya "Georgia" şeklinde. Bu ikisi de Serif
+        fontların altında yer alır.-->
+    
+        <h3>2.Paragraph</h3>
+        <p class="paragraph2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id quas nulla quibusdam expedita
+            velit.
+            Rerum quo quia nihil similique error deserunt, aut amet delectus velit quidem et non possimus quae! Illo
+            quibusdam assumenda
+            labore impedit doloribus fugiat dolores aliquid ab facilis, modi magni et! Quis non harum tenetur ullam.</p>
+    </div>
+
+    <br> <br> <br>
+
+    <div class="div2">
+        <p class="paragraph3">Lorem, ipsum dolor sit amet <span class="span1">consectetur</span> adipisicing elit. Cupiditate eos optio voluptates quam ducimus adipisci error, 
+            reiciendis odit molestias obcaecati quas, inventore hic deserunt magnam fugit itaque. Earum dolorum tenetur magni facere 
+            exercitationem doloremque animi quisquam odio repudiandae nesciunt eius numquam, illo aliquid necessitatibus repellendus 
+            vitae, unde dolore. Nisi, aliquid.</p>
+
+    </div>
+
+    
+</body>
+
+</html>

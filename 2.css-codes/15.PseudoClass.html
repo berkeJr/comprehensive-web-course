@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Pseudo Class</title>
+
+    <style>
+        /*  selectoru'un yanına kullanmak istediğimiz psudo classın adını yazarız
+            selector : pseudo_class{
+            }
+        */
+
+        /*diğer bütün pseudo class'lara w3schools'dan bakabiliriz*/        
+        .link1 {
+            font-size: 24px;
+        }
+        /*mesela linke henüz tıklanmadıysa şu pseudo class'ı kullanabiliriz*/
+        /*NOT: a:link pseudo class çalışmıyor*/
+        .link1:link {
+            color: green;
+        }
+        
+        /*eğer ki linke tıklanmışsa rengi siyah olsun, sayfayı yenilesek bile önceden tıklanmışsa yine geçerli olur.*/
+        .link1:visited {
+            color: black;
+        }
+        /*mesela biz linkin üzerine gelince rengin değişmesini istiyoruz*/
+        .link1:hover {
+            color : red; 
+        }
+        /*mesela etiketin üzerine tıklarken yani mouse basılıyken müdahale etmek için şu peseudo classı kullanırız*/
+        .link1:active {
+            color: indigo;
+        }
+
+        input{
+            font-size: 1.5em;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid black;
+        }
+        /*textbox'ın üzerine tıklandığında focus pseudo classı çalışır*/
+        input:focus{
+            outline: 0; /*üzerine tıklayınca hiçbir şey olmasın*/
+            border: 2px solid red;
+        }
+
+        .link2{
+            color: white;
+            font-size: 1.5em;
+            display: inline-block;
+            background: blue;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .link2:hover{
+            background-color: white;
+            color: blue;
+            border: 1px solid blue;
+            
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <a class="link1" href="#">This is a link here.</a> 
+    
+    <!--bizim html sayfamızda şu an bir tane a etiketi var.tarayıcıda bu elementin üzerine gelince imlecimiz değişiyor.yani biz
+    bu elementin üzerinde gezindiğimiz zaman elementn durumu değişiyor.örneğin bu bir hover efekti.-->
+
+    <!--bizim html ve css'de bir çok pseudo class'ımız bulunuyor.a etiketi üzerinde bu pseudo class'ı kullanmayı gösterelimm.-->
+
+    <!--bir tane input(textbox) oluşturalım.-->
+    <input type="text" placeholder="Name">
+    <br> <br> <br> <br> <br> <br>
+
+    <a class="link2" href="#">Facebook</a>
+
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Different Units - Example</title>
+
+    <style>
+        /*pexels.com'dan sayfamızda kullanmak üzere biackground resim indirebiliriz*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .background {
+            background: url(./images/deniz.jpg) center center no-repeat;
+            /*resim merkezde olsun ve tekrar etmesin.*/
+
+            background-size: cover;
+            /*resim alanın hepsini kaplasın*/
+
+            height: 100vh;
+            /*alanın tümünü kaplasın*/
+
+            display: flex;
+            /*h1 ve p elemeti yanyana gelsin.*/
+
+            flex-direction: column;
+            /**h1 ve p elemeti altalta gelsin.**/
+
+            color: #ffffff;
+
+            align-items: center;
+            /*yatayda merkezde hizalamak için kullanıyoruz*/
+
+            padding: 10rem;
+            /*font-size = 16px di o zaman paddinng = 160px olacak*/
+        }
+        h1 {
+            margin-bottom: 1rem;
+            /*h1'in p ile arası açılsın. html de font-size= 16px di*/
+            font-size: 3rem;
+        }
+        p {
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        /*mobil cihazlarda şöyle görünsün*/
+        @media(max-width: 500px){
+            h1{
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="background">
+        <h1>Welcome To The Site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, accusamus.</p>
+    </div>
+
+
+</body>
+
+</html>

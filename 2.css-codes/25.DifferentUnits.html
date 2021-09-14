@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive - CSS Units</title>
+
+    <style>
+        /*Responsive Units : em, rem, %, vw, vh
+        Bu dersimizde CSS Units'leri media query'ler ile birleştirmeye çalışacağız.*/
+
+        /*Yazılımlar sürekli değişen yapılardır.Sürekli ek değişiklikler, ek özellikler gelmesi gerekir.Bu açıdan bizim yazılımlarımızı 
+        hızlı bir şekilde güncelleyebilmemiz ve yeni özellikleri hızlı bir şekilde entegre etmemiz gerekiyor.Örneğin bir projeye 
+        başladığımızda üretkenlik en üst safhadadır.Ancak biz pojemizde "best practice'lere" yani en iyi tasarım örneklerine başvurmazsak
+        bir süre sonra projemiz büyüyünce yeni bir ek özelliği eklediğimiz zaman projeye onu dahil etmek oldukça uzun zamanımızı alacaktır 
+        ve bu da üretkenliği azaltacaktır.*/
+         
+        /*Örneğin biz CSS tasarımlarımızda font-size'ları, margin'leri, padding'leri sadece px'ler ile verirsek ilerleyen zamnalarda
+        herhangi bir değişiklik olduğunda sayfanın tasarımını değiştirmek istersek oradaki tüm px ler ile tekrar değer vermemiz gerekecek
+        O yüzden de bu tarz durumlar bizim yazılımlarımızın kırlıgan yapıya sahip olmasına sebebiyet verecektir.Bu açıdan biz daha önce 
+        gördüğümüz CSS units'leri daha çok kullanmaya çalışacağız.Çünkü bunlar orantısal oldukları için işimiz daha kolay olacak, html
+        sayfasında sadece 1 yerde değerini değiştirerek bir çok yer için de değişmesini sağlayacağız*/ 
+
+
+        /*em == bizim parent'ımızın font-size'ına göre orantısal bir unit'imizdi.Örneğin bir div'imiz varsa ve bu div'imizin font-size'ı
+        20px ise biz div'in içindeki bir p elementini 1.5em verdiğimizde == 1.5 x 20 = 30px(p'nin font-size'ı) olacak.*/
+
+        html{
+            font-size: 20px;
+        }
+      
+        .divFirst{
+            font-size: 1.5em; /*body'nin içerisindeydi. body'nin font-size'ı default olarak 16px'dir. o zaman div'in font-size'ı
+            == 1.5 * 16 = 24px olacak*/
+        }
+
+        .para1{
+            /*font-size: 1.5em; div'in içerisindeydi. div'in font-size'ı = 24. o zaman p'nin font-size'ı 
+            == 1.5 * 24 = 36px olacak*/
+            
+            /* padding: 1.5em; biz padding veya margin değeri verirken em kullanırsak o zaman kendi elemetinin font-size'ına göre 
+            orantı kullanır.*/
+
+            font-size: 50%; /*bu durumda html'deki font-size boyutuna göre orantılar ve %50'sini ayarlar.*/
+        }
+
+        /*rem unit'leri = sadece html elementine göre orantısal bir unit.*/
+        .para2{
+            font-size: 1.5rem; /*html'in font-size'ı default olarak 16px'dir. o zaman para2'nin font-size'ı = 
+            1.5 * 16 = 24px olacak. eğer biz html de 10px yaparsak, o zaman 15px olur.*/
+        }
+
+        /* 
+           viewport = tarayıcıda gördüğümüz bütün alan.
+           vw = viewport-width (sayfada yatay eksendeki genişlik)  = tüm genişlik =100'dür
+           vh = viewport-height (sayfada dikey eksendeki yükseklik) = tüm tükselik = 100'dür.
+        */
+        .divSecond{
+            width: 40vw;
+            height: 10vh;
+            background: #a7a7a7;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="divFirst">
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, animi?</p>
+        <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit?</p>
+    </div>
+
+    <div class="divSecond">
+        <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, animi?</p>
+        <p class="para4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, odit?</p>
+    </div>
+
+    
+</body>
+</html>

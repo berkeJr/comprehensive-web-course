@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*width, height, max-width özellikleri*/
+
+        div#box-1{
+            /* width: 100px; ==> 100px kadar yer kaplar */
+            width: 50%; /*sayfada body'de width'in(genişliğin) %50'sini doldurur*/
+            height: 100px;
+            background: #a7a7a7;
+        }
+
+        div#box-2{
+            width: 50%;
+            height: 50px;
+            background: red;
+        }
+
+        /*max-width özelliğini responsive tasarımlar yaparken de sık kullanırız.*/
+        div#box-3{
+            max-width: 700px; /*bu özellikle mesela sayfa küçültülünce altta scroll çıkmaz, genişlik azalmaya başlar,yani sayfamız küçüldükçe bu div'in width değeri de düşer*/
+            height: 100px;
+            background: blue;
+        }        
+    </style>
+
+</head>
+
+<body>
+    <div id="box-1">
+        <div id="box-2">  <!--bu div,diğer div'in içerisinde olduğu için sayfda üstteki div'in yarısı kadar yer(width, genişlik) kaplar-->
+
+        </div>
+    </div>
+
+    <div id="box-3">
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* div'e background color atayalım.*/
+        .box-1{
+            background: seagreen;
+            background-color: seagreen; 
+            
+            color : white;
+
+            /*biz div'lerimize background-color atayabildiğimiz gibi bacground-image de atabiliriz*/
+        } 
+
+        
+        .box-2{
+            background-image: url("images/1920x1080.jpg") ; /*url() bir fonksiyondur bu fonksiyon ile images klasöründeki 1920x1080.jpg
+            isimli resme ulaşabiliriz.bu şekilde yapınca image'ımız çok güzel görünmüyor çünkü burada div'in kapsadığı content alanı küçük
+            bunun için biz box-2 ye biz burada width ve height özelliği de verebiliriz.güzel görünmesi için 1920x1080 boyutunu
+            aynı oranda küçültmemiz veya büyütmemiz gereklidir*/
+            width: 640px;
+            height: 360px; 
+            /*böyle yapınca yine sayfaya tam oturmadı.fakat bizim css'de bir property'miz daha var : background-size : cover; şeklinde
+            özellik klulanırsak resmi yukarıdaki ölçülerde küçültecek ve de resmi tam oturtacak.*/
+            background-size: cover;
+
+
+            color: white; /*yazı rengi beyaz olsun*/
+        } 
+
+        
+       
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="box-1">
+        <h3>Box 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, sit.</p>
+    </div>
+
+
+    <div class="box-2">
+        <h3>Box 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nulla?</p>
+    </div>
+
+    
+</body>
+
+</html>

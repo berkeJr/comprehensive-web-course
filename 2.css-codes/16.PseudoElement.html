@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Pseudo Elements</title>
+
+    <style>
+        .para1{
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+        }
+        
+        /*pseudo elementsler şu şekilde kullanılır.örneğin ilk karakteri veya cümleyi seçip onu stillemek ve benzeri amaçlar için 
+        kullanılırlar.selector'ün yanında 2 tane peşpeşe iki nokta üst üste(::) kullanılır.mesela burada ilk cümleyi kırmızı yapalım */
+        .para1::first-line{
+            color: red;
+        }
+        
+        /*ilk harfi stilleyelim*/
+        .para1::first-letter{
+            color: blue;
+            font-size: 50px;
+        }
+
+        /*para1'in btiminde yeni bir cümle ekleyelim*/
+        .para1::after{
+            content: url("images/logo.png");
+        }
+
+        /*para1 başlamadan önce yeni bir cümle ekleyelim*/
+        .para1::before{
+            content: "Paragraf Öncesi";
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quaerat porro amet, iusto repudiandae nobis 
+        ea similique quasi fugit minima ab nesciunt soluta ullam eos eaque quis qui? Tenetur dolorem quod ipsum, sed vero expedita 
+        doloribus voluptas atque maxime ipsam facere. Officia expedita laborum error ea reprehenderit veritatis amet quibusdam commodi 
+        veniam, corrupti aliquid repellat reiciendis laboriosam consequatur ipsum necessitatibus harum hic mollitia nulla nisi aspernatur 
+        quos dolore accusamus? Reprehenderit, dolore et nostrum fugit asperiores consectetur accusamus vero possimus. Harum cumque quo 
+        veritatis dolores libero fuga error rerum numquam! Facilis molestiae, quod neque dolor officia earum saepe ipsum corporis vero.</p>
+
+    
+</body>
+</html>

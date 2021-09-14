@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Texts</title>
+
+    <style>
+        /*text'lerin konumunu belirlemek için text-align özelliğini kullanırız.*/
+        /* h1{
+            background: seashell;
+        }
+        .heading1{
+            /
+            text-align: center;
+        }
+        .heading2{
+            text-align: left;
+        }
+        .heading3{
+            text-align: right;
+        } */
+        /*biz text-align özelliğini div'lerimizin içerisinde de kullanabiliriz.*/
+
+        div{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        p{
+            /*letter-spacing özelliği harf aralıklarını ayarlamada kullanılır*/
+            letter-spacing: 1px;
+        }
+        span{
+            /*ipsum kelimesini altı çizili hale getirebiliriz*/
+            text-decoration: underline;
+            /*overline ise üstte çizgi ekler*/
+            /*line-through value'su ise ta kelimeyi çizer*/
+        }
+        a{
+            /*linklerimizin default özelliği: content teki kelime altı çizgili olarak mavi renkle gelir.*/
+            /*inspect yapınca tarayıcı tarafından verilmiş özellikler user agent stylesheet olarak geçer*/
+            text-decoration: none; /*hiçbir çizgi olmasın*/
+        }
+        /*biz bir yazımızın tamamını küçük hale veya büyük hale getirmek için text-transform özelliğini kullanırız*/
+        h1{
+            /*text-transform: capitalize; baş harfini büyük hale getirir*/
+            text-transform: uppercase; /*bütün yazıyı büyük harflerle yazar.*/
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <h1 class="heading1">Başlık 1</h1>
+    <h1 class="heading2">Başlık 2</h1>
+    <h1 class="heading3">Başlık 3</h1> -->
+    <!--bu başlıklar default olarak sol tarafta görünecekler.biz bu text'lerimizi ortaya, sola ve sağa almaya çalışacağız-->
+
+    <div>
+        <h1>article 1</h1>
+        <p>Lorem <span>ipsum</span> <a href="#">dolor</a> dolor sit amet consectetur adipisicing elit. Totam, error.</p>
+    </div>
+
+    
+</body>
+
+</html>
