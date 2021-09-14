@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin-Padding-Button</title>
+
+    <!--Bootstrap CSS-->
+    <!--Buraya bootstrapi css ile birlikte kullanmak için gerekli olan linki ekleyelim. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+    <!--Background- Text-->
+    <!--div'in backgroundu siyah olsun, contentteki yazıyı stillemek için ise biz bootstrap'te text classlarımızı kullanırız,ayrıca bootstrapte
+    padding ve margin içinde classlarımız mevcut.padding: content ile div'in bittiği yer arasında kalan alan.p-1'de her yerden 0.25rem lik 
+    padding boşluğu bırakır. mesela sadece soldan padding bırakmak istersek pl-1 şeklinde yazarız, sağdece sağdan için pr-1, sadece hem sol da
+    hem de sağdan padding bırakmak için px-1 kullanırız, sadece yularıdan ve aşağıdan padding bırakmak için py-2 yaparız.Aynı kurallar margin
+    içinde geçerli. m-1 yapınca her taraftan 0.25 rem lik margin bırakır.-->
+
+    <!-- p-1/ pl-1/ pr-1/ px-1/ py-1/ px-auto
+        m-1/ ml-1/ mr-1/ mx-1/ my-1/ mx-auto   -->
+   
+    <div class="bg-dark p-2 text-light">Content</div>
+    <div class="bg-danger m-1 text-light">Content</div>
+    <div class="bg-primary text-light">Content</div>
+    <div class="bg-warning text-light">Content</div>
+    <div class="bg-secondary text-light">Content</div>
+    <div class="bg-success text-light">Content</div>
+
+    <br> <br> <br> <br> <br> <br> 
+
+    <!--Alert: mesela bir web sayfasına giriş iznimiz yoksai login yapmak gerekiyorsa bu gibi durumlarda alert ya da uyarı yazılarımızı 
+    yazabiliriz.alert'lerimizinde renkleri primary, secondary gibi belirleniyor. alert olabilmesi için alert classı kullanılıyor. eğer
+    başarılı bir şekilde giriş yapıldıysa alert-success clasıını kullanabiliriz.meesela kullanıcı yanlış bir şey yaptı o durumda 
+    alert-danger kullanılır -->
+    <div class="alert alert-success">Başarılı bir şekilde giriş yapıldı</div>
+    <div class="alert alert-danger">Hata</div>
+    <div class="alert alert-primary">Başarılı bir şekilde giriş yapıldı</div>
+    <div class="alert alert-warning">Başarılı bir şekilde giriş yapıldı</div>
+    <div class="alert alert-secondary">Başarılı bir şekilde giriş yapıldı</div>
+       
+    <br> <br> <br> <br> <br> <br>
+
+    <!--Buttons: buttonları kullanmak için biz btn classını kullanırız.yukarıdaki color özelliklerimizin hepsi burada da mevcut.
+    ayrıca btn-sm classı butonu biraz daha küçültür, btn-lg ise butonu biraz daha büyütür. şu an butonumuz display özelliği iniline-block
+    eğer tüm satırı kaplamasını istersek btn-block yaparız. !!!!!!!btn-block çalışmıyor-->
+    <a href="#" class="btn btn-danger">Button</a>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Bootstrap JS-->
+    <!--Javascript'e bootstrap'i dahil etmek için bu link buraya yapıştırırız. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+</html>

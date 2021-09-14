@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 4</title>
+
+    <!--Bootstrap CSS-->
+    <!--Buraya bootstrapi css ile birlikte kullanmak için gerekli olan linki ekleyelim. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <style>
+        /*hazır classlarla oluşturdğumuz butonları ayrıca biz burada özelliklerini değiştirebiliriz.*/
+        .btn {
+            border-radius: 10px;
+            /*butonu biraz daha oval hale getiriyoruz.*/
+        }
+
+        .box {
+            height: 200px;
+        }
+
+        /*hatırlarsak biz css'de kendi container'larımızı oluşturuyorduk.aynı şekilde bootstrapde de container'larımız var ve bunları da
+        farklı şekillerde kullanabiliyoruz.*/
+
+        div span{
+            /*span normalde inline bir elementtir biz burada ona height ve width vermek için onu inline-block hale getirmeliyiz*/
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Bootstrap mobile-first ve responsive bir şekilde bizim layout'larımızı oluşturmamıza yarayan bir css kütüphanesidir. Kursumuz boyunca
+    bootstrap'in değişik özelliklerini kullanacağız. Bo bölümde layout bandını, grid ve flex sistemlerini öğreneceğiz ve layout'larımızı
+    kurs boyunca bootstrap ile oluşturacağız. Bootsrtap çok kapsamlı bir css kütüphanesidir. Burada belli özellikleri göreceğiz. Eğer
+    ileride daha fazlasına ihtiyacımız olursa getbootstrap.com'dan documentation'dan faydalanabiliriz.  -->
+
+    <!--Biz daha gelişmiş arayüzler oluşturmak için bootstrap içerisindeki farklı class'ları kullanırız-->
+
+    <!--Bootsrap'den daha farklı css kütüphaneleri de mevcut. İstersek onları da kullnabiliriz.-->
+
+    <!--Ana sayfada documentationsa gidince layout ve components kısımlarını inceleyebiliriz-->
+
+    <!--Bootsrtap'de hem js hem de css dosylarını kullanabiliriz. Bunun için getbootstrap.com'dan css veya js den hangisi için bootstrap
+    kullanmak istiyorsak onlara ait linkleri sayfamıza dahil etmemiz gerekir.-->
+
+    <!--Docs kısmında components'de farklı button'ları inceleyebiliriz. -->
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+    <br> <br> <br> <br> <br>
+
+    <!--Bootstrap'deki container class'ımızı burada kullanalım ve de bootstrap'deki background color'ını kullanalım :container bg-red
+    bunu yapınca tam olarak ortalandığını ve belli bir genişlik aldığını görürüz. bu bizim bootsrap'deki container'ımız. biz bootstrap ile
+    container kullanınca mobile için de media query kullanıp responsive yapmaya gerek kalmıyor, kendisi otomatik ayarlıyor. -->
+    <!-- <div class="container bg-danger">
+        <h1>Container</h1>
+    </div> -->
+    <!--biz bu container'ları aynı css'de yaptığımız gibi elemanları ortalamak vs. için kullanıyoruz-->
+    <!--biz tüm ekranlarda container genişliğinin ekranın tamamını kullanmasını istiyorsak .container-fluid classını kullanabiliriz--->
+    <!--getbootstrap.com'da docs a bakarak daha ayrıntılı bilgilere sahip olabiliriz.-->
+
+    <!--Bootstrap grid sistemi: bu sistemde her bir blok 12 eş parçaya bölünmüştür ve biz altındaki box'lara belli değerler vererek bunları 
+    yerleştirebiliriz. -->
+    <div class="container">
+        <!--biz satırımızı grid'e bölmek için class row kullanacağız.-->
+        <div class="row">
+            <!--burada satırımız yer alacak ve 12 eş parçaya bölünecek. 3 tane box oluşturalım.-->
+            <div class="box bg-danger col-2"></div>
+            <!--2/12 parça ayır-->
+            <div class="box bg-primary col-4"></div>
+            <!--4/12 parça ayır-->
+            <div class="box bg-success col-6"></div>
+            <!--6/12 parça ayır -->
+            <!--biz buradaki box'larımızı belli boyutlara göre sıralamak istersek col classını kullanırız. normalde alt alta sıralanacaklardı
+            fakat col kullanınca hepsi aynı satırda 3 farklı column olarak sıralandı. normalde row'umuz 12 eşit parçaya bölündüğü için
+            her renge 4er parça ayrılacak fakat col-2 col-4 ya da col-6 şeklinde belirtirsek büyüklükleri o oranda ayarlanmış olur.-->
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br> <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="box bg-danger col-sm"></div>
+            <div class="box bg-primary col-sm"></div>
+            <div class="box bg-success col-sm"></div>
+            <!--biz burada ayrıca col-sm classını da kullandık. bu class şu anlama geliyor. small ekranlara(mobile ekranlara) kadar yanyana
+            dizilsinler, fakat small ekranlarda(576px den küçük genişlikte) alt alta dizilsinler.Eğer ki biz bunu col-md yapsaydık medium
+            ekranlarda ve altında iken alt alta dizileceklerdi. -->
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br> <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="box bg-danger col-sm"></div>
+            <div class="box bg-primary col-sm"></div>
+            <div class="box bg-success col-sm"></div>
+        </div>
+    </div>
+
+    <br> <br> <br> <br> <br> <br>
+
+    <!--biz css'de flexbox çalışırken align-items ve justify-content özelliklerini görmüştük, bunlar ayrıca bootstrap'te de kullanılıyor-->
+    <!--Alignment-->
+    <div class="row align-items-center justify-content-center bg-dark" style="height: 600px;">
+        <div class="box bg-danger col-2"></div>
+        <div class="box bg-primary col-2"></div>
+        <div class="box bg-success col-2"></div>
+    </div>
+    <br> <br> <br> <br> <br> <br>
+    <!--burada container classını kullanmadık blok olarak tüm genişliği kapsadı ve en soldan başladı. biz flexbox'da items'ları yatayda
+    hizalamak için hustify-content kullanıyorduk. burada da yine justify-content class'larını kullanmaya çalışacağız. mesela
+    bu row'a justify-content-start classını verelim. bu durumda herhangi bir değişiklik olmaz çünkü bunun default değeri en soldan başlaması
+    fakat eğer biz burada justify-content-center dersek bu items'ları yatayda ortalayacak. ya da justify-content-end dersek sağ tarafa 
+    dayayacak.-->
+
+    <!--biz css'de flexbox'da items'ları dikeyde hizalamak için align-items ları kullanıyoruz. burada da bootstrap'in align-items classlarını
+    kullanacağız.align-items-start dersek yukarıdan başlar. align-items-end dersek dikeyde hizalar-->
+
+    <!--mesela ayrıca biz sadece mavi kutuyu dikeyde en alta getirmek istiyorsak row'da align classını kullanmayız, mavi kutuya 
+    align-self-end classını atarız.-->
+
+    <!--grid sistemini sayfanın tamamını tasarlarken yani büyük tasarımlarda kullanmalıyızz fakat küçük tasarımlarda mesela küçük bir kutuyu 
+        tasarlarken flexbox clasını kullanabiliriz.-->
+
+    
+    <div class="d-flex bg-dark flex-column align-items-center justify-content-between" style="height: 600px;">
+        <span></span>
+        <span></span>
+        <span></span>
+        <!--biz burada d-flex dediğimiz için satırda yan yana gelecekler.-->
+    </div>    
+    <!--biz css'de flexbox kullanırken biz flexbox oluşturmak için display:flex yapıyorduk. burada ise d-flex classını kullanacağız.-->
+    <!--flex-column classını kullanırsak eğer yatayda değil dikeyde flexbox lar sıralanır.-->
+    <!--biz column yapınca justify-content'in ve align-items'ın yerleri değişir
+    justify-content: dikey
+    align-items: yatay da kullanılır-->
+    <!--flex'in default hali flex-row'dur yani default olarak başlangıçta yan yana dizilirler-->
+
+
+    <!--Bootstrap JS-->
+    <!--Javascript'e bootstrap'i dahil etmek için bu link buraya yapıştırırız. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

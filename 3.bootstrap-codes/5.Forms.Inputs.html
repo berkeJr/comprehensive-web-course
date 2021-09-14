@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap4 Forms and Inputs</title>
+
+    <!--Bootstrap CSS-->
+    <!--Buraya bootstrapi css ile birlikte kullanmak için gerekli olan linki ekleyelim. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+
+
+
+</head>
+<body>
+    
+    <!--Bootstrap Forms and Inputs: form-control ve form-group class'larını kullanacağız-->
+    <div class="container">
+        <form style="width: 30rem;" >
+            <h3>Bilgilerinizi Girin</h3>
+            <hr>
+            
+            <!--Name için-->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" >
+            </div>
+
+            <!--Email için-->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control">
+                <!--uyarı yazılarını da form-text classı ile oluştururuz-->
+                <small class="form-text text-danger">*Please provide an email</small>
+            </div>
+
+            <!--Select-list için-->
+            <div class="form-group">
+                <label for="language">Diller</label>
+                <select class="form-control" id="language">
+                    <option>Arapça</option>
+                    <option selected>İngilizce</option>
+                    <option>Fransızca</option>
+                    <option>Rusça</option>
+                </select>
+            </div>
+
+            <!--text area için-->
+            <div class="form-group">
+                <label for="message">Mesajınız</label>
+                <textarea class="form-control" name="message" id="message"  rows="5"></textarea>
+            </div>
+
+            <!--Checkbox'lar için form-check'leri kullanacağız. checxbox oluşturacağımız için label ve inputun yanyana gelmesi gerekiyor.
+            bunun için label'ın classını form-check-text yapacağız-->
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" name="accept" id="accept" class="form-check-input">
+                    <label for="accept" class="form-check-text">Satış Sözleşmesini Okudum</label>
+                </div>
+            </div>
+
+            <!--burada input'ları alt alta sıraladık eğer inputların alt alta değil de yan yana gelmelerini istiyorsak grid sistemini 
+                kullanabiliriz. grid sistemi için biz row kullanıyorduk ama form'lara özgü olması içinde form-row kullanabiliriz-->
+            
+
+            <!--button ekleyelim-->
+            <button type="submit" class="btn btn-primary btn-block">Gönder</button>
+
+
+        </form>
+    </div>
+
+
+
+
+
+    <!--Bootstrap JS-->
+    <!--Javascript'e bootstrap'i dahil etmek için bu link buraya yapıştırırız. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+</html>
