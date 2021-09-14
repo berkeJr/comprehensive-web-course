@@ -1,0 +1,1 @@
+alert("Javascript'e Hoşgeldiniz/Berke Sayın Full-Stack Web Developer");
