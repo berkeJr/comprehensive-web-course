@@ -77,6 +77,7 @@ else {
 
 
 //Sadece 1 if ve 1 else varsa daha kısa yazabiliriz
+
 //Ternary Operator
 const  number = 100;
 console.log(number === 100 ? "Sayı 100" : "Sayı 100 değil");
