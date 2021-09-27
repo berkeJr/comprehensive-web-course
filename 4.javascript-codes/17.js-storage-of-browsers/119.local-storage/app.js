@@ -47,3 +47,35 @@ localStorage.setItem("todos", JSON.stringify(todos));  // tabloya array şeklind
 const value = JSON.parse(localStorage.getItem("todos"));
 console.log(value); // console'da array şeklinde yazdırır. 
 
+// Biz todo list'te input'a girilen değerleri bir tane array'e atayacağız daha sonra bu array'imizi local storage'a yazacağız.
+
+/* Şimdi biz formdaki input alanından değerimizi alacağız ve tekrardan tabloya yazacağız. Onun için bu forma submit olayı 
+kazandırmamız gerekiyor. */
+const form = document.getElementById("todo-form");
+const todoInput = document.getElementById("todo");
+
+form.addEventListener("submit", addTodo);
+
+function addTodo(e) {
+    // input'taki değeri alalım.
+    const value = todoInput.value;
+
+    /* Daha sonra biz aldığımız değeri bir array olarak yazmak istiyoruz. Eğer bizim local storage'ımızda o array varsa 
+    onu ilk başta elde edip daha sonra bu değeri o array'e aktarmamız gerekiyor. Ancak burada o key'imiz yoksa ilk başta 
+    onu oluşturmamız gerekiyor. */
+
+    let todos; 
+
+    if(localStorage.getItem("todos") === null) {
+        todos = [];
+    }
+    else {
+        todos = JSON.parse(localStorage.getItem("todos"));  // array olarak alalım
+    }
+    todos.push(value);
+
+    localStorage.setItem("todos", JSON.stringify("todos"));  // array olarak yazdıralım
+    
+
+    e.preventDefault();  // submit olunca herhangi bir sayfaya gitmesin. 
+}
