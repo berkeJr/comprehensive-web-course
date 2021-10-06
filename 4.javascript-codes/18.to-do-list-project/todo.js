@@ -19,4 +19,16 @@ const secondCardBody = document.querySelectorAll(".card-body")[1];
 const filter = document.querySelector("#filter");
 
 // taskları temizleme butonunu seçelim
-const clearButton = document.querySelector("#clear-todos")
+const clearButton = document.querySelector("#clear-todos");
+
+
+/* Sonra ise, biz burada inputa girilen to do ları ekleyeceğimiz için buradaki forma bie submit olayı kazandırmamız lazım.
+Yani form submit olduğunda girilen todo, list-item alanına eklenmeli */
+
+// aşağıda oluşturduğumuz fonksiyonu çalışması için burada çağıralım.
+eventListeners();
+
+// bütün eventListener'ları yöneteceğimiz bir fonksiyon oluşturalım.
+function eventListeners() {
+    
+}
