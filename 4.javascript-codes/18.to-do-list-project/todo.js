@@ -60,14 +60,28 @@ function addTodoToUI(newTodo) {  // bu fonksiyon aldığı string değerini list
     */
 
         // li elementini dinamik bir şekilde oluşturalım
-        const ListItem = document.createElement("li");
-        ListItem.className = "list-group-item d-flex justify-content-between";
-        
+        const listItem = document.createElement("li");
+        listItem.className = "list-group-item d-flex justify-content-between";
+
 
         // a elementini (link) dinamik bir şekilde oluşturalım
         const link = document.createElement("a");
         link.href = "#";
         link.className = "delete-item";
         link.innerHTML = "<i class = 'fa fa-remove'></i>"
+
+        // Todo 1 ya da Todo 2 yazısını text node olarak li elementi içerisine ekleyelim
+        listItem.appendChild(document.createTextNode(newTodo));
+
+        // li elementi içerisine a elementini çocuk olarak ekleyelim
+        listItem.appendChild(link);
+
+        // oluşturduğumuz li elementini ul elementi içerisine bir çocuk olarak ekleyelim.
+        // TodoList'e listItem'e ekleyelim.
+        todoList.appendChild(listItem);
+
+        // todo eklendikten sonra input alanı temizlensin
+        todoInput.value = "";
+
 
 }
