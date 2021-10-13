@@ -4,7 +4,7 @@
 const form = document.querySelector("#todo-form");
 
 // input alanını seçelim
-const todoInput = document.querySelector("todo");
+const todoInput = document.querySelector("#todo");
 
 // todo ların listelendiği parent element olan ul elementini seçelim
 const todoList = document.querySelector(".list-group");
@@ -22,66 +22,63 @@ const filter = document.querySelector("#filter");
 const clearButton = document.querySelector("#clear-todos");
 
 
-/* Sonra ise, biz burada inputa girilen to do ları ekleyeceğimiz için buradaki forma bie submit olayı kazandırmamız lazım.
-Yani form submit olduğunda girilen todo, list-item alanına eklenmeli */
 
-// aşağıda oluşturduğumuz fonksiyonu çalışması için burada çağıralım. 
 eventListeners();
 
-// bütün eventListener'ları yöneteceğimiz bir fonksiyon oluşturalım.
+// Projedeki tüm eventleri eventListeners fonksiyonu ile kontrol edelim. 
 function eventListeners() {
+
+    /* Sonra ise, biz burada inputa girilen to do ları ekleyeceğimiz için buradaki forma bir submit olayı kazandırmamız lazım.
+    Yani form submit olduğunda girilen todo, list-item alanına eklenmeli */
+
     form.addEventListener("submit", addTodo); // submit olunca todo'nun list-item'a eklenmesi için gerekli olan fonksiyon
 }
 
-// submit olunca todo'nun list-item'a eklenmesi için gerekli olan fonksiyon
 function addTodo(e) {
 
-    // ilk önce todo ekleme input'undaki değere ulaşmamız gerekiyor.
-    const newTodo = todoInput.value.trim();
-    // not: js trim function: string'in başındaki ve de sonundaki boşlukları siler. 
+    // ilk önce todo-input içerisine girilen değeri alalım.
+    const newTodo = todoInput.value.trim();   // not: js trim function: string'in başındaki ve de sonundaki boşlukları siler.
 
-    // bu aldığımız newTodo'yu list item olarak ekleyeceğiz (ul içerisine)  yani arayüze eklenecek (UI)
+    // inputa girilen todo'nun ul elementi içerisinde UI'a eklenmesi.
     addTodoToUI(newTodo);
 
-    // formumuz submit olduğunda tekrardan sayfaya yönelmesin diye default olan özelliğini değiştirelim
-    e.preventDefault();
+
+    e.preventDefault();  // sayfa submit edilince herhangi bir yere yönlendirilmesin.
 }
 
-function addTodoToUI(newTodo) {  // bu fonksiyon aldığı string değerini list item olarak UI'a ekleyecek
+function addTodoToUI(newTodo) {  // inputa girilen todo'nun ul elementi içerisinde UI'a eklenmesi.
 
-    /**  // String Değer
-     * 
-        <li class="list-group-item d-flex justify-content-between">
-            Todo 1
-            <a href = "#" class ="delete-item">
-                <i class = "fa fa-remove"></i>
-            </a>
-        </li> 
+   /* 
+    <li class="list-group-item d-flex justify-content-between">
+        Todo 1
+        <a href="#" class="delete-item">
+            <i class="fa fa-remove"></i>
+        </a>
+    </li> --> 
+    
     */
 
-        // li elementini dinamik bir şekilde oluşturalım
-        const listItem = document.createElement("li");
-        listItem.className = "list-group-item d-flex justify-content-between";
+    // Yukarıdaki li elementini dinamik bir şekilde oluşturup dinamik bir şekilde ul içerisine ekleyeceğiz.
+    const listItem = document.createElement("li");
+    listItem.className = "list-group-item d-flex justify-content-between";
 
+    // bu li elementi içerisinde bir tane de a elementi (linkimiz) var
+    const link = document.createElement("a");
+    link.href = "#";
+    link.className = "delete-item";
+    link.innerHTML = "<i class='fa fa-remove'></i>";
 
-        // a elementini (link) dinamik bir şekilde oluşturalım
-        const link = document.createElement("a");
-        link.href = "#";
-        link.className = "delete-item";
-        link.innerHTML = "<i class = 'fa fa-remove'></i>"
+    // Todo 1 ya da Todo 2 yazısını text node olarak li elementi içerisine ekleyelim
+    listItem.appendChild(document.createTextNode(newTodo));
 
-        // Todo 1 ya da Todo 2 yazısını text node olarak li elementi içerisine ekleyelim
-        listItem.appendChild(document.createTextNode(newTodo));
+    // li elementi içerisine a elementini çocuk olarak ekleyelim
+    listItem.appendChild(link);
 
-        // li elementi içerisine a elementini çocuk olarak ekleyelim
-        listItem.appendChild(link);
+    // oluşturduğumuz li elementini ul elementi içerisine bir çocuk olarak ekleyelim.
+    // TodoList'e listItem'e ekleyelim.
+    todoList.appendChild(listItem);
 
-        // oluşturduğumuz li elementini ul elementi içerisine bir çocuk olarak ekleyelim.
-        // TodoList'e listItem'e ekleyelim.
-        todoList.appendChild(listItem);
-
-        // todo eklendikten sonra input alanı temizlensin
-        todoInput.value = "";
-
+    // todo eklendikten sonra input alanı temizlensin
+    todoInput.value = "";
 
 }
