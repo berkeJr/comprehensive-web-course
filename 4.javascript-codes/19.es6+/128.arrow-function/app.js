@@ -37,4 +37,12 @@ const gorusuruz = (name) => {
 gorusuruz("Berke");
 
 
+// Eğer fonksiyon tek parametre alacaksa şu şekilde de yazabiliriz.
+const iyiAksamlar = name => {
+
+    console.log("İyi Akşamlar", name);
+
+}
+iyiAksamlar("Berke Sayın");
+
 
