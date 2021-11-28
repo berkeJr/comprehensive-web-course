@@ -28,3 +28,13 @@ const gunaydin = (firstName, lastName) => {
 gunaydin("Berke", "Sayın");
 
 
+// Tek parametre alan fonksiyon
+const gorusuruz = (name) => {
+
+    console.log("Görüşürüz", name);
+
+}
+gorusuruz("Berke");
+
+
+
