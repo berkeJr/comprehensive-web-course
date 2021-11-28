@@ -46,3 +46,9 @@ const iyiAksamlar = name => {
 iyiAksamlar("Berke Sayın");
 
 
+// Sadece tek bir işlem yapacak olan fonksiyon için süslü paranteze de ihtiyaç yok ve de tek satırda yazabiliriz.
+const iyiGeceler = name => console.log("İyi Geceler", name);
+
+iyiGeceler("Sayın Berke Sayın");
+
+
