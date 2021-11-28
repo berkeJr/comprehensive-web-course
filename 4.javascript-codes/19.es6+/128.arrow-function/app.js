@@ -19,5 +19,12 @@ selam();
 
 // Aslında pek fark gözükmese de tek satırda yazmak için oldukça kolaylık sağlar. 
 
+// Paramatre(firstName, lastName) alan arrow function
+const gunaydin = (firstName, lastName) => {
+
+    console.log("Günaydın", firstName, lastName);
+
+}
+gunaydin("Berke", "Sayın");
 
 
