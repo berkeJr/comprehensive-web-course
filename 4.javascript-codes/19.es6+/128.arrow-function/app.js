@@ -52,3 +52,31 @@ const iyiGeceler = name => console.log("İyi Geceler", name);
 iyiGeceler("Sayın Berke Sayın");
 
 
+const iyiGeceler2 = name => {console.log("İyi Geceler", name);}
+
+iyiGeceler2("Sayın Berke Sayın");
+
+
+// İki parametre ile sadece tek bir işlem yapacak olan fonksiyon için süslü paranteze de ihtiyaç yok ve de tek satırda yazabiliriz.
+const iyiSabahlar = (firstName, lastName) => console.log("İyi Sabahlar", firstName, lastName);
+
+iyiSabahlar("Berke", "Sayın");
+
+
+// Girilen sayının küpünü alan fonksiyonu yazalım
+const cube = function(x){
+
+    return x * x * x;
+
+}
+console.log(cube(5));
+
+// Girilen sayının küpünü alan fonksiyonu arrow function ile yazalım
+const cube2 = x => { return x * x * x; }
+console.log(cube2(6));
+
+
+// Girilen sayının küpünü alan fonksiyonu arrow function ile yazalım (Kısa yol ile)
+const cube3 = x =>  x * x * x; 
+console.log(cube3(10));
+/**Burada fonksiyon tek bir işlem yaptığı için return yazmamıza ve süslü parantez kullanmamıza gerek yok. */
