@@ -42,3 +42,12 @@ const numbers = {
     e: 50
 }; 
 
+// Şimdi mesela biz bu obje içerisindeki a, b, c değerlerinin başka objelere atanmasını istiyoruz. 
+
+// Şimdi 3 tane değişken oluşturalım fakat obje içerisinden aldığımız için süslü parantez kullanmamız gerekir. 
+
+// obje'den değişken üreteceğimiz için değişken isimlerini obje içerisinde'ki key'lerden vermek gerekir. 
+const {a: number7, c: number8, e: number9} = numbers; 
+
+console.log(number7, number8, number9); 
+
