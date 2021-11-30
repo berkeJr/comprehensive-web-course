@@ -62,3 +62,25 @@ const [lang1, lang2, lang3] = getLangs();
 // lang1 = Python, lang2 = Java, lang3 = C++ şeklinde atama yapıldı. 
 
 console.log(lang1, lang2, lang3);
+
+
+// Yeni bir obje oluşturalım.
+
+const person = {
+    name: "Berke Sayın", 
+    year: 1999,
+    salary: 3000,
+    showInfos: () => console.log("Bilgiler Gösteriliyor!")
+}
+
+// Burada person objesine 3 tane özellik ve 1 tane fonksiyon verdik. 
+
+// Şimdi name, year, salary ve showInfos'u 4 tane değişkene atayalım. 
+
+// Obje kullandığımız için burada süslü paranteze ihtiyacımız var. 
+
+const {name: isim, year: yil, salary: maas, showInfos: bilgileriGoster} = person;
+
+console.log(isim, yil, maas);
+
+bilgileriGoster();
