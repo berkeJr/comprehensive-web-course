@@ -32,4 +32,13 @@ console.log(number5, number6);   // =>  output: 100 200
 
 // Yani biz eğer ki değişkenlerimizi array'lerden oluşturacaksak destructing yapısı ile daha kısa bir şekilde oluşturabiliriz. 
 
+// numbers isimli bir obje oluşturalım
+
+const numbers = {
+    a: 10,
+    b: 20,
+    c: 30, 
+    d: 40,
+    e: 50
+}; 
 
