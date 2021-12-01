@@ -1,1 +1,1 @@
-# comprehensive-web-crash-course
+# comprehensive-web-course
