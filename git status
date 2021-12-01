@@ -1,0 +1,390 @@
+[33mcommit a80b2fd5e1ddb8e0f19034793721cda1a066197f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Nov 30 19:16:59 2021 +0300
+
+    Create an object called person. Use destructing to get values inside the object.
+
+[33mcommit be2b15e07c945b5246cea2d5db38c562e32d6c95[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Nov 30 19:08:23 2021 +0300
+
+    Create an arrow function and use function destructing.
+
+[33mcommit 7e45edcfc3537441998e404bfb619dda845ca305[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Nov 30 19:03:06 2021 +0300
+
+    Use destructing for objects.
+
+[33mcommit 0c699504a50ea43cd9fbff3f085e6c0982cc7b68[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Nov 30 17:51:08 2021 +0300
+
+    Create an object called numbers.
+
+[33mcommit a30523c48c57869602431c09ca06965af925fca3[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Nov 30 17:42:48 2021 +0300
+
+    Start learning destructing in JavaScript.
+
+[33mcommit dd2f9d49a89296d23df805099a3d5f21aa3cc08a[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:52:45 2021 +0300
+
+    Create cube function with arrow functions.
+
+[33mcommit 09ffd7f3643fe6e7669967cd99b4993e0bebdf88[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:43:10 2021 +0300
+
+    Delete curly brackets for arrow function.
+
+[33mcommit d853727098b185e4315b25dfdf467062254d032f[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:40:11 2021 +0300
+
+    Create a function with one parameter, without using parantyhesis for the parameter.
+
+[33mcommit 652da6824d13da1f6893673a1de29eb1d16d2825[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:38:28 2021 +0300
+
+    Create an arrow function with one parameter
+
+[33mcommit 3f9ed60764e3c955526ebb72627815a59bdf5344[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:35:30 2021 +0300
+
+    Create an arrow function with 2 parameters.
+
+[33mcommit 1e3fb932acbafd7813773a5696374919bf3f4da9[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:35:07 2021 +0300
+
+    Create an arrow function.
+
+[33mcommit c89511535512db3002de3e4bebf3126f0875d751[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 16:01:41 2021 +0300
+
+    Start arrow functions.
+
+[33mcommit 07c8b319d4e31fcdaa3fbafe3e47d1dce7954b08[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 15:34:29 2021 +0300
+
+    Delete an item.
+
+[33mcommit f9a925bac0dd09fc64ed3eb9732600e4e42a10dc[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 15:33:50 2021 +0300
+
+    add paragraph.
+
+[33mcommit 8985c13e4d98e04fc02faf6aa65920dcdeeaa6fe[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Nov 28 15:32:50 2021 +0300
+
+    Start react.
+
+[33mcommit f33c39f6f7098b85aab217b63291f868875dc4e2[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Oct 13 15:57:03 2021 +0300
+
+    Create addTodoToUI() function.
+
+[33mcommit 9542d7f16e17216aca1163c85dad24cbfd2085a2[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Oct 13 13:19:34 2021 +0300
+
+    Add Todo items to the list at UI.
+
+[33mcommit 70178168018b7cda373389d72e13febdc774f03a[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Oct 13 13:13:14 2021 +0300
+
+    Create elements dynamically.
+
+[33mcommit 7f9baa416b74652b499f979e187f73bd3f82969d[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Oct 6 12:12:10 2021 +0300
+
+    Create a function to manage all the eventListeners through the project.
+
+[33mcommit b32ac714aae76d47e1dc4b9066a2ce8fa8bbead8[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Oct 6 12:04:50 2021 +0300
+
+    Choose all elements at the to-do list page.
+
+[33mcommit dfd1e50da96055d6a9befa36233878d6f65afca1[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 16:56:22 2021 +0300
+
+    Done todo-list project's user interface page.
+
+[33mcommit 578e8474333b5763ef0b64a3c4412d63a0832068[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 16:46:13 2021 +0300
+
+    Made an example to understand local storages and form relationships.
+
+[33mcommit fcf9e1cdf7e6f60351e738d33a5910f22a98b419[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 16:33:24 2021 +0300
+
+    Studied local storage. Used localStorage.getItem() and localStorage.setItem() functions. Learned JSON.stringify() and JSON.parse() functions.
+
+[33mcommit 107f52aeb03ae72f892bbc0c2d34ef1c5eb15845[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 16:02:39 2021 +0300
+
+    Learned about storages of browsers. Studied on session storage.
+
+[33mcommit 2b14ea589ddfb1a791406f894f900462e2209eb0[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 15:22:46 2021 +0300
+
+    Learned about event capturing and event bubbling.
+
+[33mcommit 25d75eb2326d6b404f6ced85e3923c0e1854cd69[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 14:46:08 2021 +0300
+
+    Studied input events. Learned; DomContentLoaded event, focus event, blur event, paste event, copy event, cut event, and select event.
+
+[33mcommit 9325cedc0ea90528bc362979679d22771c714c3a[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Mon Sep 27 14:33:46 2021 +0300
+
+    Studied on events. Learned; click, doubleclick(dblclick), mousedown, mouseup, mouseover, mouseout, mouseenter, mouseleave events.
+
+[33mcommit c6431a8292cbc4c1497ba80490304007a976f510[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Sep 26 21:02:57 2021 +0300
+
+    Learned keypress, keydown and keyup events.
+
+[33mcommit 46129d0c5c5164b7017f23896d2721ee64803d42[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Sun Sep 26 20:22:12 2021 +0300
+
+    Studied on javascript events. Used focus and submit events to understand js events.
+
+[33mcommit 47f1a55aebbb08fcaf62d01de6ac35ecd5be6756[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 18:56:57 2021 +0300
+
+    Managed dynamically adding- deleting, updating attributes. Used setAttribute(), getAttribute(), hasAttribute(), classList.add, classList.remove and removeAttribute() methods.
+
+[33mcommit 0cc7172b0ad13626af5dab79dce4fc12c104109f[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 18:46:59 2021 +0300
+
+    Used replaceChild() method to replace two elements in a dynamic way.
+
+[33mcommit e44b4d1c5880e378f5507b9c581820dc472008ab[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 18:40:24 2021 +0300
+
+    Used remove() and removeChild() methods to delete a chosen element dynamicly.
+
+[33mcommit 2968b01b5729b10a0a4f27d838b945b9d045a1cc[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 18:34:25 2021 +0300
+
+    Created an element in a dynamic way. Learned appendChild(), createElement(), createTextNode() methods for DOM.
+
+[33mcommit e25e99d69c4c3ff614d83b41acd14d972e3168e0[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 16:54:22 2021 +0300
+
+    Studied Dom movements. children - parent - sibling relationships.
+
+[33mcommit 18f2bcfd2ee2ee314a6ff8fd0ceae38163ea2c4a[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 15:34:22 2021 +0300
+
+    Learned about choosing elements and changing their styles in a dynamic way.
+
+[33mcommit 4a77d98bfd8f484a7765e14002208dae23b432a9[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 15:06:50 2021 +0300
+
+    Learned how to choose and focus on elements in a dynamic way.  Studied; getElementById, getElementByClassName, getElemetnByTagName, querySelector and querySelectorAll methods.
+
+[33mcommit b3b17d2742fe1ff5f9c618710461a58e70fba225[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 14:04:34 2021 +0300
+
+    Learned about document object's properties and how to use it.
+
+[33mcommit d2da6121246ee28d4b91a5421374025f2331a17a[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 13:47:38 2021 +0300
+
+    Learned about the document (html page) and how to print html elements (HTMLAllCollection objesi) at the console, how to go to each of them.
+
+[33mcommit d40b6c619bf572c924abf9e5f7a2bfb79d3391de[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 13:28:39 2021 +0300
+
+    Learned what is dom manipulation for.
+
+[33mcommit 1ade6bf79b24dff418327e87d79680826765ce89[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 13:19:12 2021 +0300
+
+    Started dom manipulation part.
+
+[33mcommit 8f35cfe4a82115b90f5b6ef02197ce802e00bc77[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 12:06:19 2021 +0300
+
+    Studied js scope.
+
+[33mcommit 14a7cd0e3f63b64eeaed1b69ec3f3c5cc39467ff[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Wed Sep 22 12:03:32 2021 +0300
+
+    Studied Javascript Window object and its methods - properties.
+
+[33mcommit 8b4e07da4f3f9afa9b024d8ebb746e7b68872696[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 17:57:05 2021 +0300
+
+    Studied loops; while, for, do-while, foreach, map() function and foreach structure.
+
+[33mcommit 8d9031dfe1a21340313d0fc7309a82b7f35e029b[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 17:32:40 2021 +0300
+
+    Studied on functions, IIFE(Immediately Invoked Function Expression) and how to create a function and call - use it.
+
+[33mcommit cdaa952edbbf14ab78819e80ce8173257e470a96[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 16:47:05 2021 +0300
+
+    Studeied on operators, conditionals, switch-case structure and the ternary operator.
+
+[33mcommit b9f7fb85632c915ebd28dd5e60b151bb94fe908c[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 16:39:33 2021 +0300
+
+    Studied on JavaScript Date Object
+
+[33mcommit 6dc94586189a17a4b65e24dd43873c922daa45e8[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 16:34:39 2021 +0300
+
+    Studied on JavaScript objects and JSON notation.
+
+[33mcommit e220f894771b38d3edd3d8c73cada9f9dac57c31[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 15:43:01 2021 +0300
+
+    Studied on JS arrays and array methods.
+
+[33mcommit 81e6cbdd2efb32aa3d79f52a868470732678d84e[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 21 15:17:45 2021 +0300
+
+    Studied on Template Literal strings
+
+[33mcommit 145b8b34c24eeb4f17592173042b0009000e1ac6[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 21:45:43 2021 +0300
+
+    arranged folder structure.
+
+[33mcommit 99e4057672510e79a082e2434969a2143359f487[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:50:12 2021 +0300
+
+    learned about conditionals and ternary operator.
+
+[33mcommit 1dc2fe7f4e8db4bd01f9bcb8b036a8d69d16cf2b[m
+Merge: 98f5fee 52c93ba
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:48:17 2021 +0300
+
+    Merge branch 'master' of https://github.com/berkeJr/comprehensive-web-crash-course
+
+[33mcommit 98f5feea5f4b6b05660924601d1431c43bba4c99[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:48:13 2021 +0300
+
+    created folder structure.
+
+[33mcommit 52c93baac16d958ba988297c968864dbdf1b007e[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:34:23 2021 +0300
+
+    Create README.md
+
+[33mcommit 2114799d440b3a165ddf124bb32b432d876c2b99[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:29:58 2021 +0300
+
+    learned about string methods.
+
+[33mcommit a4c67bc93e35a370558662036ca2488810c7d55b[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:29:17 2021 +0300
+
+    learned about the operators and math object.
+
+[33mcommit 09bcd0b4e6aff14eaa16a6827a6a4f2abe3783ae[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:28:31 2021 +0300
+
+    learned to change the data types into each other whenever it is needed.
+
+[33mcommit de38ed0f1a61ab02c5a70350c37f7100fc6bb3c9[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:27:31 2021 +0300
+
+    learned about variables (var, let and const) and their difference and how to use them in a proper way.
+
+[33mcommit 0c3d1052729802b5e2bee87a1923d1fc623af4d9[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:25:18 2021 +0300
+
+    learned about variables and data types in javascript.
+
+[33mcommit ab0cd9cffecea8ae78c98ba72afcf214ba445526[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:24:19 2021 +0300
+
+    learned about web developer tools on browser and how to use it and the console.
+
+[33mcommit ec01d12e5bb5c4e11024737cebf3784071cbeef7[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 20:23:16 2021 +0300
+
+    got started on learning about javascript.
+
+[33mcommit bbb6ef588b765149b3359b966859ce2a23347f81[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 17:51:02 2021 +0300
+
+    completed bootstrap course and codes.
+
+[33mcommit 4cb462022c47cd8dfb3db5e7efc9af478d34bc7e[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 17:49:20 2021 +0300
+
+    completed css course and codes.
+
+[33mcommit c144f10e4aeb828bad647e98af1e757e5d308a03[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 17:47:10 2021 +0300
+
+    completed html course and codes
+
+[33mcommit 27e82af2d820465b9904e2ce7a128abde5c0d169[m
+Author: Berke Sayın <sayinberkesayin@gmail.com>
+Date:   Tue Sep 14 17:44:35 2021 +0300
+
+    first commit
