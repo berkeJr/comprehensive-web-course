@@ -44,3 +44,17 @@ for(let index in name) {
     console.log(index, name[index]);
 }
 
+// For of döngüleri ile obje'ler üzerinde gezinemiyoruz, sadece array'e benzeyen veri tipleri üzerinde gezinebiliyoruz. 
+
+// Yani biz for of ile, array, string üzerinde veya query selector all ile aldığımız elementler üzerinde gezinebiliriz. 
+
+for(let value of langs) {
+    console.log(value);
+}
+
+// String ile for of kullanma
+
+for(let character of name) {
+    console.log(character);
+}
+
