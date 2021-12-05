@@ -84,3 +84,15 @@ console.log(lastMap);
 
 
 // Map'lerden array oluşturma
+
+const countries = new Map();
+
+countries.set("Holland", 15);
+countries.set("Turkey", 80);
+countries.set("England", 65);
+countries.set("France", 50);
+
+// countries isimli map'ten bir array oluşturalım
+const array2 = Array.from(countries);
+
+console.log(array2);
