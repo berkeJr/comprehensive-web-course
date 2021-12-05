@@ -73,3 +73,14 @@ for(let value of cities.values()) {
     console.log(value);
 }
 
+// İç içe bir array oluşturalım:
+
+const array = [["key1", "value1"], ["key2", "value2"], ["key3", "value3"]];
+
+// şimdi bu array'den bir tane map oluşturmaya çalışalım. 
+const lastMap = new Map(array);
+
+console.log(lastMap);
+
+
+// Map'lerden array oluşturma
