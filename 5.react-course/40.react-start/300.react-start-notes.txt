@@ -1,0 +1,18 @@
+--- React - Redux - Hooks Eğitimi
+
+- Bu eğitimde syntax bazlı programlama yerine, ne, ne zaman, nerede, niçin sorularına cevap vererek bu yapıları öğreneceğiz.
+
+- Ne zaman react, ne zaman redux, ne zaman hooks kullanmamız gerektiğini mantığıyla öğreneceğiz. 
+
+1.Adım: React bilmediğimizi düşünerek sıfırdan başlıyoruz. Yeni nesil JavaScript tekniklerini kullanarak ilerleyeceğiz. 
+
+2.Adım: State management konularını basit ama nokta atışı örneklerle öğreneceğiz. Redux burada başlıyor. 
+
+3.Adım: Gelişmiş bir projeyle redux anlamında hiç bir eksiğimiz kalmayacak. 
+
+4.Adım: Yepyeni bir konu olan react-hooks yapısını öğreneceğiz. 
+
+
+
+
+
