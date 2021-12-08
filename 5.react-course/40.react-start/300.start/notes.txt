@@ -11,8 +11,3 @@
 3.Adım: Gelişmiş bir projeyle redux anlamında hiç bir eksiğimiz kalmayacak. 
 
 4.Adım: Yepyeni bir konu olan react-hooks yapısını öğreneceğiz. 
-
-
-
-
-
