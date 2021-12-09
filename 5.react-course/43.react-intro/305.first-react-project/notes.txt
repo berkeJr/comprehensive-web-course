@@ -45,3 +45,9 @@ function App() {
 }
 
 Yani artık react ile tarayıcıda Hello from react! yazdırdık. 
+
+-- Daha sonra mesela src klasörü içerisinde App.css dosyası da var. Bu az önce var olan App.js uygulamasının css dosyası.
+Onu silebiliriz. App.test.js dosyası, logo.svg dosyası, index.css dosyası, bu dosyaları da silebiliriz, şu an için bunlarla
+çalışmayacağımız için kafamız karışmasın. 
+
+-- Yani şimdiye kadar src klasörü içerisindeki App.js ile çalıştık. 
