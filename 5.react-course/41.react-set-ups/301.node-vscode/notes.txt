@@ -1,7 +1,0 @@
---- Node.Js Nedir?
-
--- Node.js JavaScript kodunun server kısmında çalışmasından tutun (server-side) ayrıca paket yönetimi ve geliştirme ortamı
-sunuyor. Biz bu eğitimimiz boyunca node'un sağladığı bu imkanları kullanıyor olacağız. 
-
--- İnternet üzerinden node.js.org adresinden node'u indirmemiz gerekiyor. 
-

@@ -1,10 +1,29 @@
-1.Node.Js kurulumu
-2.Create-react-app kurulumu
-3.İlk react projemizin oluşturulması 
+300.Giriş
+301.Node.Js kurulumu
+304.Create-react-app kurulumu
+305.İlk react projemizin oluşturulması 
+306.React Component Mimarisi
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-1.Node.Js kurulumu:
+--- React - Redux - Hooks Eğitimi
+
+- Bu eğitimde syntax bazlı programlama yerine, ne, ne zaman, nerede, niçin sorularına cevap vererek bu yapıları öğreneceğiz.
+
+- Ne zaman react, ne zaman redux, ne zaman hooks kullanmamız gerektiğini mantığıyla öğreneceğiz. 
+
+1.Adım: React bilmediğimizi düşünerek sıfırdan başlıyoruz. Yeni nesil JavaScript tekniklerini kullanarak ilerleyeceğiz. 
+
+2.Adım: State management konularını basit ama nokta atışı örneklerle öğreneceğiz. Redux burada başlıyor. 
+
+3.Adım: Gelişmiş bir projeyle redux anlamında hiç bir eksiğimiz kalmayacak. 
+
+4.Adım: Yepyeni bir konu olan react-hooks yapısını öğreneceğiz. 
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+301.Node.Js kurulumu:
 --- Node.Js kurulumu: Node.js JavaScript kodunun server kısmında çalışmasından tutun (server-side) ayrıca paket yönetimi 
 ve geliştirme ortamı sunuyor. Biz bu eğitimimiz boyunca node'un sağladığı bu imkanları kullanıyor olacağız. 
 
@@ -12,7 +31,7 @@ ve geliştirme ortamı sunuyor. Biz bu eğitimimiz boyunca node'un sağladığı
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-2.Create-react-app kurulumu:
+304.Create-react-app kurulumu:
 --- Son bir kurulum daha yapacağız. Bu kurulum ise create-react-app isimli bir uygulama aslında. Bu react'ı geliştiren
 facebook tarafından resmi olarak yayınlanan bir uygulama. Bu, bizim hızlıca react ugulamaları oluşturabilmemizi
 sağlıyor. Bunu da şu şekilde kurarız. Vs Code'da terminali açalım. Terminal bizim için komut satırı oluşturuyor. 
@@ -29,7 +48,7 @@ hızlıca başlamamızı sağlayacak proje şablonunu bu komut vasıtasıyla hı
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-3.İlk react projemizin oluşturulması: 43.react-intro içerisindeki intro klasörü
+305.İlk react projemizin oluşturulması: 43.react-intro içerisindeki intro klasörü
 
 --- Şimdi ise ilk react projemizi oluşturalım. Terminali açtıktan sonra şu komudu yazalım: 
 
@@ -86,7 +105,11 @@ Onu silebiliriz. App.test.js dosyası, logo.svg dosyası, index.css dosyası, bu
 -- Yani şimdiye kadar src klasörü içerisindeki App.js ile çalıştık. 
 
 
+
+
 ---------------------------------------------------------------------------------------------------------------------------
+
+301 - 304 - 305 tekrar 
 
 1. npm install -g create-react-app: genel global kurulum: bir sefer
 
@@ -111,3 +134,23 @@ export default App;
 5. react kodunu tarayıcıda görüntülemek için terminale şu komudu yaz: npm start 
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+306. React Component Mimarisi
+
+-- Terminalde 44.react-components klasörüne locate olalım
+
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>cd 5.react-course
+
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course\5.react-course>cd 44.react-components 
+
+44.react-components klasörüne locate olduk
+
+Şimdi buraya react kuralım
+
+npx create-react-app project-name(folder-name) 
+
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
+\5.react-course\44.react-components>npx create-react-app react-components-mimarisi
+
+Burada react-components-mimarisi isimli yeni bir react projesi oluşturuyoruz.
+
