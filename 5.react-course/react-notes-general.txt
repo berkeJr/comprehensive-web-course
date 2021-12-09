@@ -135,10 +135,3 @@ export default App;
 
 306. React Component Mimarisi
 
-Command prompt'ta 5.react-course klasörüne locate olalım.
-
-Daha sonra 44.react-components isimli bir react projesi oluşturalım
-
-npx create-react-app 44.react-components
-
-Daha sonra az önceki 305.dosyadaki gereksiz dosyaları silelim. 
