@@ -1,0 +1,18 @@
+--- Şimdi ise ilk react projemizi oluşturalım. Terminali açtıktan sonra şu komudu yazalım: 
+
+-- İlk önce terminalde (command promp'ta) proje klasöürümüze locate olup olmadığımızı kontrol etmemiz gerekli. 
+
+-- Örneğin biz şu an comprehensive-web-course klasörü içerisindeyiz;
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
+
+-- Daha sonra 5.react-course klasörüne gideriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course
+
+-- Daha sonra da react'ı kurmak istediğimiz 43.react-intro klasörüne gideriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
+
+-- 43.react-intro klasörüne gittikten sonra intro isimli react projemizi kurabiliriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
+npx create-react-app intro
+
+-- Not: cd.. komutu dizinde bir klasör geri gider. 
