@@ -31,3 +31,17 @@ indirebiliyoruz.
 -- locate olduktan sonra bizim yapmamız gereken npm start komutunu yazmak. npm start bizim için intro klasöründeki
 bu projeyi geliştirme ortamında node üzerinde yayına alıyor. Yani tarayıcıda localhost:3000 portunda projemizi yayına
 alıyor. 
+
+-- Örneğin intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta app.js 
+isimli bir dosya göreceğiz. Orada app isimli bir function var. Onun içerisindeki div'in içindeki tüm kodları silelim
+sadece div kalsın. Onun içerisine <h3>Hello from react!</h3> yazalım.
+
+function App() {
+  return (
+    <div>
+      <h3>Hello from react!</h3>
+    </div>
+  );
+}
+
+Yani artık react ile tarayıcıda Hello from react! yazdırdık. 
