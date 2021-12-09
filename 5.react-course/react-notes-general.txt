@@ -135,20 +135,10 @@ export default App;
 
 306. React Component Mimarisi
 
--- Terminalde 44.react-components klasörüne locate olalım
+Command prompt'ta 5.react-course klasörüne locate olalım.
 
-C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>cd 5.react-course
+Daha sonra 44.react-components isimli bir react projesi oluşturalım
 
-C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course\5.react-course>cd 44.react-components 
+npx create-react-app 44.react-components
 
-44.react-components klasörüne locate olduk
-
-Şimdi buraya react kuralım
-
-npx create-react-app project-name(folder-name) 
-
-C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
-\5.react-course\44.react-components>npx create-react-app react-components-mimarisi
-
-Burada react-components-mimarisi isimli yeni bir react projesi oluşturuyoruz.
-
+Daha sonra az önceki 305.dosyadaki gereksiz dosyaları silelim. 
