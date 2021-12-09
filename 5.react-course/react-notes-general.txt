@@ -1,0 +1,113 @@
+1.Node.Js kurulumu
+2.Create-react-app kurulumu
+3.İlk react projemizin oluşturulması 
+
+---------------------------------------------------------------------------------------------------------------------------
+
+1.Node.Js kurulumu:
+--- Node.Js kurulumu: Node.js JavaScript kodunun server kısmında çalışmasından tutun (server-side) ayrıca paket yönetimi 
+ve geliştirme ortamı sunuyor. Biz bu eğitimimiz boyunca node'un sağladığı bu imkanları kullanıyor olacağız. 
+
+-- İnternet üzerinden node.js.org adresinden node'u indirmemiz gerekiyor. Oradan indirelim.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+2.Create-react-app kurulumu:
+--- Son bir kurulum daha yapacağız. Bu kurulum ise create-react-app isimli bir uygulama aslında. Bu react'ı geliştiren
+facebook tarafından resmi olarak yayınlanan bir uygulama. Bu, bizim hızlıca react ugulamaları oluşturabilmemizi
+sağlıyor. Bunu da şu şekilde kurarız. Vs Code'da terminali açalım. Terminal bizim için komut satırı oluşturuyor. 
+Bu komut satırı aracılığıyla biz komutlarımızı çalıştırabiliyoruz. Terminale şunu yazalım; 
+
+npm install -g create-react-app
+
+-g koymazsak bu şu anlama gelir. Ben bunu sadece bu klasöre kurmak istiyorum(terminaldeki dizin). -g ise global demek. 
+yani biz create-react-app kodunu nereden çalıştırırsa çalıştıralım erişebiliriz demek. Yani klasör bağımsız, buna global
+kurulum diyoruz. 
+
+create-react-app ile artık biz react uygulamalarını geliştirebileceğimiz ortam için, ilk etapta bizim için 
+hızlıca başlamamızı sağlayacak proje şablonunu bu komut vasıtasıyla hızlıca oluşturabileceğiz.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+3.İlk react projemizin oluşturulması: 43.react-intro içerisindeki intro klasörü
+
+--- Şimdi ise ilk react projemizi oluşturalım. Terminali açtıktan sonra şu komudu yazalım: 
+
+-- İlk önce terminalde (command promp'ta) proje klasörümüze locate olup olmadığımızı kontrol etmemiz gerekli. 
+
+-- Örneğin biz şu an comprehensive-web-course klasörü içerisindeyiz;
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
+
+-- Daha sonra 5.react-course klasörüne gideriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>cd 5.react-course
+
+-- Daha sonra da react'ı kurmak istediğimiz 43.react-intro klasörüne gideriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
+
+-- 43.react-intro klasörüne gittikten sonra intro isimli react projemizi(klasör) kurabiliriz
+C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
+npx create-react-app intro
+
+-- Not: cd.. komutu dizinde bir klasör geri gider. 
+
+-- Şu anda intro klasörümüz oluştu. intro klasörü içerisinde oluşan package.json dosyası bizim node paket yönetimi
+üzerinden kurduğumuz paketlerimizin aslında konfigürasyon dosyası. Bu dosyayla ilerleyen zamanlarda biz sıklıkla uğraşıyor
+olacağız. 
+
+-- peki npm(node package manager) nedir? Biz internetten npm'in resmi sitesine gideriz: www.npmjs.com Orada bütün
+paketler bulunuyor. Yani açık kaynak yazılım geliştirenler istedikleri javascript paketlerini yazıyorlar, buraya 
+yüklüyorlar ve bizde npm install diyerek bu paketleri indirip kullanıyoruz. Örneğin react paketini oradan 
+indirebiliyoruz.
+
+-- tekrardan terminalde intro klasörümüze locate olalım. 
+
+-- locate olduktan sonra bizim yapmamız gereken npm start komutunu yazmak. npm start bizim için intro klasöründeki
+bu projeyi geliştirme ortamında node üzerinde yayına alıyor. Yani tarayıcıda localhost:3000 portunda projemizi yayına
+alıyor. 
+
+-- Örneğin intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta app.js 
+isimli bir dosya göreceğiz. Orada app isimli bir function var. Onun içerisindeki div'in içindeki tüm kodları silelim
+sadece div kalsın. Onun içerisine <h3>Hello from react!</h3> yazalım.
+
+function App() {
+  return (
+    <div>
+      <h3>Hello from react!</h3>
+    </div>
+  );
+}
+
+Yani artık react ile tarayıcıda Hello from react! yazdırdık. 
+
+-- Daha sonra mesela src klasörü içerisinde App.css dosyası da var. Bu az önce var olan App.js uygulamasının css dosyası.
+Onu silebiliriz. App.test.js dosyası, logo.svg dosyası, index.css dosyası, bu dosyaları da silebiliriz, şu an için bunlarla
+çalışmayacağımız için kafamız karışmasın. 
+
+-- Yani şimdiye kadar src klasörü içerisindeki App.js ile çalıştık. 
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+1. npm install -g create-react-app: genel global kurulum: bir sefer
+
+2. react'ı kurmak istediğin klasöre terminalde locate ol.
+
+3. locate olduktan sonra: npx create-react-app project-name(folder-name)
+react projesini oluşturur. src klasörü içerisindeki App.js'ye react kodlarımızı yazabiliriz.
+
+4.App.js içerisindeki örnek react kodu: 
+import React from 'react';
+
+function App() {
+  return (
+    <div>
+      <h3>Hello from react!</h3>
+    </div>
+  );
+}
+
+export default App;
+
+5. react kodunu tarayıcıda görüntülemek için terminale şu komudu yaz: npm start 
+
+---------------------------------------------------------------------------------------------------------------------------
