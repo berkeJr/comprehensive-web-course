@@ -35,7 +35,7 @@ hızlıca başlamamızı sağlayacak proje şablonunu bu komut vasıtasıyla hı
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-305.İlk react projemizin oluşturulması: 43.react-intro içerisindeki intro klasörü
+305.İlk react projemizin oluşturulması:
 
 --- Şimdi ise ilk react projemizi oluşturalım. Terminali açtıktan sonra şu komudu yazalım: 
 
@@ -47,16 +47,12 @@ C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
 -- Daha sonra 5.react-course klasörüne gideriz
 C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>cd 5.react-course
 
--- Daha sonra da react'ı kurmak istediğimiz 43.react-intro klasörüne gideriz
-C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
-
--- 43.react-intro klasörüne gittikten sonra intro isimli react projemizi(klasör) kurabiliriz
-C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>5.react-course>cd 43.react-intro
-npx create-react-app intro
+-- Şu komudu yazarak react projemizi oluşturalım
+npx create-react-app 43.react-intro
 
 -- Not: cd.. komutu dizinde bir klasör geri gider. 
 
--- Şu anda intro klasörümüz oluştu. intro klasörü içerisinde oluşan package.json dosyası bizim node paket yönetimi
+-- Şu anda 43.react-intro klasörümüz oluştu. Bu klasör içerisinde oluşan package.json dosyası bizim node paket yönetimi
 üzerinden kurduğumuz paketlerimizin aslında konfigürasyon dosyası. Bu dosyayla ilerleyen zamanlarda biz sıklıkla uğraşıyor
 olacağız. 
 
@@ -65,13 +61,13 @@ paketler bulunuyor. Yani açık kaynak yazılım geliştirenler istedikleri java
 yüklüyorlar ve bizde npm install diyerek bu paketleri indirip kullanıyoruz. Örneğin react paketini oradan 
 indirebiliyoruz.
 
--- tekrardan terminalde intro klasörümüze locate olalım. 
+-- tekrardan terminalde 43.react-intro klasörümüze locate olalım. 
 
 -- locate olduktan sonra bizim yapmamız gereken npm start komutunu yazmak. npm start bizim için intro klasöründeki
 bu projeyi geliştirme ortamında node üzerinde yayına alıyor. Yani tarayıcıda localhost:3000 portunda projemizi yayına
 alıyor. 
 
--- Örneğin intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta app.js 
+-- Örneğin 43.react-intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta App.js 
 isimli bir dosya göreceğiz. Orada app isimli bir function var. Onun içerisindeki div'in içindeki tüm kodları silelim
 sadece div kalsın. Onun içerisine <h3>Hello from react!</h3> yazalım.
 
@@ -86,12 +82,27 @@ function App() {
 Yani artık react ile tarayıcıda Hello from react! yazdırdık. 
 
 -- Daha sonra mesela src klasörü içerisinde App.css dosyası da var. Bu az önce var olan App.js uygulamasının css dosyası.
-Onu silebiliriz. App.test.js dosyası, logo.svg dosyası, index.css dosyası, bu dosyaları da silebiliriz, şu an için bunlarla
-çalışmayacağımız için kafamız karışmasın. 
+Onu silebiliriz. 
+
+-- App.css sil
+
+-- Daha sonra App.js dosyasındaki "import './App.css';" kısmını da silelim. 
+
+-- App.test.js dosyası 
+
+-- logo.svg dosyası 
+
+-- App.js dosyasındaki "import logo from './logo.svg';" kısmı
+
+-- index.css dosyası 
+
+-- index.js içerisindeki "import './index.css';" kısmını da silelim
+
+Bu dosyaları silelim
+
+-- App.js dosyasında en üste şunu yazabiliriz: import React from 'react'
 
 -- Yani şimdiye kadar src klasörü içerisindeki App.js ile çalıştık. 
-
-
 
 
 ---------------------------------------------------------------------------------------------------------------------------
