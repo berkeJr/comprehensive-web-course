@@ -48,11 +48,11 @@ C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course
 C:\Users\Berke\Desktop\Software Tools\comprehensive-web-course>cd 5.react-course
 
 -- Şu komudu yazarak react projemizi oluşturalım
-npx create-react-app 43.react-intro
+npx create-react-app intro
 
 -- Not: cd.. komutu dizinde bir klasör geri gider. 
 
--- Şu anda 43.react-intro klasörümüz oluştu. Bu klasör içerisinde oluşan package.json dosyası bizim node paket yönetimi
+-- Şu anda intro klasörümüz oluştu. Bu klasör içerisinde oluşan package.json dosyası bizim node paket yönetimi
 üzerinden kurduğumuz paketlerimizin aslında konfigürasyon dosyası. Bu dosyayla ilerleyen zamanlarda biz sıklıkla uğraşıyor
 olacağız. 
 
@@ -61,13 +61,13 @@ paketler bulunuyor. Yani açık kaynak yazılım geliştirenler istedikleri java
 yüklüyorlar ve bizde npm install diyerek bu paketleri indirip kullanıyoruz. Örneğin react paketini oradan 
 indirebiliyoruz.
 
--- tekrardan terminalde 43.react-intro klasörümüze locate olalım. 
+-- tekrardan terminalde intro klasörümüze locate olalım. 
 
 -- locate olduktan sonra bizim yapmamız gereken npm start komutunu yazmak. npm start bizim için intro klasöründeki
 bu projeyi geliştirme ortamında node üzerinde yayına alıyor. Yani tarayıcıda localhost:3000 portunda projemizi yayına
 alıyor. 
 
--- Örneğin 43.react-intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta App.js 
+-- Örneğin intro klasöründe src klasörü içerisine bakalım. Orada bizim için proje kodları bulunuyor. İlk etapta App.js 
 isimli bir dosya göreceğiz. Orada app isimli bir function var. Onun içerisindeki div'in içindeki tüm kodları silelim
 sadece div kalsın. Onun içerisine <h3>Hello from react!</h3> yazalım.
 
