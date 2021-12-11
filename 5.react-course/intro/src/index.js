@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/boostrap.min.css';  // reactstrap'i kullanabilmek için dahil etmeliyiz.
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
