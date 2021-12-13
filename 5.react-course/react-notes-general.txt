@@ -5,10 +5,7 @@
 306.React Component Mimarisi
 307.İlk Component'lerimizi Oluşturalım
 308.ReactStrap ile Çalışmak
-
----------------------------------------------------------------------------------------------------------------------------
-
-
+309.Props İle Çalışmaya Başlamak
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -296,3 +293,8 @@ Bunun içinde bootstrap'deki colon mimarisini kullanacağız.
 
 -- Daha sonra reactstrap docs sayfasında list group alanına gidelim
 Oradan list group item kodlarından birini alıp CategoryList'te Category List kolonu altına yapıştıralım
+
+---------------------------------------------------------------------------------------------------------------------------
+
+309.Props İle Çalışmaya Başlamak
+
