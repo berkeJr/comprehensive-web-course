@@ -1,0 +1,20 @@
+301.Node.Js kurulumu:
+--- Node.Js kurulumu: Node.js JavaScript kodunun server kısmında çalışmasından tutun (server-side) ayrıca paket yönetimi 
+ve geliştirme ortamı sunuyor. Biz bu eğitimimiz boyunca node'un sağladığı bu imkanları kullanıyor olacağız. 
+
+-- İnternet üzerinden node.js.org adresinden node'u indirmemiz gerekiyor. Oradan indirelim.
+
+-- Daha sonra da Microsoft'un açık kaynak olarak sunduğu Visual Studio Code uygulamasını (kod editörünü) 
+resmi sitesinden ücretsiz bir şekilde indirebiliriz.
+
+-- VS Code'u da indirdikten sonra şu eklentileri de indirelim:
+- Auto Close Tag
+- Auto Rename Tag 
+- Bracket Pair Colorizer 
+- ES Lint
+- ES7 - React / Redux / GraphQl
+- Prettier Code Formatter
+- JS ES6+ Code Snippets
+
+
+
