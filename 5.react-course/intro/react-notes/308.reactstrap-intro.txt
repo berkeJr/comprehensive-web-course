@@ -1,0 +1,73 @@
+308.ReactStrap İle Çalışmak:
+
+-- ReactStrap, React yapısına uygun olarak Bootstrap'in kullanılmasına olanak sağlayan bir kütüphane. Aslında 
+bootstrap kullanıyor, ReactStrap ile bunu güzel componentler haline getirmişler. Biz de onu kullanabliiyoruz. Biz 
+istersek direkt olarak bootstrap de kullanabiliriz, istersek ReactStrap ile beraber de kullanabiliriz ama react
+dünyasında yaygın olarak bu tip kütüphaneleri kullanmak söz konusudur. ReactStrap dışında bir çok farklı kütüphaneler de
+mevcut. 
+
+-- ReactStrap resmi docs sayfası: https://reactstrap.github.io/
+
+-- Peki biz reactstrap'i projemize nasıl dahil ederiz? Bunun için 2 yol vardır.
+
+-- Yöntem 1: package.json dosyasına gidelim. Orada dependencies kısmı var: 
+"dependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+
+- Bu kısımda bulunan react ile ilgili ifadeler biz create-react-app komutunu çalıştırınca geldiğimizde
+
+- Biz süslü parantez içerisinde en alta "reactstrap": "8.0.0" yazarak ve daha sonra command prompt'ta 
+npm install komudunu çalıştırarak reactstrapı intro projemize  dahil edebiliriz. 
+
+- npm install komudu package.json dosyasında yapılan değişiklikleri kaydeder, günceller. 
+
+-- Yöntem 2: Command prompt'a geliriz. intro klasörümüze locate oluruz. Ve şu komudu yazarız:
+npm install reactstrap
+
+- Son olarak eklememiz gereken bir şey daha var. ReactStrap dependency olarak bootstrapi otomatik olarak getirmiyor. 
+Ona bağlı ama onu kurmuyor. Bu yüzden npm install bootstrap'de demeliyiz. 
+npm install bootstrap
+
+- Bu komut bizim için reactstrapi kurar ve de package.json dosyasında reactstrap eklendiğini görebiliriz.
+
+- Bu paketler bizim için intro klasörü içindeki node_modules klasörüne ekleniyor. 
+
+- Peki biz bu şlemi gerçekleştirdikten sonra reactstrap'i uygulamamıza nasıl dahil ederiz? Nasıl kullanırız?
+index.js dosyasına geliyoruz ve şöyle bir kod yazıyoruz: 
+
+
+import 'bootstrap/dist/css/boostrap.min.css';  // reactstrap'i kullanabilmek için dahil etmeliyiz.
+
+index.js ye bu kodu yazdıktan sonra biz react ile hem bootstrap'i hem de reactstrap'i kullanabiliriz. Yani sıkıştığımız
+zaman reactstrap'te bulamadığımızın karşılığını bootstrap'te bulup kullanabiliriz. 
+
+-- Peki index.js ne?
+index.js bizim ana javascript konfigürasyon dosyamız. index.js'de hangi componentin ana component olduğunu
+görebiliriz.(App.js) 
+
+
+-- index.js'ye reactstrapi dahil ettik. peki biz App.js içerisinde bu reactstrap'i nasıl kullanırız?
+
+- App.js dosyasına reactstrap'i ve reactstrap ile birlikte kullandığımız elementleri dahil ederiz.
+import {Container, Row} from 'reactstrap';
+
+- Daha sonra da Container, row elementlerini App.js'de return fonksiyonu içinde bulunan div içerisinde kullanırız
+
+- Örenğin Navi componentini ilk row içerisine, CategoryList ve de ProductList componentlerini de 
+ikinci row içerisine koyalım. 
+
+
+- Biz şimdi şöyle bir tasarım istiyoruz: 
+Navbar yukarıda olsun, onun altında CategoryList ile ProductList olsun, 
+ProductList biraz daha geniş olsun. 
+Bunun içinde bootstrap'deki colon mimarisini kullanacağız. 
+
+-- Daha sonra reactstrap docs sayfasında list group alanına gidelim
+Oradan list group item kodlarından birini alıp CategoryList'te Category List kolonu altına yapıştıralım
