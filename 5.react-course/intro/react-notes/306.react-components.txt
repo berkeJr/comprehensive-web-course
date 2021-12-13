@@ -1,0 +1,21 @@
+306. React Component Mimarisi
+
+--- React dünyasında bizim için en önemli yapı, component dediğimiz yapıdır. Component mimarisini bizim iyi anlamamız
+gerekiyor. Peki nedir bu react'ın komponent yapısı. Şöyle ki biz uygulamalarımızı componentlere bölüyoruz. Yani component  
+demek bileşen demek. React bir SPA, yani single page application yani tek sayfa uygulamasıdır. Şöyle ki bizim aslında tek 
+bir sayfamız var. İşte bu sayfamız bizim için bir component görevi görecek. Yani olay temel bir component'le başlıyor. 
+Daha sonra mesela bu kapsayıcı component içerisinde bizim bir navigation bar'ımız var. Onu da bir component olarak
+oluşturuyoruz. Sonra sol tarafta başka bir menü var, onun için de bir component, sonra sağ tarafta bir menü 
+oluşturalım o da bir component. Daha sonra mesela nav-bar'da bir login yapısı oluşturmak istiyoruz, o da bir component.
+Yani biz iç içe componentlerle sayfalarımızı yapılandırıyoruz. Tabii ki yeri geldiğinde o componentleri değiştirebiliriz.
+Örneğin bir componenti kaldırıp onun yerine bambaşka bir component ekleyebiliriz. Bu da routing dediğimiz bir yapıyla oluyor.
+
+
+-- React'ta sıkıntı bu componenent'leri birbiri ile görüştürmek. Nedir bu peki? Mesela bir sayfa içerisinde farklı kategoriler
+için farklı componentler var. Örneğin sol taraftaki menu-bar'da category componenti olsun, sağ taraftaki menu-bar'da da 
+ürünler kategorisi olsun. Biz sol taraftaki menu'de herhangi bir kateegoriye tıklayınca sağ taraftaki menu de ürünlerin
+değişmesini istiyoruz. İşte react tarafında en büyük sıkıntı bu, yani bir componentten diğerine veri transferi. 
+
+
+-- React tarafında şöyle bir basit yapı var. Üst component(kapsayıcı olan) alt componenente veri taşıyabiliyor. Ama alt 
+componenent üst componenente veri taşıyamıyor. 
