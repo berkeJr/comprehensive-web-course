@@ -1,0 +1,6 @@
+-- Şimdi react'ta önemli bir konuya başlayalım. Öncelikle biz props'a neden ihtiyaç duyarız, bundan bahsedelim. Önce 
+bir component hiyerarşimizi anlayalım. Bizim ana kapsayıcı App.js'miz var, onun da içerisinde bir navbar ve de onun da altında
+CategoryList ve de ProductList yanyana olacak şekilde mevcut. Yani App.js ana componentimiz içerisinde 3 tane farklı 
+componentimiz var. Yani App'nin altında direkt olarak çağırılmış olan 3 tane component var. Yani bizim hiyerarşimiz
+bu yapıdadır. 
+
