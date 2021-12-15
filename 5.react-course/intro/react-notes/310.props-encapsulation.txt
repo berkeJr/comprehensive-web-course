@@ -1,0 +1,16 @@
+310.Props İle Encapsulation
+
+-- Props yapısının temelini anladık. Fakat gerçek hayat projelerinde direkt bu şekilde çok az görürüz. 
+Kullanmamız gereken ortamlarda aslında biraz düzenlemeye gitmemiz gerekir. Bunu da encapsulation yapısı ile
+yaparız. Peki nedir encapsulation? Encapsulation, bizim için yeni bir eleman geldiği zaman verilen değeri 
+(App.js içerisinde <h3> elementi içerisinde title ile gönderdiğimiz değer,)bir model gibi düşünüp, onun içerisinde
+herhangi bir yerde değişiklik yapmamak için bu işlemi kullanırız. Yani encapsulation'dan yararlanırız. Yani şöyle ki
+az önce App.js'de tanımladığımız title değerleri dışında başka bir özellik daha ekleyelim.
+let baskaBirIsim = "baskaBirDeger"
+
+-- Bunu kullanmak için App.js'de kullandığımız CategoryList ya da ProductList'te ayrıca 
+baskaBirIsim = {baskaBirDeger}
+şeklinde bir ekleme yapmamız gerekir. Yani bir şey eklediğimizde mecburen her tarafı düzenlememiz gerekiyor. 
+Bu sorunsuz bir şekilde çalışır, fakat best practice kapsamında bu şekilde kullanmayız.
+
+-- Onun yerine değişken tanımlamada object notation'dan faydalanıp nesneler ile tanımlayabiliriz.

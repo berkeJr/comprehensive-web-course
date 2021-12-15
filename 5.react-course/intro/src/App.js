@@ -6,8 +6,12 @@ import { Container, Row, Col } from "reactstrap";
 
 function App() {
 
-  let titleProduct = "Product List";
-  let titleCategory = "Category List";
+  // let titleProduct = "Product List";
+  // let titleCategory = "Category List";
+  // let baskaBirSey = "";
+
+  let categoryInfo = {title: "CategoryList", baskaBirSey: "birSey"};
+  let productInfo = {title: "ProductList"}
 
   return (
     // Navi componentini burada kullanabiliriz. (div içerisinde)
@@ -19,11 +23,11 @@ function App() {
 
         <Row>
           <Col xs="3">
-            <CategoryList title={titleCategory} />
+            <CategoryList info={categoryInfo} />
           </Col>
           
           <Col xs="9">
-            <ProductList title={titleProduct} />
+            <ProductList info={productInfo} />
           </Col>
         </Row>
 
