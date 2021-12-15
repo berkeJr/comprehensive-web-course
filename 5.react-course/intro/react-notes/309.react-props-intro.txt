@@ -43,7 +43,7 @@ bileşenine taşıyoruz. Bir de state denilen bir mantık var, henüz set edilme
 
  constructor(props) {
     super(props);
-    state:{}
+    this.state = {}
   }
 
 
