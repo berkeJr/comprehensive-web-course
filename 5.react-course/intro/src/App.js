@@ -5,6 +5,10 @@ import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap";
 
 function App() {
+
+  let titleProduct = "Product List";
+  let titleCategory = "Category List";
+
   return (
     // Navi componentini burada kullanabiliriz. (div içerisinde)
     <div>
@@ -12,15 +16,17 @@ function App() {
         <Row>
           <Navi />
         </Row>
+
         <Row>
           <Col xs="3">
-            <CategoryList />
+            <CategoryList title={titleCategory} />
           </Col>
-
+          
           <Col xs="9">
-            <ProductList />
+            <ProductList title={titleProduct} />
           </Col>
         </Row>
+
       </Container>
     </div>
   );

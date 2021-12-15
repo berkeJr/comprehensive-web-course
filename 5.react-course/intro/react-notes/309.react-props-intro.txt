@@ -4,3 +4,83 @@ CategoryList ve de ProductList yanyana olacak şekilde mevcut. Yani App.js ana c
 componentimiz var. Yani App'nin altında direkt olarak çağırılmış olan 3 tane component var. Yani bizim hiyerarşimiz
 bu yapıdadır. 
 
+-- Ana component: App.js 
+
+-- App.js içerisindeki componentler:
+- Navi.js
+- CategoryList.js
+- ProductList.js
+
+-- Şimdiye kadar biz şunu yapmıştık: CategoryList.js componenti içerisinde title olarak <h3>Category List</h3> (Category List)
+yazdrmıştık. Aynı şekilde ProductList.js componenti içerisinde title olarak <h3>Product List</h3> yazdrmıştık. 
+Şimdi biz şunu yapmak istiyoruz. Category List ve Product List başlıklarının App.js'den gelmesini istiyoruz. 
+Yani App.js componenti içerisinde tanımlayacağımız değişkenden CategoryList.js ve ProductList.js componentlerine
+aktarılmasını istiyoruz. Kısacası amacımız bir componentten diğerine data taşımak. O zaman karşımıza props denen mantık
+çıkıyor. Props yani properties. Yani biz datayı props'larla taşıyor olacağız. 
+
+-- Bunun için App.js'ye geliyoruz. App.js'de kullandığımız CategoryList componentine bir title ile değer veriyoruz.
+title'ı burada değişken ismi olarak düşünebiliriz. Yani onun yerine anlamsız başka bir şey de yazılabilir. Sadece 
+önemli olan şu, biz bu title'ı daha sonra kullanacağız. title="Category List"
+
+-- Aynı işlemi App.js'de kullandığımız diğer bir component olan CategoryList componenti için de yapıyoruz. ProductList
+componentinin yanına gelip title="Product List" diyoruz.
+
+<Row>
+          <Col xs="3">
+            <CategoryList title="Category List" />
+          </Col>
+          
+          <Col xs="9">
+            <ProductList title="Product List" />
+          </Col>
+        </Row>
+
+-- Daha sonra ise öncelikle App.js'den çıkıp CategoryList.js ekranına gelelim. Burada component fonksiyonunun hemen 
+içerisinde, (süslü parantezlerin içinde), render() fonksiyonunun hemen üzerinde, dışında, bir constructor
+(yapıcı blok) oluşturalım. Bu constructor'a biz props geçeceğiz. Yani değişken geçeceğiz. Daha sonra constructor 
+içerisinde super() diyerek bu props'ı componentimize taşıyoruz. Yani aslına bakarsak biz bu property'yi component
+bileşenine taşıyoruz. Bir de state denilen bir mantık var, henüz set edilmemiş, ileride göreceğiz. 
+
+ constructor(props) {
+    super(props);
+    state:{}
+  }
+
+
+-- Peki daha sonra biz bunu nasıl okuyacağız? constructor'da işimiz bittikten sonra yine aynı sayfada component içerisinde
+render fonksiyonu içerisinde, jsx yazdığımız return içerisine girelim. Orada biz daha önce <h3> elementleri
+içerisinde Category List yazmıştık. <h3> elementi içerine girip o yazıyı silelim. Daha sonra o <h3> elementi içerisinde
+biz {} açalım, o süslü parantezler içerisinde biz javascript, react kodlarını yazarız. Ve o süslü parantezler içerisine 
+this.props.title yazalım
+<h3>{this.props.title}</h3>  
+
+h3 elementi içersinde yazdığımız this, componente gönder demek. this.props dediğimiz zaman aslında 
+componentteki props'lara erişebilmiş oluyoruz. 
+
+
+-- Böylece biz veriyi artık App.js componenti içerisinden yönetebiliyoruz. datayı oradan taşıyabiliyoruz.
+
+
+-- Şimdi ise aynı işlemleri diğer bir componentimiz olan ProductList.js için de yapalım.
+
+
+-- Ek not: javascript'te aslında özünde class diye bir şey yok. ES6+ standartları ile bu yapıyı getiriyor.
+
+-- Not: Aslında yeni nesil react ile birlikte props kullanımı için constructor yapısını kurmaya gerek de kalmadı, 
+eğer istersek constructor yapısını da kullanmadan da <h3>{this.props.title}</h3> yazarak props'lara erişebiliriz.
+
+-- Biz App.js'de componentleri kullandığımız yerde title="Product List" ve title="Category List" şeklinde kullanmıştık,
+biz eğer arzu edersek, App componenti içerisinde değişkenle o değerleri de tutup oradan alabiliriz.
+
+let titleProduct = "Product List";
+let titleCategory = "Category List";
+
+Daha sonra da componentleri kullanığımız yerde title'a karşılık gelen değişiklikleri yazarız
+
+<Col xs="3">
+    <CategoryList title={titleCategory} />
+</Col>
+          
+<Col xs="9">
+    <ProductList title={titleProduct} />
+</Col>
