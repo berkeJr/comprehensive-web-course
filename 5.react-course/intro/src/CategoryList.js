@@ -12,6 +12,9 @@ export default class CategoryList extends Component {
         { categoryId: 1, categoryName: "Beverages" },
         { categoryId: 2, categoryName: "Condiments" },
       ],
+
+      currentCategory: "";
+
     }; // categori'ler bizim için boş bir array.
   }
 
@@ -27,6 +30,9 @@ export default class CategoryList extends Component {
             <ListGroupItem key={category.categoryId} >{category.categoryName}</ListGroupItem>
           ))}
         </ListGroup>
+
+        <h2>{this.state.currentCategory}</h2>
+        
       </div>
     );
   }

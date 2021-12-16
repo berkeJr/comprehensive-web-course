@@ -1,0 +1,20 @@
+312.Event'lerle Çalışmaya Başlamak 
+
+-- Props'ları gördük, state'leri gördük, şimdi de olayı biraz daha ileriye taşıyalım. Şimdiye kadar state^leri 
+kullanarak CategoryList componenti altına Beverages ve Condiments kategorilerini eklemiştik. Biz şimdi şunu 
+istiyoruz, biz Category List başlığı altında hangi kategoriye tıklarsak altta da onun görünmesini istiyoruz. 
+Daha sonra da App.js ve diğer componentlerimizi birbiri ile ilişkilendirmeye başlayacağız. Burada ayrıca 
+event'lere de başlamış olacağız. Örneğin tıklama eventi veya diğer eventler. 
+
+-- Peki tıklama eventi nasıl yazılır. Örneğin CategoryList componenti için tıklama eventi yazmak istiyoruz.
+Bunun için CategoryList.js component sayfasını açalım. Biz burada component içerisinde constructor oluşturup, onun içerisinde
+state ifadelerimizi yazıp daha sonra kullanmıştık. this.state deyip, category'lerimizi array içerisinde objelerle göstermiştik.
+Şimdi ise o array'in bitimine gelelim ve şunu yazalım: 
+
+currentCategory: "";
+
+
+-- Daha sonra return içerisinde (.jsx kısmı) ListGroupItem'ın bittiği yerin altına şunu yazalım: 
+
+<h2>{this.state.currentCategory}</h2>
+
