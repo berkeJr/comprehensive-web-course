@@ -29,3 +29,14 @@ onClick={()=>this.setState({currentCategory:category.categoryName})}
 
 // setState ile state'de var olan neyi değiştirmek istiyorsak onu yazıyoruz. setState içerisinde bir obje veriyoruz. O objede 
 değiştirilmesini istediğimiz değeri yeniden set ediyoruz.  
+
+// Bu işlemi yapmak için 2.yöntem de var, o yöntem daha kullanışlı. component içerisinde render() fonksiyonunun hemen 
+üzerinde changeCategory isminde bir deişken oluşturup onu arrow function ile kullanalım. Daha sonra 
+this.setState ile yazdığımız kodu kesip, fonksiyon içerisine koyalım.
+
+changeCategory = (category) => {
+    this.setState({currentCategory:category.categoryName})
+}
+
+-- Daha sonra da ListGroupItem'da onClick eventi karşısına şunu yazalım: 
+onClick={() => this.changeCategory(category)} 
