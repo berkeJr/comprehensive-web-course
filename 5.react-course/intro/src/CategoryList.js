@@ -13,7 +13,7 @@ export default class CategoryList extends Component {
         { categoryId: 2, categoryName: "Condiments" }
       ],
 
-      currentCategory: ""
+      currentCategory: ""   // mevcut kategori bizim için state'deki diğer elemandır. 
 
     }; // categori'ler bizim için boş bir array.
   }
@@ -27,11 +27,12 @@ export default class CategoryList extends Component {
 
         <ListGroup>
           {this.state.categories.map((category) => (
-            <ListGroupItem key={category.categoryId} >{category.categoryName}</ListGroupItem>
+            <ListGroupItem onClick={()=>this.setState({currentCategory:category.categoryName})} 
+              key={category.categoryId} >{category.categoryName}</ListGroupItem>
           ))}
-        </ListGroup>
+        </ListGroup> 
 
-        <h2>{this.state.currentCategory}</h2>
+        <h4>{this.state.currentCategory}</h4>
 
       </div>
     );

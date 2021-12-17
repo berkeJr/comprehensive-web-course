@@ -16,5 +16,16 @@ currentCategory: "";
 
 -- Daha sonra return içerisinde (.jsx kısmı) ListGroupItem'ın bittiği yerin altına şunu yazalım: 
 
-<h2>{this.state.currentCategory}</h2>
+<h4>{this.state.currentCategory}</h4>
 
+-- Bunu da yazdıktan sonra, artık state içerisinde currentCategory ye ne değerini atarsak onu Category List'in 
+en altında yazar.
+
+-- Bizim herhangi bir ListGroupItem'a (herhangi bir kategori adı) tıkladığımız zaman olmasını istediğimiz
+bir işlem var. Bunu onClick ile gerçekleştiriyoruz. CategoryList.js de component içerisinde return içindeki 
+ListGroupItem etiketini şu özelliği verelim. 
+
+onClick={()=>this.setState({currentCategory:category.categoryName})}
+
+// setState ile state'de var olan neyi değiştirmek istiyorsak onu yazıyoruz. setState içerisinde bir obje veriyoruz. O objede 
+değiştirilmesini istediğimiz değeri yeniden set ediyoruz.  
