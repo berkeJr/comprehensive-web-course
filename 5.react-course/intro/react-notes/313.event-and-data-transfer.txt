@@ -1,2 +1,5 @@
 313.Componentler Arası Veri ve Event Transferi 
 
+-- Şimdi ise Componentler arası veri transferine geçiş yapalım. Şöyle ki, bu kısım react tarafındaki zorlanılan kısımlardan
+birisi. Bizim şimdi bir tane App'miz vardı ve onun içerisinde Navi, CategoryList ve ProductList componentlerimiz 
+bulunuyordu. 
