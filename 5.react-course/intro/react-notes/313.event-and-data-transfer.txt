@@ -3,3 +3,10 @@
 -- Şimdi ise Componentler arası veri transferine geçiş yapalım. Şöyle ki, bu kısım react tarafındaki zorlanılan kısımlardan
 birisi. Bizim şimdi bir tane App'miz vardı ve onun içerisinde Navi, CategoryList ve ProductList componentlerimiz 
 bulunuyordu. 
+
+-- Bizim sol tarafta CategoryList componentimiz, onun sağında ise ProductList componentimiz bulunuyor. Bizim istediğimiz şey
+şu; biz sol tarafta Category List içinde örneğin Beverages'a tıklayınca, sağ tarafta Product List'in altında Product List'e 
+ait item'ların gelmesini istiyoruz. 
+
+-- Hatırlatma: Biz react'ta şu an CategoryList'ten ProductList'e data taşıyamıyoruz, sadece App.js'den yani ana kapsayıcı
+componentten onun içindeki componentlere veri taşıyabiliyoruz. 

@@ -6,7 +6,7 @@ Bu komut satırı aracılığıyla biz komutlarımızı çalıştırabiliyoruz. 
 npm install -g create-react-app
 
 -g koymazsak bu şu anlama gelir. Ben bunu sadece bu klasöre kurmak istiyorum(terminaldeki dizin). -g ise global demek. 
-yani biz create-react-app kodunu nereden çalıştırırsa çalıştıralım erişebiliriz demek. Yani klasör bağımsız, buna global
+yani biz create-react-app kodunu nereden çalıştırırsak çalıştıralım erişebiliriz demek. Yani klasör bağımsız, buna global
 kurulum diyoruz. 
 
 create-react-app ile artık biz react uygulamalarını geliştirebileceğimiz ortam için, ilk etapta bizim için 
