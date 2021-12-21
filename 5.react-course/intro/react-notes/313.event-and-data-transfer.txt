@@ -5,8 +5,68 @@ birisi. Bizim şimdi bir tane App'miz vardı ve onun içerisinde Navi, CategoryL
 bulunuyordu. 
 
 -- Bizim sol tarafta CategoryList componentimiz, onun sağında ise ProductList componentimiz bulunuyor. Bizim istediğimiz şey
-şu; biz sol tarafta Category List içinde örneğin Beverages'a tıklayınca, sağ tarafta Product List'in altında Product List'e 
-ait item'ların gelmesini istiyoruz. 
+şu; biz sol tarafta Category List içinde örneğin Beverages'a tıklayınca, sağ tarafta Product List'in altında Beverages'e 
+ait item'ların gelmesini istiyoruz. Yani biz Category List içindeki nesneye tıklayınca oradaki bilginin Product List'e de 
+gitmesini istiyoruz. 
 
 -- Hatırlatma: Biz react'ta şu an CategoryList'ten ProductList'e data taşıyamıyoruz, sadece App.js'den yani ana kapsayıcı
 componentten onun içindeki componentlere veri taşıyabiliyoruz. 
+
+-- Yani biz App'den ProductList'e data taşıyabiliyoruz, peki bu durumda bizim CategoryList'den ProductList'e data
+taşımamız gerekli, o zaman ne yapacağız? Şu anda bunu saf React kullanarak yapacağız, sonrasında ise React'taki 
+Redux ile state management yapısını kullanarak daha farklı noktaya getireceğz. 
+
+-- App.js sayfasına gelelim. Orada biz gerekli olan işlemlerimizi function App() fonksiyonu içerisinde yazmıştık. Şimdi
+biz o fonksiyonu öncelikle bir class componente çevireceğiz. Yani o fonksiyon içerisindeki bilgileri App class component 
+oluşturup onun içine yazıp, o fonksiyonu da sileceğiz. 
+
+export default class App extends Component {
+  categoryInfo = { title: "CategoryList", baskaBirSey: "birSey" };
+  productInfo = { title: "ProductList" };
+  // fonksiyon içinde olmadığımız için değişken tanımlarken let kullanmayız.
+
+  render() {
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Navi />
+          </Row>
+
+          <Row>
+            <Col xs="3">
+              <CategoryList info={categoryInfo} />
+            </Col>
+
+            <Col xs="9">
+              <ProductList info={productInfo} />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
+}
+
+-- Daha sonra App.js'de bulunan 
+import React from "react"; kısmını silelim 
+
+Ve de App.js'ye 
+import React, { Component } from "react"; kısmını ekleyelim 
+
+
+--  let categoryInfo = { title: "CategoryList", baskaBirSey: "birSey" };
+    let productInfo = { title: "ProductList" };
+değişkenlerini de render() fonksiyonu içerisine yazalım. 
+
+
+-- Şu anda kodumuz aynen çalışır. Biz sadece function App() yapısını class componente çevirdik. Çünkü
+biz CategoryList.js'de yazdığımız changeCategory kodunu mecburen bu App içerisinde taşıyacağız. 
+
+-- CategoryList.js'ye gidelim ve şu kısmı keselim: 
+  changeCategory = (category) => {
+    this.setState({ currentCategory: category.categoryName });
+  };
+
+-- Kestiğimiz o kısmı, changeCategory kısmını App.js'de class componenti içerisine koyalım. Yani şu anda 
+App class componenti içerisinde bir fonksiyon render() bir fonksiyon da changeCategory() fonksiyonu oldu. 

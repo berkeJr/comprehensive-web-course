@@ -39,9 +39,8 @@ npm install bootstrap
 
 - Bu paketler bizim için intro klasörü içindeki node_modules klasörüne ekleniyor. 
 
-- Peki biz bu şlemi gerçekleştirdikten sonra reactstrap'i uygulamamıza nasıl dahil ederiz? Nasıl kullanırız?
+- Peki biz bu işlemi gerçekleştirdikten sonra reactstrap'i uygulamamıza nasıl dahil ederiz? Nasıl kullanırız?
 index.js dosyasına geliyoruz ve şöyle bir kod yazıyoruz: 
-
 
 import 'bootstrap/dist/css/boostrap.min.css';  // reactstrap'i kullanabilmek için dahil etmeliyiz.
 
