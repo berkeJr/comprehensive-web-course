@@ -11,8 +11,8 @@ export default class CategoryList extends Component {
       categories: [
         { categoryId: 1, categoryName: "Beverages" },
         { categoryId: 2, categoryName: "Condiments" },
-      ],      
-    }; 
+      ],
+    };
   }
 
   render() {

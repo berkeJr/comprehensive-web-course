@@ -88,3 +88,31 @@ kısımı kesip App componentinde bir state içerisinde yazalım
 
 -- Son olarak CategoryList.js'de return içerisinde şunu yazalım: 
 <h4>{this.props.currentCategory}</h4>
+
+-- Biz şimdiye kadar şunu yaptık. 
+
+* CategoryList'teki changeCategory'yi App.js içerisinde App class componenti oluşturup orada yazdık. Çünkü biz 
+currentCategory yazısını ProductList'e de geçmek istiyoruz. React'te sadece ana kapsayıcı component'ten içteki 
+componente taşıma olduğu için kategori değiştirmeye yönelik her şeyi App içerisine taşıdık. 
+
+* Daha sonra App.js içerisinde changeCategory() fonksiyonunu App.js return içindeki CategoryList'e props olarak kullandık. 
+
+* Daha sonra CategoryList'te 
+this.props.changeCategory(category)
+ile eventi kullandık. 
+
+* Daha sonra currentCategory'yi de App.js'de return içindeki CategoryList'e props olarak yolladık
+currentCategory={this.state.currentCategory}
+
+* Daha sonra ise CategoryList'te props ile currentCategory'yi yazdırdık. ,
+<h4>{this.props.currentCategory}</h4>
+
+
+Note: State değiştiği anda o state'i kullanan tüm componentler yeniden render edilir. Örneğin currentCategory.
+
+-- Biz böylelikle currentCategory'yi alıp App.js içindeki ProductList'e de taşıyabiliriz. 
+<ProductList currentCategory={this.state.currentCategory}
+
+-- Ve son olarak da ProductList.js sayfasına gidip : this.props.currentCategory'yi de kullanırız. 
+<h3>{this.props.info.title}-{this.props.currentCategory}</h3>
+

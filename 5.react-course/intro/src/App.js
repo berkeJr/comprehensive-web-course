@@ -32,7 +32,10 @@ export default class App extends Component {
             </Col>
 
             <Col xs="9">
-              <ProductList info={productInfo} />
+              <ProductList
+                currentCategory={this.state.currentCategory}
+                info={productInfo}
+              />
             </Col>
           </Row>
         </Container>
