@@ -70,3 +70,21 @@ biz CategoryList.js'de yazdığımız changeCategory kodunu mecburen bu App içe
 
 -- Kestiğimiz o kısmı, changeCategory kısmını App.js'de class componenti içerisine koyalım. Yani şu anda 
 App class componenti içerisinde bir fonksiyon render() bir fonksiyon da changeCategory() fonksiyonu oldu. 
+
+-- Biz onClick eventini kullanmıştık(changeCategory() fonksiyonu ile). Şu anda changeCategory() fonksiyonunu 
+CategoryList'ten alıp, App.js ye taşıdık, o yüzden changeCategory'yi App.js'de return içerisinde CategoryList'e
+props olarak yollamamız gerekli. 
+<CategoryList changeCategory={this.changeCategory} info={categoryInfo} />
+
+-- Ayrıca CategoryList.js'ye gidelim, orada onClick içerisinde fonksiyona 
+this.props.changeCategory(category) yazalım
+
+-- Ayrıca CategoryList.js içerisinde state içindeki 
+currentCategory: ""
+kısımı kesip App componentinde bir state içerisinde yazalım 
+
+-- Sonra ise App componenti içindeki CategoryList'e currentCategory'yi de yollayalım
+<CategoryList currentCategory={this.state.currentCategory} changeCategory={this.changeCategory} info={categoryInfo} />
+
+-- Son olarak CategoryList.js'de return içerisinde şunu yazalım: 
+<h4>{this.props.currentCategory}</h4>
