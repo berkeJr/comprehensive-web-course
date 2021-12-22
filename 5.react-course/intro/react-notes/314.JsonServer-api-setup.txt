@@ -1,2 +1,15 @@
 314.JsonServer İle Api Kurulumu
 
+-- Bu aşamada ise datamızı bir Api'den almak istiyoruz, yani gerçek data ile çalışmak istiyoruz. Bunun için burada bir Api
+oluşturmayacağız, o konumuzun dışında. Biz normalde api'leri bir Java ortamında, bir .net ortamında ya da bir node 
+express ortamında oluştururuz. Ama biz burada hazır api kullnacağız. Bu tip geliştirme ortamları için 
+json-server'i kullanıyor olacağız. json-server ile elimizde bir json datamız olacak ve o json datasında bir api'de 
+olması gereken her şeyi içeren data'lar olacak. 
+
+-- json server'i kurabilmek için terminalde; 
+
+npm install -g json-server
+
+komudunu çalıştırmamız gerekli. (tabi önce intro klasörüne locate oluruz.)
+
+-- Daha sonra klasör yapımızda 5.react-course içerisinde api isimli bir klasör oluşturalım
