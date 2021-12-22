@@ -12,4 +12,25 @@ npm install -g json-server
 
 komudunu çalıştırmamız gerekli. (tabi önce intro klasörüne locate oluruz.)
 
--- Daha sonra klasör yapımızda 5.react-course içerisinde api isimli bir klasör oluşturalım
+-- Daha sonra klasör yapımızda 5.react-course içerisinde api isimli bir klasör oluşturalım ve de dersin kaynaklar kısmından 
+indirdiğimiz db.json dosyasını api klasörü içerisine atalım.
+
+-- db.json'da bir obje notasyonu bulunuyor. İçerisinde bir sürü ürün(products) var. Bir de kategoriler var. (categories) 
+
+-- Terminalde api klasörüne locate olalım ve şu komudu yazalım
+
+json-server --watch db.json
+
+-- Bu da 3000.portu kullanıyor. 3000.port'ta products ve categories datasını bize getirdi. 
+
+-- Daha sonra react yayınımızı durdurup yeniden başlatalım
+
+-- Şu an localhost:3000'de json server   /  localhost:3001'de react uygulamamız var. 
+
+-- localhost:3000/products bize ürünleri listeler
+
+-- localhost:3000/categories bize kategorileri listeler. 
+
+-- localhost:3000/products?id=1  bize id'si 1 olan ürünü getirir. 
+
+-- Şu an bizim elimizde sanal/fake bir api var ve her işimizi görecek.
