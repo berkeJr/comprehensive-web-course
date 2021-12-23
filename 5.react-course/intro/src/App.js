@@ -7,16 +7,24 @@ import { Container, Row, Col } from "reactstrap";
 export default class App extends Component {
   state = { currentCategory: "", products: [] }; // bizim burada products state'ine ihtiyacımız var.
 
-  changeCategory = (category) => {
-    this.setState({ currentCategory: category.categoryName });
-  };
-
-  componentDidMount(){
+  componentDidMount() {
     this.getProducts();
   }
 
-  getProducts = () => {
-    fetch("http://localhost:3000/products")
+  changeCategory = (category) => {
+    this.setState({ currentCategory: category.categoryName });
+    this.getProducts(category.id);
+  };
+  
+
+  getProducts = (categoryId) => {
+    let url = "http://localhost:3000/products";
+
+    if (categoryId) {
+      url += "?categoryId=" + categoryId;
+    }
+
+    fetch(url)
       .then((response) => response.json()) // response'u json'a döndürüyoruz
       .then((data) => this.setState({ products: data })); // state'in product değerini değiştirip data yapıyoruz.
   };
