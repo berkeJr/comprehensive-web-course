@@ -4,16 +4,19 @@ import { ListGroupItem, ListGroup } from "reactstrap";
 import React, { Component } from "react";
 
 export default class CategoryList extends Component {
-  constructor(props) {
-    super(props);
-    // this.state = { counter:1} // counter bir değişken ismi
-    this.state = {
-      categories: [
-        { categoryId: 1, categoryName: "Beverages" },
-        { categoryId: 2, categoryName: "Condiments" },
-      ],
-    };
+  state = {
+    categories: [],
+  };
+
+  componentDidMount() {
+    this.getCategories();
   }
+
+  getCategories = () => {
+    fetch("http://localhost:3000/categories")
+      .then((response) => response.json()) // response'u json'a döndürüyoruz
+      .then((data) => this.setState({ categories: data })); // state'in cateogry değerini değiştirip data yapıyoruz.
+  };
 
   render() {
     return (
@@ -26,7 +29,7 @@ export default class CategoryList extends Component {
           {this.state.categories.map((category) => (
             <ListGroupItem
               onClick={() => this.props.changeCategory(category)}
-              key={category.categoryId}
+              key={category.id}
             >
               {category.categoryName}
             </ListGroupItem>
