@@ -1,2 +1,79 @@
 316.Ürünlerin Listelenmesi 
 
+-- Biz az önce önceden indirdiğimiz hazır api'ı kullanarak CategoryList için data'yı çektik. Şimdi de Products için 
+data'yı çekip listeleme yapmak istiyoruz. Olay şu: Category List'te herhangi bir kategoriye tıklandığında 
+sağ tarafta Products List'te ilgili dataların gelmesini istiyoruz. 
+
+-- Öncelikle Reactstrap'ten table yapısını alalım ve Product List'te h3 elementi altına yapıştıralım. 
+
+-- Ayrıca reactstrap'teki table yapısını kullanabilmek için Table'ı import etmemiz gerekli. 
+import {Table} from 'reactstrap';
+
+-- Şu anda tablo yapısı geldi. Bizim fetch api yöntemini kullanarak hazır datayı çekmemiz gerekli. Şöyle bir durum var, 
+eğer biz bütün ürünlerin aynı categories'deki gibi tek bir sefer listelenmesini istiyorsak CategoryList'de yaptığımız
+işlemlerin aynısını ProductList'te de yaparız, fakat bizim istediğimiz şu: Sol tarafta CategoryList'te herhangi bir 
+kategoriye tıklandığında sağ tarafta o kategoriye ait Product'ların gelmesini istiyoruz. 
+
+-- Yani biz bir kategoriye tıklandığımızda ürünlerin filtrelenmesini isteyeceğiz. Biz ürünün filtrelenme işini 
+CategoryList'ten aldığımız için, onu da bir üstteki component olan App.js'deki eventi çalıştırarak yapmamız gerektiği için
+bizim bu Product List'i kendi içinde değil App'den taşımamız gerekiyor. 
+
+-- Yani biz sol tarafta bir kategoriye tıkladığımızda onun eventi ürünleri o kategoriye göre filtreleyerek listelemeli.
+
+-- App.js'ye gelelim. changeCategory fonksiyonu altında getProducts fonksiyonunu yazalım. 
+
+getProducts = () => {
+    fetch("http://localhost:3000/products")
+      .then((response) => response.json()) // response'u json'a döndürüyoruz
+      .then((data) => this.setState({ products: data })); // state'in product değerini değiştirip data yapıyoruz.
+  };
+
+-- Daha sonra ise oluşturduğumuz getProducts fonksiyonunu kullanalım: 
+componentDidMount(){
+    this.getProducts();
+  }
+
+-- Daha sonra boş bir products[] state'i oluşturalım. 
+
+-- Daha sonra ise products'ı bizim props olarak App.js'deki ProductList'e yollamamız gerekiyor. 
+<ProductList
+    products={this.state.products}
+    currentCategory={this.state.currentCategory}
+    info={productInfo}
+/>
+
+
+-- Şu anda elimizde props'la gelmiş data var, fakat öncelikle ProductList.js'ye gidelim ve tablo yapısını düzenleyelim.
+
+-- Tablo'da tekrar eden kayıtlar olan tr'lerin fazlalarını silelim yalnızca bir tanesi kalsın. 
+
+-- Biz kategori list'te bir tane map gerçekleştirmiştik. 
+
+-- ProductList.js'de ürünleri listeleyecek kodu yazalım: 
+<Table hover>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Unit Price</th>
+              <th>Quantity Per Unit</th>
+              <th>Units In Stock</th>
+            </tr>
+          </thead>
+
+          // burası önemli
+          <tbody>
+            {this.props.products.map((product) => (
+              <tr key={product.id}>
+                <th scope="row">{product.id}</th>
+                <td>{product.productName}</td>
+                <td>{product.unitPrice}</td>
+                <td>{product.quantityPerUnit}</td>
+                <td>{product.unitsInStock}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+
+-- Şu anda api'deki bütün data listeleniyor. Bir sonraki aşamada ise ilgili categoriye tıklayınca ilgili productların
+listelenmesini sağlayacağız. 

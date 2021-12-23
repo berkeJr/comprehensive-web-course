@@ -5,10 +5,20 @@ import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap";
 
 export default class App extends Component {
-  state = { currentCategory: "" };
+  state = { currentCategory: "", products: [] }; // bizim burada products state'ine ihtiyacımız var.
 
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
+  };
+
+  componentDidMount(){
+    this.getProducts();
+  }
+
+  getProducts = () => {
+    fetch("http://localhost:3000/products")
+      .then((response) => response.json()) // response'u json'a döndürüyoruz
+      .then((data) => this.setState({ products: data })); // state'in product değerini değiştirip data yapıyoruz.
   };
 
   render() {
@@ -33,6 +43,7 @@ export default class App extends Component {
 
             <Col xs="9">
               <ProductList
+                products={this.state.products}
                 currentCategory={this.state.currentCategory}
                 info={productInfo}
               />
