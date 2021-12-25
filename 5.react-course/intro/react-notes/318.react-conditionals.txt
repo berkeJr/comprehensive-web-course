@@ -1,3 +1,12 @@
 318.Şartlı İfadelerle Çalışmak
 
--- 
+-- Şimdi de şartlı bloklarla çalışmaya başlayalım. Örneğin bizim sol tarafta CategoryList'imiz var, biz orada 
+bir kategooriyi seçince sağ tarafta o kategoriye ait ürünler listeleniyor, biz ayrıca sol tarafta CategoryList'te
+seçilen kategorinin mavi olmasını istiyoruz diyelim. ListGroupItem'da bootstrap'ten gelen bir özellik var. 
+Biz ListGroupItem'a active={true} özelliğini verirsek bütün ListGroupItem'ları mavi yapar. Biz o süslü parantez
+içerisinde aslında bir şart bloğu çalıştırabiliriz. 
+
+active={category.categoryName===this.props.currentCategory?true:false}
+
+-- Mevcut kategorinin ismi currentCategory'ye eşitse (yani seçili olana) active true olacak yani mavi renk yapacak
+değilse false olacak. 
