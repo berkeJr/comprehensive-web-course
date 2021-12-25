@@ -15,7 +15,6 @@ export default class App extends Component {
     this.setState({ currentCategory: category.categoryName });
     this.getProducts(category.id);
   };
-  
 
   getProducts = (categoryId) => {
     let url = "http://localhost:3000/products";
@@ -36,9 +35,7 @@ export default class App extends Component {
     return (
       <div>
         <Container>
-          <Row>
-            <Navi />
-          </Row>
+          <Navi />
 
           <Row>
             <Col xs="3">

@@ -2,10 +2,10 @@
 
 // rcc yazalım ve enter'a basalım, hani bir bileşen ekledik ya snippent'lar, işte rcc oradan geliyor.
 
-// rcc + enter yapınca bize bir adet class component oluşturdu. 
+// rcc + enter yapınca bize bir adet class component oluşturdu.
 
 /** Peki nedir bu class component? Baktığımız zaman bize şöyle bir yapı oluşturuyor. export = public anlamına geliyor.
- * Yani diğer taraflardan erişilebilir. Bunun bir component olabilmesi için React kütüphanesideki component nesnesini 
+ * Yani diğer taraflardan erişilebilir. Bunun bir component olabilmesi için React kütüphanesideki component nesnesini
  * extend etmesi (inheritance) gerekir. Artık Navi bir component'tir, çünkü extends Component yapısı ile miras almış.
  */
 
@@ -14,20 +14,72 @@
  * çağırıp kullanabiliriz.
  */
 
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Col,
+} from "reactstrap";
 
 export default class Navi extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Navi Component</h2>
-            </div>
-        )
-    }
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false,
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">Northwind Store</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#">Components</NavLink>
+              </NavItem>
+
+              <NavItem>
+                <NavLink href="#">Github</NavLink>
+              </NavItem>
+
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Options
+                </DropdownToggle>
+
+                <DropdownMenu right>
+                  <DropdownItem>Option 1</DropdownItem>
+
+                  <DropdownItem>Option 2</DropdownItem>
+
+                  <DropdownItem divider />
+
+                  <DropdownItem>Reset</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
 }
-
-/** App.js içerisindeki return aslında burada Navi.js'deki render()'a karşılık geliyor. Peki render ne işe yarıyor?
- * render() componentlerde bir değişiklik olduğu zaman componentleri değişen veriye göre yeniliyor. 
- */
-
-// Peki biz bu Navi'yi nasıl kullanırız; App.js içerisine gideriz. 

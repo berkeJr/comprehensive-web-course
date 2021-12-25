@@ -10,3 +10,19 @@ olsun ve o butona tıklayınca ürünler sepete eklensin.
 -- Daha sonra ProductList.js'ye gidelim. Orada buton için ayrıca bir kolon ekleyelim. Ve butonu da td etiketleri 
 içerisine koyalım. Daha sonra Button'u da reactstrap'ten aldığımız için import edelim. 
 
+-- Şimdi biz herhangi bir product için Add To Cart butonuna tıkladığımızda sepete ekleme işlemini gerçekleştirmesini
+istiyoruz. Bunun için ProductList.js'ye gelelim. ProductList componenti içerisinde render() fonksiyonu üzerinde 
+bir fonksiyon oluşturalım. 
+
+addToCart = (product) => {
+    alert(product.productName);
+};
+
+-- Daha sonra ise butonu oluşturduğumuz yerde onClick eventini kullanıp addToCart fonksiyonunu kullanmamız gerekli. 
+<Button onClick={()=>this.addToCart(product)} color="info">Add To Cart</Button>
+
+-- Şimdi biz sepet bilgisini navi'de göstermek istiyoruz. Yani Add To Cart butonuna tıkladığımızda navbar'da bir 
+sepet özeti olsun ve orada gösterilsin. Bizim bu Add To Cart operasyonumuzun App.js'de olması gerekiyor. Çünkü 
+bizim bir sepeti yönetmemiz gerekiyor ve o sepeti göstermemiz gerekiyor. Yani data transferini yapacağımız için. 
+
+-- reactstrap'ten bir navbar alalım ve de Navi.js'de navbar oluşturalım. 
