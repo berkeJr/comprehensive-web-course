@@ -1,3 +1,12 @@
 319.Sepete Ürün Eklemek
 
--- 
+-- Şimdi projemizi biraz daha geliştirelim hem de daha önce gördüğümüz konuların farklı ortamlarda nasıl kullanılacağını 
+görelim. Bunun herhangi bir alışveriş sitesi olduğunu düşünelim. Product List'te her bir ürün için en sağda bir buton 
+olsun ve o butona tıklayınca ürünler sepete eklensin. 
+
+-- Bunun için reactstrap'e gidelim ve oradan bir buton alalım. 
+<Button color="info"> Click Me </Button>
+
+-- Daha sonra ProductList.js'ye gidelim. Orada buton için ayrıca bir kolon ekleyelim. Ve butonu da td etiketleri 
+içerisine koyalım. Daha sonra Button'u da reactstrap'ten aldığımız için import edelim. 
+
