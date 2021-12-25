@@ -26,8 +26,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  Col,
+  DropdownItem
 } from "reactstrap";
 
 export default class Navi extends Component {

@@ -26,3 +26,4 @@ sepet özeti olsun ve orada gösterilsin. Bizim bu Add To Cart operasyonumuzun A
 bizim bir sepeti yönetmemiz gerekiyor ve o sepeti göstermemiz gerekiyor. Yani data transferini yapacağımız için. 
 
 -- reactstrap'ten bir navbar alalım ve de Navi.js'de navbar oluşturalım. 
+
