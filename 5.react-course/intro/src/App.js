@@ -28,6 +28,10 @@ export default class App extends Component {
       .then((data) => this.setState({ products: data })); // state'in product değerini değiştirip data yapıyoruz.
   };
 
+  addToCart = (product) => {
+    alert(product.productName);
+  };
+
   render() {
     let categoryInfo = { title: "CategoryList", baskaBirSey: "birSey" };
     let productInfo = { title: "ProductList" };

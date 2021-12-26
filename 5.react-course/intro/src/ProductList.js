@@ -4,9 +4,7 @@ import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
 
 export default class ProductList extends Component {
-  addToCart = (product) => {
-    alert(product.productName);
-  };
+  
 
   render() {
     return (
