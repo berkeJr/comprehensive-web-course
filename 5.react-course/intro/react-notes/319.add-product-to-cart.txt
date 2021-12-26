@@ -32,3 +32,7 @@ bizim bir sepeti yönetmemiz gerekiyor ve o sepeti göstermemiz gerekiyor. Yani 
 
 -- Yani biz butona basınca sepet nesnesini alıp navi'ye de göndermemiz gerekiyor. Bu sebeple ProductList.js'deki
 addToCart fonksyonunu oradan keselim ve App.js'ye koyalım.
+
+-- Biz artık addToCart fonksiyonuna sepete ekleme işemeini yazabiliriz. Peki sepet ne olacak. Sepet tıpkı 
+currentCategory, ve products gibi bir state olacak. Dolayısıyla App.js'de state'e cart ekleyelim. 
+state = { currentCategory: "", products: [], cart: [] };

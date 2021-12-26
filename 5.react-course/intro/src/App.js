@@ -5,7 +5,7 @@ import ProductList from "./ProductList";
 import { Container, Row, Col } from "reactstrap";
 
 export default class App extends Component {
-  state = { currentCategory: "", products: [] }; // bizim burada products state'ine ihtiyacımız var.
+  state = { currentCategory: "", products: [], cart: [] }; // bizim burada products state'ine ihtiyacımız var.
 
   componentDidMount() {
     this.getProducts();
