@@ -62,7 +62,7 @@ export default class Navi extends Component {
 
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Cart - {this.props.cart.length}
                 </DropdownToggle>
 
                 <DropdownMenu right>

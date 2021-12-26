@@ -36,3 +36,28 @@ addToCart fonksyonunu oradan keselim ve App.js'ye koyalım.
 -- Biz artık addToCart fonksiyonuna sepete ekleme işemeini yazabiliriz. Peki sepet ne olacak. Sepet tıpkı 
 currentCategory, ve products gibi bir state olacak. Dolayısıyla App.js'de state'e cart ekleyelim. 
 state = { currentCategory: "", products: [], cart: [] };
+
+-- Şimdi ise addToCart fonksiyonu içerisine gelelim ve operasyonumuzu yazalım. 
+
+-- Biz cart'ın içerisinde şöyle bir data tutmak istiyoruz. Bir eklenen product'ı bir de quantity yani miktarını 
+tutmak istiyoruz. O sebeple bir ürün için daha önce eklenmiş mi kontrolü yaparız.
+var addedItem = newCart.find(c=>c.productId === product.id);
+
+// ya da o kontrolü şu şekilde de yapabiliriz.
+newCart.push({product:product, quantity:1});
+this.setState({cart:newCart});
+
+// Daha sonra App.js'de ProductList'e bizim addToCart fonksiyonunu göndermemiz gerekiyor. 
+addToCart={this.addToCart}
+
+// Sonrasında ise ProductList.js'de butona addToCart fonksiyonunu props'la göndeririz. 
+<Button onClick={()=>this.props.addToCart(product)} color="info">Add To Cart</Button>
+
+// Peki oluşan o cart nesnesini, yani state'i ne yapacağız. State'i de Navi'ye gödermemiz gerekiyor. App.js'de
+Navi'ye şunu yazarız. 
+<Navi cart={this.state.cart} />
+
+// Navi.js,'ye gidelim, süslü parantez içindeki kod ile sepetteki eleman sayısını öğreniriz. 
+<DropdownToggle nav caret>
+    Options - {this.props.cart.length}
+</DropdownToggle>

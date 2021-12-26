@@ -29,8 +29,17 @@ export default class App extends Component {
   };
 
   addToCart = (product) => {
-    alert(product.productName);
-  };
+    let newCart = this.state.cart;
+    // daha önce bu eleman eklenmiş mi diye liste kontrolü yapalım.
+    var addedItem = newCart.find((c) => c.product.id === product.id);
+    if (addedItem) {
+      addedItem.quantity += 1;
+    }
+    else { // daha önce o ürün yoksa
+       newCart.push({ product: product, quantity: 1 }); // push ile array'e yeni bir eleman ekliyoruz.
+    }   
+    this.setState({ cart: newCart });
+  }
 
   render() {
     let categoryInfo = { title: "CategoryList", baskaBirSey: "birSey" };
@@ -39,7 +48,7 @@ export default class App extends Component {
     return (
       <div>
         <Container>
-          <Navi />
+          <Navi cart={this.state.cart} />
 
           <Row>
             <Col xs="3">
@@ -53,6 +62,7 @@ export default class App extends Component {
             <Col xs="9">
               <ProductList
                 products={this.state.products}
+                addToCart={this.addToCart}
                 currentCategory={this.state.currentCategory}
                 info={productInfo}
               />
