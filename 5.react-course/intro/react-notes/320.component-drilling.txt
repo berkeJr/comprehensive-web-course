@@ -1,3 +1,9 @@
 320.Component Drilling
 
--- 
+-- Biz şimdiye kadar Add To Cart butonu ile sepete ürün ekliyyorduk ve de navbar'daki Cart- yazısında ürün 
+sayılarını gösteriyorduk. (Tabi ayrıca aynı ürünü 2 sefer eklemiyordu, sepet içerisinde sayısını arttırıyordu.) 
+Biz şimdide sepete ürün eklediğimiz zaman ürün isimlerinin Cart- 'a tıklayınca gözükmesini istiyoruz. 
+
+-- Bunun için src klasöründe CartSummary.js isimli bir dosya oluşturalım. Bu işlemleri CartSummary.js içerisinde 
+ayrı bir Component olarak gerçekleştireceğiz ki amacımız o componentler arası veri trafiğini yönetmek için iç içe 
+componentlerde nasıl bir davranışta bulunuyoruz onu öğreniriz. 
