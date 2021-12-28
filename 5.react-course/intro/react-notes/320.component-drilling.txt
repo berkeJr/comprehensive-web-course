@@ -26,3 +26,22 @@ transferi yok.
 <CartSummary cart={this.props.cart}/>
 
 -- Biz şu anda Navbar'da Cart'a tıklayınca açılan sekmede hangi ürünlerin eklendiğini görmek istiyoruz. 
+
+-- CartSummary'ye geliriz. Option'ların olduğu kısmı döngüye alıp js ile ilgili kodu yazarız.
+<DropdownMenu right>
+{this.props.cart.map(
+    (
+    cartItem //cartItem'ın bir quantity'si var bir de name
+    ) => (
+    <DropdownItem key={cartItem.product.id}>{cartItem.product.productName}</DropdownItem>
+    )
+)}
+
+<DropdownItem divider />
+
+
+-- Şu anda Cart'a eklenen ürünler listede gözüküyor. Şu anda istediğimiz ise, her bir eklenen üründen kaç tane eklendiği
+ürünün adının yanında yazsın. Bunun için DropdownItem'a şunu ekleriz:
+<Badge color="success">{cartItem.quantity}</Badge>
+
+-- Badge ReactStrap - BootStrap'ten geliyor. 
