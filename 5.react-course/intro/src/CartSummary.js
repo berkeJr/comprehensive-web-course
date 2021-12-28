@@ -36,6 +36,6 @@ export default class CartSummary extends Component {
   }
 
   render() {
-    return <div></div>;
+    return <div>{this.renderSummary()}</div>;
   }
 }
