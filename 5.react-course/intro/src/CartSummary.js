@@ -16,9 +16,13 @@ export default class CartSummary extends Component {
                 </DropdownToggle>
 
                 <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
+                    {this.props.cart.map(cartItem => ( //cartItem'ın bir quantity'si var bir de name
+                         <DropdownItem>
+                             {cartItem.product.productName}
+                         </DropdownItem>
+                    ))}
 
-                  <DropdownItem>Option 2</DropdownItem>
+                 
 
                   <DropdownItem divider />
 

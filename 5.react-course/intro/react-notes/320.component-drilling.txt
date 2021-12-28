@@ -24,3 +24,5 @@ transferi yok.
 
 -- Dolayısıyla Navi.js'de şu işlemi yaparız: 
 <CartSummary cart={this.props.cart}/>
+
+-- Biz şu anda Navbar'da Cart'a tıklayınca açılan sekmede hangi ürünlerin eklendiğini görmek istiyoruz. 
