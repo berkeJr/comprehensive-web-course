@@ -48,7 +48,7 @@ export default class CartSummary extends Component {
   render() {
     // eğer sepette eleman yoksa renderSummary'yi çalıştırma varsa çalıştır:
     return (
-      <div>{this.props.cart.length > 0 ? this.renderSummary() : <div />}</div>
+      <div>{this.props.cart.length > 0 ? this.renderSummary() : this.renderEmptyCart()}</div>
     );
   }
 }
