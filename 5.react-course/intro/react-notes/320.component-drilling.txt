@@ -55,3 +55,5 @@ UncontrolledDropdown'ı o fonksiyon içerisine taşıyalım.
 -- renderSummary() fonksiyonu içerisinde jsx yazacağımız için return() kullanıp jsx'i o parantez
 içerisine yazarız. 
 
+-- renderEmptyCart() isimli bir fonksiyon oluşturalım.
+
