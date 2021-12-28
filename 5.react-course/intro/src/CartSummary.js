@@ -5,6 +5,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Badge,
+  NavItem,
+  NavLink,
 } from "reactstrap";
 
 export default class CartSummary extends Component {
@@ -35,8 +37,18 @@ export default class CartSummary extends Component {
     );
   }
 
+  renderEmptyCart() {
+    return (
+      <NavItem>
+        <NavLink>Empty Cart</NavLink>
+      </NavItem>
+    );
+  }
+
   render() {
-    // eğer sepette eleman yoksa renderSummary'yi çalıştırma varsa çalıştır:  
-    return <div>{this.props.cart.length>0?this.renderSummary():<div />}</div>;
+    // eğer sepette eleman yoksa renderSummary'yi çalıştırma varsa çalıştır:
+    return (
+      <div>{this.props.cart.length > 0 ? this.renderSummary() : <div />}</div>
+    );
   }
 }
