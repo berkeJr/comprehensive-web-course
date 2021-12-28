@@ -45,3 +45,13 @@ transferi yok.
 <Badge color="success">{cartItem.quantity}</Badge>
 
 -- Badge ReactStrap - BootStrap'ten geliyor. 
+
+-- Şimdi mesela sepette eleman yoksa NavBar'da Your Cart yazısı gözükmesin. Bunun için CartSummary.js'de 
+bir şartlı blok çalıştıracağız. 
+
+-- Şimdi CartSummary.js'ye gidelim. render() içerisinde renderSummary() şeklinde bir fonksiyon oluşturalım ve de 
+UncontrolledDropdown'ı o fonksiyon içerisine taşıyalım. 
+
+-- renderSummary() fonksiyonu içerisinde jsx yazacağımız için return() kullanıp jsx'i o parantez
+içerisine yazarız. 
+
