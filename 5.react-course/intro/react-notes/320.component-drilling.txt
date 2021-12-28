@@ -6,4 +6,21 @@ Biz şimdide sepete ürün eklediğimiz zaman ürün isimlerinin Cart- 'a tıkla
 
 -- Bunun için src klasöründe CartSummary.js isimli bir dosya oluşturalım. Bu işlemleri CartSummary.js içerisinde 
 ayrı bir Component olarak gerçekleştireceğiz ki amacımız o componentler arası veri trafiğini yönetmek için iç içe 
-componentlerde nasıl bir davranışta bulunuyoruz onu öğreniriz. 
+componentlerde nasıl bir davranışta bulunuyoruz onu öğreniriz. Bu olaya Component Drilling deniyor. 
+
+-- CartSummary.js'de rcc yazıp enter'a basalım ve class componentimiz oluşsun. 
+
+-- CartSummary.js'de bizim options ile başlayan componentimizi yerleştirmek istiyoruz. Navi.js'ye gidelim. 
+options kısmının olduğu UncontrolledDropdown tag'lerini tamamen alalım ve CartSummary'de div'in içerisine koyalım. Tabi
+kullandığımız elemanları da import edelim. 
+
+-- Daha sonra Navi.js'de div içerisinde en altta CartSummary'yi çağırmamız gerekli.
+
+-- Şu anda hiyerarşi yapımız şu şekilde. App.js en kapsayıcı, onun içerisinde Navi.js, onun da içerisinde 
+CartSummary.js bulunuyor. Biz options için App.js'den Navi.js'ye veri aktarımı yapmıştık, şimdi de Navi.js'den 
+CartSummary.js'ye aktarmamız gerekli. Bu işlem; data'nın bir componentten onun altına, oradan da onun altına taşınması
+şeklinde açıklanabilir, buna da component drilling denir. React'ta doğrudan App.js'den CartSummary.js'ye veri 
+transferi yok. 
+
+-- Dolayısıyla Navi.js'de şu işlemi yaparız: 
+<CartSummary cart={this.props.cart}/>
