@@ -1,3 +1,13 @@
 330.Redux Nedir? 
 
--- Şimdiye kadar sade React ile çalışmıştık. Şimdi de Redux ile çalışmaya başlayalım. 
+-- Şimdiye kadar sade React ile çalışmıştık. Şimdi de Redux ile çalışmaya başlayalım. Şimdi bizim normal React'ta problemimiz
+neydi? React'ta bir component mimarisi var demiştik. React'ta data state ile yönetiliyordu. React'ta şöyle bir durum var. 
+Bir data bir yerden diğerine sadece gider. Büyük projelerde component drilling dediğimiz bir yapı ortaya çıkıyordu. Yani,
+en kapsayıcı component olan App.js'den 4 alttaki componente data taşımak gerekiyorsa her bir alttaki componentten diğerine 
+sırayla taşınıyordu. Yani taşıyıp taşıyıp duruyorduk. İşte Redux'ta bu sorunun üstesinden geliyoruz. İşte Redux'ta 
+bu sorunun üstesinden geliyoruz. Aslında React ilk etapta bu state yönetimini yani data - durum yönetimini flux denilen
+bir porjeyle gerçekleştiriyordu. Fakat Redux'la beraber kendileri de artık bu projeyi kullanır oldu. Redux aslında
+ilk etapta React'taki state yönetimi için ortaya atılmıştır ama Redux herhangi bir teknolojiye bağımlı geliştirilmemiş, 
+Redux'ı örneğin Angular içerisinde de kullanabiliyoruz. Yani React ekibinin geliştirdiği bir şey değil, tamamen bağımsız 
+bir proje. 
+
