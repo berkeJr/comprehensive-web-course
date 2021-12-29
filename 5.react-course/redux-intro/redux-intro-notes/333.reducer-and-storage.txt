@@ -35,6 +35,8 @@ mesela productReducer, cartReducer şeklinde. Şimdi bizim bu reducer'ları topl
 reducers klasörü içerisinde index.js isminde bir dosya oluştururuz.
 
 -- index.js'ye gelelim, orada bizim redux'tan çağıracağımız bir nesne var. 
+import { combineReducers } from "redux";
+
 
 
 
