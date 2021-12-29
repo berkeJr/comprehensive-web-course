@@ -6,3 +6,4 @@ export const DECREASE_COUNTER = "DECREASE_COUNTER";
 
 export const INCREASE_BY_TWO_COUNTER = "INCREASE_BY_TWO_COUNTER";
 // Bu da 2 arttırma aksiyonu.
+
