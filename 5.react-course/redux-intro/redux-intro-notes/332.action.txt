@@ -3,4 +3,24 @@
 -- src klasöründe redux ve components isimli 2 klasör oluşturalım. Daha sonra ise redux klasörü ieçrisinde 
 actions isimli bir klasör daha oluşturalım.
 
--- Peki bu action nedir? Action bizim için şu anlama geliyor. 
+-- Peki bu action nedir? Action bizim için şu anlama geliyor. Örneğin biz daha önceki projemizde ne yaptık? Sepete
+ekleme diye bir şey yaptık, yani sepeti yönettik. Yani addToCart() diye bir operasyon vardı. removeFromCart() diye 
+bir operasyon vardı. Actions, bizim operasyonlarımız, arttır, eksilt, ekle, çıkar, listele gibi operasyonlarımız. 
+Bu noktada bizim uygulamamızın kullanacağı bütün aksiyonları biz burada tutuyoruz. 
+
+-- Örneğin bizim bir App'miz vardı, bir tane ProductList, bir tane Navi ve bir tane de CategoryList'imiz vardı. 
+Navi'nin altında da CartSummary'miz vardı. Örneğin ProductList'te bir addToCart operasyonu vardı, biz onu App'de 
+tanımladık, CartSummary'de removeFromCart vardı, onu da App'de tanımladık. Yani sepet datası App'deydi. İşte
+biz bu aksiyonlarımızı actions klasörü ieçrisinde tutuyor olacağız. 
+
+-- actions klasöründe actionTypes.js isimli bir dosya oluşturalım. Peki nedir bu actionTypes? Aslında biz, 
+aksiyonlarımızın isimlerini değişkenlerde tutuyoruzki aksiyonları rahat rahat kullanabilelim. Tekrarladığımızda o action
+isimleri bir daha yazmamız gerekmesin. Bu aslında programlamada magic string denen bir olaya karşılık geliyor. Şöyle 
+düşünelim bizim standart hata mesajlarımız var, ve biz bu hata mesajlarını onlarca sayada kullanıyoruz, örneğin 
+bilgiler eksik diye bir hata mesajımız var, ve biz bu hata mesajını onlarca sayfada kullanıyoruz, şimdi biz her seferinde
+bilgiler eksik yazısını hatanın içerisine ayrı ayrı yazarsak, yani 10 farklı yerde kullandığımızda her yere bilgiler eksik 
+yazmamız gerekir. Bundan kurtulmak için actionTypes.js isimli dosyanın içerisinde bunu gerçekleştiririz, aslında daha 
+ilerledikçe bu actionTypes'ı bölümlere ayrırız, işte productActionTypes, caregoryActionTypes, cartActionTypes gibi. 
+Biz şu an için olayı öğrenmeye çalışıyoruz. 
+
+-- Şimdi bizim sayaçlarımız vardı. 
