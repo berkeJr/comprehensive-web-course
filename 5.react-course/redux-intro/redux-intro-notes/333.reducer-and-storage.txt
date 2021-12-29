@@ -37,6 +37,14 @@ reducers klasörü içerisinde index.js isminde bir dosya oluştururuz.
 -- index.js'ye gelelim, orada bizim redux'tan çağıracağımız bir nesne var. 
 import { combineReducers } from "redux";
 
+-- index.js'de ayrıca counterReducer'ımızı da import edelim.
+import counterReducer from "./counterReducer";
+
+-- Daha sonra index.js'de reducer'larımızı obje şeklinde süslü parantez içerisinde veririz.
+const reducers = combineReducers({
+  counterReducer,
+});
+
 
 
 
