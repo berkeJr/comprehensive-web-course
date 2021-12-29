@@ -44,3 +44,4 @@ counterActions'da operasyonlarımızı yazacağız. Aslında actionTypes'ı koym
 -- Şimdi counterActions.js dosyamıza gelelim. actionTypes'da tuttuğumuz bilgileri import edelim.
 import * as actionTypes from "./actionTypes";
 
+-- Şimdi bu noktada oluşturacağımız aksiyonları yazalım. Aksiyonlar aslında fonksiyon. 
