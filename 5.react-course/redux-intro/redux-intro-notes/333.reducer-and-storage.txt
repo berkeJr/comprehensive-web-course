@@ -45,6 +45,17 @@ const reducers = combineReducers({
   counterReducer,
 });
 
+-- Biz şimdiye kadar burada ne yaptık? Action'ı oluşturduk. Action'ın ne olduğunu anladık, yani component action'ı 
+çağıracak. Sonra o action'a sahip olan bir reducer varsa o otomatik olarak devreye girecek. (switch bloğu ile) 
+Yani biz orada ekstradan bir şey yapmıyoruz, onu reduz yapıyor. Gidiyor bakıyor reducer'larına o action'ı kullanan kimse var mı
+varsa payload'ına göre vs. ne işlem yapıyorsa yapıyor, yoksa mevcut state'i döndürüyor. Bizim için son nokta, bir işlem 
+yapmamız gerekiyor. O da artık bu yapının tamamını içeren bir sistem oluşturmak, ona da store deniyor. 
+
+-- Bu noktada reducers klasörü içerisinde configureStore.js isminde yeni bir dosya oluşturalım. Burada bir import 
+işlemi gerçekleştireceğiz. 
+import { createStore } from "redux";
+
+-- Daha sonra configureStore.js'de import etmemiz gereken şey reducers.(index.js'den)
 
 
 
