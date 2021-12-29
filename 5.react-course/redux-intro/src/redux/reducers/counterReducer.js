@@ -23,10 +23,13 @@ const counterReducer = (state = 0, action) => {
       return (newState = state + action.payload);
 
     default:
-      return state;  // eğer yukarıdaki bloğa girmiyorsa state'in kendisini return etsin.
+      return state; // eğer yukarıdaki bloğa girmiyorsa state'in kendisini return etsin.
   }
 };
 
 /* let newstate ile yeni bir değişken tanımladık. Bu olay bizim için reducer'da yapmamız gereken şudur. Örneğin
 elimizde bir liste var, array var, önce array'in kopyasını alıp referans oluştururuz, onun üzerinde işlemimizi yapıp 
 döndürürüz. Yani referansın değişmesi önemli. (JavaScript Immutability)  */
+
+// Şu anda artık reducer'ımızı export edebiliriz. redux tarafında genelde aşağıdan export ederiz
+export default counterReducer;
