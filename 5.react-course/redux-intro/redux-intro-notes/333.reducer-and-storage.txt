@@ -62,6 +62,17 @@ import reducers from "./index";
 store'un kendisini react'a bağlamak. Onun için src içerisinde bulunan asıl uygulamanın index.js'sine gelelim.
 import configureStore from './redux/reducers/configureStore';
 
+-- Aynı yerde bir importumuz daha var. 
+import {Provider} from 'react-redux';
 
+-- Daha sonra index.js'de basit bir kod yazıyoruz. 
+const store = configureStore();
 
+-- Artık bu noktada index.js'de kullanılan App'yi bir provider içine atalım ve o Provider içerisinde şunu yazarız:
+<Provider store={store}>
+    <App />
+</Provider>
 
+-- Tabii ki bu konfigürasyonu sadece bir sefer yapıyoruz. 
+
+-- Şu anda biz reducer'ımızı ve store'umuzu oluşturduk ve projeyi redux'a bağladık. 
