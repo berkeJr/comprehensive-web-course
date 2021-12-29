@@ -14,7 +14,7 @@ export const decreseCounter = () => ({
 
 export const increaseByTwoCounter = () => ({
   type: actionTypes.INCREASE_BY_TWO_COUNTER,
-  payload: 1,
+  payload: 2,  // 2 şer olarak arttıracağız.
 });
 
 // Biz daha sonra bu aksiyonları redux'ta başka bir yerde çalıştıracağız.(reducer)
