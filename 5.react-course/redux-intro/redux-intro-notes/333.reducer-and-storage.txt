@@ -4,3 +4,8 @@
 bir yapı vasıtasıyla kontrol altına alınıyor. Aslında reducer ilgili aksiyonu içerip içermediğine bakıyor. Bu noktada
 reducer'lar devreye giriyor. src içerisindeki redux klasörü içinde reducers isimli yeni bir klasör oluşturalım ve 
 de onun içinde counterReducer.js isminde bir dosya oluşturalım.
+
+-- counterReducer.js'ye gidip action type'ları çekelim.
+import * as actionTypes from "../actions/actionTypes";
+
+-- Daha sonra burada bir adet reducer oluşturalım. 
