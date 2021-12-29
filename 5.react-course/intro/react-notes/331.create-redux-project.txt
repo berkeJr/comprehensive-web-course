@@ -1,9 +1,0 @@
-331.Redux Projesinin Oluşuturulması ve Paketler 
-
--- Şimdi ilk Redux projemizle olaya başlayalım. İlk olarak proje klasörümüzü oluşturacağız. Terminalde 
-5.react-course dizinine gidelim. Orada yeni bir react projesi oluşturacağız. Proje klasörümüzün adı redux-intro olsun.
-
-npx create-react-app redux-intro
-
--- redux-intro projesinde ufak bir proje yaparak genel anlamda redux yapısını anlayacağız ve sonrasında redux ile 
-büyük projeye geçeceğiz. 
