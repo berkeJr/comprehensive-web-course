@@ -14,13 +14,16 @@ tanımladık, CartSummary'de removeFromCart vardı, onu da App'de tanımladık. 
 biz bu aksiyonlarımızı actions klasörü ieçrisinde tutuyor olacağız. 
 
 -- actions klasöründe actionTypes.js isimli bir dosya oluşturalım. Peki nedir bu actionTypes? Aslında biz, 
-aksiyonlarımızın isimlerini değişkenlerde tutuyoruzki aksiyonları rahat rahat kullanabilelim. Tekrarladığımızda o action
+aksiyonlarımızın isimlerini değişkenlerde tutuyoruz ki aksiyonları rahat rahat kullanabilelim. Tekrarladığımızda o action
 isimleri bir daha yazmamız gerekmesin. Bu aslında programlamada magic string denen bir olaya karşılık geliyor. Şöyle 
 düşünelim bizim standart hata mesajlarımız var, ve biz bu hata mesajlarını onlarca sayada kullanıyoruz, örneğin 
 bilgiler eksik diye bir hata mesajımız var, ve biz bu hata mesajını onlarca sayfada kullanıyoruz, şimdi biz her seferinde
 bilgiler eksik yazısını hatanın içerisine ayrı ayrı yazarsak, yani 10 farklı yerde kullandığımızda her yere bilgiler eksik 
-yazmamız gerekir. Bundan kurtulmak için actionTypes.js isimli dosyanın içerisinde bunu gerçekleştiririz, aslında daha 
+yazmamız gerekir. Bundan kurtulmak için actionTypes.js isimli dosyanın içerisinde bunu gerçekleştiririz, aslında daha da
 ilerledikçe bu actionTypes'ı bölümlere ayrırız, işte productActionTypes, caregoryActionTypes, cartActionTypes gibi. 
 Biz şu an için olayı öğrenmeye çalışıyoruz. 
 
--- Şimdi bizim sayaçlarımız vardı. 
+-- Şimdi bizim sayacımız vardı ve sayaç içerisinde 1 arttırma, 1 eksiltme ve 2 arttırma operasyonlarımız vardı. 
+
+-- actionTypes.js'de 1 arttırma operasyonumuzu yazalım
+export const INCREASE_COUNTER = "INCREASE_COUNTER"
