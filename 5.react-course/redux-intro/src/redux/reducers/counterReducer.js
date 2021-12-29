@@ -33,3 +33,5 @@ döndürürüz. Yani referansın değişmesi önemli. (JavaScript Immutability) 
 
 // Şu anda artık reducer'ımızı export edebiliriz. redux tarafında genelde aşağıdan export ederiz
 export default counterReducer;
+
+

@@ -9,3 +9,34 @@ de onun içinde counterReducer.js isminde bir dosya oluşturalım.
 import * as actionTypes from "../actions/actionTypes";
 
 -- Daha sonra burada bir adet reducer oluşturalım. 
+
+const counterReducer = (state = 0, action) => {
+  let newState;
+  switch (action.type) {
+    case actionTypes.INCREASE_COUNTER:
+      return (newState = state + action.payload);
+
+    case actionTypes.DECREASE_COUNTER:
+      return (newState = state - action.payload);
+
+    case actionTypes.INCREASE_BY_TWO_COUNTER:
+      return (newState = state + action.payload);
+
+    default:
+      return state; // eğer yukarıdaki bloğa girmiyorsa state'in kendisini return etsin.
+  }
+};
+
+-- Daha sonra ise reducer'ımızı export edelim. redux tarafında genelde aşağıdan export ederiz
+export default counterReducer;
+
+-- Şu anda reducer'ımızı yazmış olduk, reducer'ımız artık hazır. Zamanla bizim burada reducer'larımız artacak. 
+mesela productReducer, cartReducer şeklinde. Şimdi bizim bu reducer'ları toplamamız gerekiyor. Dolayısıyla biz
+reducers klasörü içerisinde index.js isminde bir dosya oluştururuz.
+
+-- index.js'ye gelelim, orada bizim redux'tan çağıracağımız bir nesne var. 
+
+
+
+
+
