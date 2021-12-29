@@ -56,7 +56,11 @@ işlemi gerçekleştireceğiz.
 import { createStore } from "redux";
 
 -- Daha sonra configureStore.js'de import etmemiz gereken şey reducers.(index.js'den)
+import reducers from "./index";
 
+-- Artık bizim store'umuz da var. Aslında biz konfigürasyonu gerçekleştirdik, bunun bir adımı daha var, o da 
+store'un kendisini react'a bağlamak. Onun için src içerisinde bulunan asıl uygulamanın index.js'sine gelelim.
+import configureStore from './redux/reducers/configureStore';
 
 
 
