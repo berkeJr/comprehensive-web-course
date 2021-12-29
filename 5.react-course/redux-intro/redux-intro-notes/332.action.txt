@@ -1,0 +1,6 @@
+332.Action Yapısını Anlamak 
+
+-- src klasöründe redux ve components isimli 2 klasör oluşturalım. Daha sonra ise redux klasörü ieçrisinde 
+actions isimli bir klasör daha oluşturalım.
+
+-- Peki bu action nedir? Action bizim için şu anlama geliyor. 
