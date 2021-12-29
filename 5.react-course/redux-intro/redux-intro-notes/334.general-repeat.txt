@@ -1,0 +1,49 @@
+334.Genel Tekrar ve ConfigureStore
+
+-- Şimdi ise şu ana kadar yaptıklarımızı tekrar edelim. Çünkü ilk etapta redux öğrenmeye ilk başladığımızda olay 
+birazcık karmaşık gelebiliyor. 
+
+-- İlk etapta biz npm install ile 'react' ve 'react-redux' paketlerini projemize dahil ettik. redux aslında redux'ın 
+kendisi, react-redux ise henüz kullanmadık, componentlerimizi redux'a bağlamak için kullanılan react-redux 
+kütüphanesi. 
+
+-- Peki neler yaptık? Bir redux klasörümüz vardı. Olay actions ile başlıyordu. actions içinde actionTypes.js dosyasında
+uygulama içerisindeki aksiyonlarımızı tuttuk. (Yani butona basma eventlerimizi tuttuk.) 
+
+-- Daha sonra counterAction.js'de asıl aksiyonlarımızın tanımlarını yaptık. Aksiyonlar aslında birer fonksiyon 
+ve içerisinde obje döndürüyordu. Birer arttırmada ve azaltmada payload değeri olarak 1, 2 arttırmada ise payload değeri 
+olarak 2'yi gönderiyoruz. Kısacası biz componentlerde bu aksiyonları kullanacağız. 
+
+-- Peki bu aksiyonlarımızı işlettiğimiz yer neresi? ==> reducers. Reducer'ın amacı state bilgisini döndürmektir. 
+
+-- reducers klasöründe counterReducer.js'de state yönetimi gerçekleştireceğimiz bir reducer yazdık. Switch bloğuyla
+gönderilen aksiyonun tipine göre state'de 1 arttırma, 1 azaltma, veya 2 arttırma işlemlerini yazdık. 
+
+-- Bir sonraki aşamada reducer klasörünün index.js dosyasında biz elimizde bulunan reducer'ları combine ediyoruz. 
+Bizim elimizde bir tane reducer var, birden fazla olsaydı onları da fonksiyon içerisine yazıp combine ederdik. 
+
+-- Bir de reducer klasörümüz içerisinde configureStore.js isimli bir dosyamız vardı. Orası bizim için store 
+dediğimiz yapıyı tanımladığımız yerdi. Bunu bir state veritabanı gibi düşünebiliriz. 
+
+-- src klasörü içerisindeki index.js'de ise App'ye diyoruz ki; sen react-redux kullanacaksın ve Provider olarak 
+react-redux'taki Provider'ı kullanacaksın. Bu ne demek? Yani bizim App'miz artık bir store'a bağlı. store kim? 
+configureStore.
+
+-- Burada bir tek eksiğimiz kaldı. store'u konfigür ettiğimiz operasyonun içi henüz boş. Bu noktada 
+configureStore.js dosyamıza gelelim. 
+
+import { createStore } from "redux";
+
+import reducers from "./index";
+
+export default function configureStore() {
+    return createStore(reducers);
+}
+// createStore ile bir mağaza oluşturuyoruz ve oraya da index'teki reducers'ı yolluyoruz. 
+
+/** Yani configureStore'da olay şu: Bir mağaza olduğunu düşünelim. Yani bir state veri tabanım var. O state veri tabanının
+ * reducer'ları kimler. Yani state'i yöneten nesneleri kimler? İşte bu noktada bizim reducer'ımızda combine ettiğimiz
+ * tüm reducer'lar burada mevcut.
+ */
+
+Olay bundan ibaret. 
