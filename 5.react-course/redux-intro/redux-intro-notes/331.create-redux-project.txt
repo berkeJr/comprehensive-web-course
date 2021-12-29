@@ -7,3 +7,14 @@ npx create-react-app redux-intro
 
 -- redux-intro projesinde ufak bir proje yaparak genel anlamda redux yapısını anlayacağız ve sonrasında redux ile 
 büyük projeye geçeceğiz. 
+
+-- Peki şimdi biz bu projede ne yapacağız? Basit bir sayaç uygulaması yapacağız. Sayı sayacağız yani, sayıyı 1
+arttırmak, 2 arttırmak ve 1 eksiltmek için butonlarımız olacak. Butonlara tıklanınca sayı artacak veya azalacak. Burada
+farklı componentlerle çalışmak için her birini ayrı componentlerde tutacağız. Bizim bir redux yapımız olacak. Sayı 
+label'ı ve butonlar bizim redux storage'ımıza bağlanacak. Bu şekilde bir proje oluşturacağız. 
+
+-- Şimdi redux ile çalışabilmek için 2 tane pakete ihtiyacımız var, birisi redux. Terminalde redux-intro
+dizinine gidip redux'ı indirelim
+npm install redux 
+
+-- Bu redux genel redux paketi, bir de react için geliştirilmiş react-redux paketini kurmamız gerekli.
