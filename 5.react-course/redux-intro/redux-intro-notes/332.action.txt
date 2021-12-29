@@ -40,3 +40,7 @@ export const INCREASE_BY_TWO_COUNTER = "INCREASE_BY_TWO_COUNTER";
 ilk iletişimi kurduğumuz nokta. Daha sonra bu aksiyonların ne yapacağına bir dosyada karar veriyoruz. Şimdi bizim
 aksiyonlarımız counter için. O yüzden actions klasörü içerisinde counterActions.js isimli bir dosya oluşturalım. Yani
 counterActions'da operasyonlarımızı yazacağız. Aslında actionTypes'ı koymayıp buraya da yazabiliriz. 
+
+-- Şimdi counterActions.js dosyamıza gelelim. actionTypes'da tuttuğumuz bilgileri import edelim.
+import * as actionTypes from "./actionTypes";
+
