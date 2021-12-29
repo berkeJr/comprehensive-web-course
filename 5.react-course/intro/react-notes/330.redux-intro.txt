@@ -11,3 +11,9 @@ ilk etapta React'taki state yönetimi için ortaya atılmıştır ama Redux herh
 Redux'ı örneğin Angular içerisinde de kullanabiliyoruz. Yani React ekibinin geliştirdiği bir şey değil, tamamen bağımsız 
 bir proje. 
 
+-- Peki Redux'ta ne yapıyor? Redux'ta hani biz state'imizi App.js'de (en kapsayıcı component) tutuyorduk ya işte 
+biz state'i App.js'de tutmak yerine state'i bambaşka bir yerde tutuyoruz. Buna storage diyebiliriz. Yani bizim 
+için data'nın, eventin vs. tutulduğu veri tabanı şeklinde düşünebiliriz. Yani Redux yapısı bizim için o state yapısının kendisini
+tutuyor. Örneğin herhangi bir yerde bulunan component o state'i istediği zaman o component abone oluyor, farklı bir konumda, 
+hiyerarşide bulunan component o state'i isterse o da abone oluyor. Dolayısıyla bizim için burada o component drilling olayı 
+ortadan kalkıyor.  
