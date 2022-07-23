@@ -1,10 +1,10 @@
-/**Javascipt'in ilk çıkış amacı olan DOM Manipülasyonuna geçelim. Eskiden web sayfaları oluşurken sadece html dökümanı yazabiliyorduk.
-yani html etiketlerimizle sabit, statik sayfalar oluşturabiliyoruk. ancak js'nin çıkmasıyla birlikte biz bu sayfalara dinamiklik ve 
-interaktiflik kazandırabiliyoruz ve de bunun adı DOM Manipülasyonu olarak geçiyor. Bu bölümümüzde DOM Manipülasyonu ile ilgili çoğu
-özelliğimizi görmeye çalışcağız. 
+/**Javascipt'in ilk çıkış amacı olan DOM Manipülasyonuna geçelim. Eskiden web sayfaları oluşurken sadece html dökümanı 
+ * yazabiliyorduk. yani html etiketlerimizle sabit, statik sayfalar oluşturabiliyoruk. ancak js'nin çıkmasıyla birlikte biz 
+ * bu sayfalara dinamiklik ve interaktiflik kazandırabiliyoruz ve de bunun adı DOM Manipülasyonu olarak geçiyor. 
+ * Bu bölümümüzde DOM Manipülasyonu ile ilgili çoğu özelliğimizi görmeye çalışcağız. 
 
-DOM: html etiketleri bir araya gelerek document obje modelini oluşturur. biz bu document üzerinde ise elementlerimizi javacript ile 
-mannipüle edebiliriz. */
+DOM: html etiketleri bir araya gelerek document obje modelini oluşturur. biz bu document üzerinde ise 
+elementlerimizi javacript ile mannipüle edebiliriz. */
 
 //Dom derslerinde hazır olarak indirdiğimiz to do list'in html dosyasını kullanacağız.
 
