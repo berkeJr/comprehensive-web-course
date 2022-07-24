@@ -1,44 +1,55 @@
-/*biz programlarmızda veya yazılımlarımızda gerçek hayatta bilgiasyarlara uyarlayarak gerçek hayat problemlerini bilgisayarlar sayesinde 
- çözmeye çalışırız ve zaten programlama dilleri de bu sayede ortaya çıkmıştır ve gün geçtikçe ihtiyaçlar doğrultusunda programlama
- dillerinin özellikleri de değişiyor ve gelişiyor ve gereçek hayata daha çok uyarlamaya çalışıyoruz. Aslında object oriented programlama(nesne
-yönelimli programlama) felsefesinin çıkması da bundan kaynaklanıyor. */
+// 94.JavaScript'te Obje Kavramı ve Obje Oluşturma
 
-/*Nesne yönelimli programlamada biz aslında geçek hayattaki objelerimizi örneğin bir bilgisayarı biz programalama dünyasında da oluşturmak
- istiyoruz ve bu sayede gerçek hayat problemlerini çözmek istiyoruz. Biz kurs boyunca nesnelerimizi oluşturarak bu konsept üzerinden 
- progrramlamaya devam edeceğiz. Bu dersimizde şimdilik sadece bir obje oluşturmaya çalışacağız.*/
 
-/*Gerçek hayattaki bir obje mesela bir bilgisayar olabilir, bilgisayarın ne gibi özellikleri olabilir. Bilgisayarın rengi, tuşları, ve 
-bilgisayarın modeli olabilir.Aynı zamanda bilgisayarın kendi içinde bir çok fonksiyonu bulunuyor. Örneğin bilgisayarın kapama tuşuna 
-bastığımızda bilgisayarın kapanması bir olay yani metoddur(fonksiyondur).Yani bu bilgisayar objemizin bir metodudur. */
+/*
 
-//bir programmer objesi oluşturalım. Süslü parantezler arasına özelliklerini veya fonksiyonlarını yazabiliriz
+- Object oriented programming(nesne yönelimli programlama) kavramı aslında program geliştirme süreci boyunca 
+karşılaştığımız problemleri gerçek hayatla ilişkilendirerek çözme kapsamında ortaya çıkmıştır. 
+
+/* 
+
+
+- Burada örnek olarak bir bilgisayarı ele alalım. Gerçek hayattaki bir obje mesela bir bilgisayar olabilir, 
+peki bilgisayarın ne gibi özellikleri olabilir? Bilgisayarın rengi, tuşları, ve bilgisayarın modeli olabilir. 
+Aynı zamanda bilgisayarın kendi içinde bir çok fonksiyonu bulunur. Örneğin bilgisayarın kapama tuşuna bastığımızda 
+bilgisayarın kapanması bir olay yani metoddur(fonksiyondur). Yani bu bilgisayar objemizin bir metodudur. 
+
+*/
+
+// programmer isimli bir obje oluşturalım. Süslü parantezler arasına özelliklerini veya fonksiyonlarını yazabiliriz
 
 let value;
 
+
 const programmer = {
-    name: "Mustafa Murat Coşkun",
-    age: 25,
-    email: "coskun.m.murat@gmail.com" ,
-    langs: ["Python", "Java", "Javascript"],
+  // properties: values
 
-    //obje içinde obje oluşturma
-    address : {
-        city: "Ankara",
-        street: "Bahçelievler"
-    },
-    //programcının 5 tane özelliği oldu. ayrıca programcının bir tane de metodu olsun
+  name: "Berke Sayın",
+  age: 20,
+  email: "sayinberkesayin@gmail.com",
+  langs: ["Python", "Java", "JavaScript", "C#"],
 
-    work: function(){
-        console.log("Programcı Çalışıyor...")
-    }
-}
-//Objemizi oluşturduk, peki bu objemizin özelliklerine nasıl erişeceğiz?
+  // obje içinde obje oluşturma
+  address: {
+    city: "İstanbul",
+    street: "Üsküdar",
+  },
 
-value = programmer;  //bu şekilde yazınca console'da programmer'ın bütün özellikleri görünür.
+  // programmer objesinin 5 tane özelliği oldu. ayrıca programcının bir tane de metodu olsun:
 
-value = programmer.email;  //programcının email'i. genelde bu yöntemi kullanırız.
+  work: function () {
+    console.log("Programcı Çalışıyor...");
+  },
+};
 
-value = programmer["email"]; //programcının email'i, bu yöntemde kullanılabilir.
+
+// Objemizi oluşturduk, peki bu objemizin özelliklerine nasıl erişeceğiz?
+
+value = programmer; //bu şekilde yazınca console'da programmer'ın bütün özellikleri görünür.
+
+value = programmer.email; // programcının email'i. genelde bu yöntemi kullanırız.
+
+value = programmer["email"]; // programcının email'i, bu yöntemde kullanılabilir.
 
 value = programmer.langs;
 
@@ -51,15 +62,20 @@ value = programmer.address.street;
 programmer.work(); //fonksiyonu bu şekilde çağırıyoruz.
 
 
-//JSON objeleri
-//JSON, objeleri array şeklinde tutar(birden çok objeyi)
+// JSON objects:
+
+//JSON, birden çok objeyi array şeklinde içerisinde tutar
+
 const programmers = [
-    {name: "Mustafa Murat", age:25}, //obje
-    {name: "Oğuz", age:25} //obje
+  { name: "Berke Sayın", age: 20, email: "berkesayin@gmailcom" }, // obje
+  { name: "Ali", age: 21, email: "ali@gmail.com" }, // obje
+  { name: "Mustafa", age: 22, email: "mustafa@gmail.com" }, // obje
 ];
+
 
 value = programmers[0];
 value = programmers[1];
+value = programmers[2];
 value = programmers;
 
 
