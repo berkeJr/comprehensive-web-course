@@ -1,5 +1,15 @@
-/*Js'de hem bizim ihtiyaç duyduğumuzda kullanabileceğimiz hazır fonksiyonlar vardır hem de biz de kendi istedğimiz komutları
-yapacak olan fonksiyonlarımızı yazabiliriz*/
+// 98.Fonksiyonlar, IIFE ve Anonim Fonksiyonlar
+
+
+/* 
+
+- JavaScript dili kendi içerisinde birçok hazır fonksiyon bulunduruyor ve biz program yazma süreci içerisinde ihtiyaç 
+duyduğumuz an istediğimizi kullanabiliyoruz.
+
+- Buna ek olarak biz de çalışmasını istediğimiz kodları, işlemleri kendi fonksiyonlarımızı oluşturarak istediğimiz zaman
+kullanabiliriz.
+
+*/
 
 /**örneğin bizim bir tane programımız var ve diyelim ki biz programda 4 farklı yerde faktöriyel hesaplama kodunu yazmak istiyoruz, bu durumda
 4 ayrı sefer aynı kodu uzun uzun yazmamız gerekecek ya da copy-paste kullanacağız bu da spagetti denen karmaşık koda sebep oluyor.
